@@ -1,0 +1,66 @@
+:root {
+    /* color-scheme: dark; */
+}
+
+:focus-visible {
+    outline-color: theme(colors.gray.DEFAULT);
+}
+
+::selection {
+    /* background-color: theme(colors.primary.DEFAULT / 50%); */
+}
+
+* {
+    scroll-margin: calc(var(--header-height) + theme(spacing.5));
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+*,
+*:before,
+*:after {
+    transition-duration: var(--transition-duration);
+    transition-timing-function: var(--transition-timing-function);
+    transition-property: none;
+    border-color: theme(colors.gray.DEFAULT);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: theme(colors.text);
+    background-color: theme(colors.body);
+    font-size: theme(fontSize.base);
+    line-height: theme(lineHeight.normal);
+    -webkit-font-smoothing: antialiased;
+    padding-top: var(--header-height, 0);
+    text-rendering: optimizeLegibility !important;
+
+    .is-nospace & {
+        padding-top: 0;
+    }
+
+    > main {
+        flex-grow: 1;
+    }
+}
+
+a,
+button {
+    color: currentColor;
+    -webkit-tap-highlight-color: transparent;
+    transition-property:
+        border-color,
+        background-color,
+        color,
+        opacity;
+
+    &:hover {
+        color: var(--hover-color, theme(colors.primary.DEFAULT));
+    }
+}

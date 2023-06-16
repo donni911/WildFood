@@ -1,0 +1,50 @@
+.c-error {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    .l-box {
+        margin: auto;
+    }
+
+    &__inner {
+        padding: theme(spacing.24) 0;
+        text-align: center;
+    }
+
+    .c-logo {
+        margin: auto;
+        margin-bottom: theme(spacing.10);
+        width: theme(spacing.50);
+
+        @screen md {
+            margin-bottom: theme(spacing.16);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__code {
+        line-height: theme(lineHeight.none);
+        font-size: theme(fontSize.35);
+
+        @screen sm {
+            font-size: theme(fontSize.50);
+        }
+    }
+
+    &__title {
+        margin-top: theme(spacing.5);
+    }
+
+    &__btns {
+        margin-top: theme(spacing.7);
+
+        @screen md {
+            margin-top: theme(spacing.10);
+        }
+    }
+}

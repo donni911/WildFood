@@ -1,0 +1,30 @@
+[
+  {
+    "html": "test.html",
+    "title": "Test",
+    "slug": "test",
+    "desktop": false,
+    "responsive": false
+  },
+  {
+    "html": "home.html",
+    "title": "Wildfood",
+    "slug": "home",
+    "desktop": false,
+    "responsive": false
+  },
+  {
+    "html": "about-us.html",
+    "title": "About us",
+    "slug": "about",
+    "desktop": false,
+    "responsive": false
+  },
+  {
+    "html": "blog.html",
+    "title": "Blog",
+    "slug": "about",
+    "desktop": false,
+    "responsive": false
+  }
+]

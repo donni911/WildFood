@@ -1,0 +1,73 @@
+.c-title {
+    font-weight: 700;
+    line-height: 1;
+
+    &--h1 {
+        font-size: theme(fontSize.8);
+        line-height: 1.1;
+
+        @screen md {
+            font-size: theme(fontSize.10);
+        }
+
+        @screen xl {
+            font-size: theme(fontSize.14);
+        }
+    }
+
+    &--h2 {
+        font-size: theme(fontSize.7);
+
+        @screen md {
+            font-size: theme(fontSize.8);
+        }
+
+        @screen xl {
+            font-size: theme(fontSize.10);
+        }
+    }
+
+    &--h3 {
+        font-size: theme(fontSize.6);
+
+        @screen lg {
+            font-size: theme(fontSize.7);
+        }
+
+        @screen xl {
+            font-size: theme(fontSize.8);
+        }
+    }
+
+    &--h4 {
+        font-size: theme(fontSize.5);
+
+        @screen lg {
+            font-size: theme(fontSize.6);
+        }
+
+        @screen xl {
+            font-size: theme(fontSize.7);
+        }
+    }
+
+    &--h5 {
+        font-size: theme(fontSize.4);
+
+        @screen lg {
+            font-size: theme(fontSize.5);
+        }
+
+        @screen xl {
+            font-size: theme(fontSize.6);
+        }
+    }
+
+    &--lg {
+        font-size: theme(fontSize[4.5]);
+
+        @screen xl {
+            font-size: theme(fontSize[5.5]);
+        }
+    }
+}

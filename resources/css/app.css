@@ -1,0 +1,37 @@
+/* Tailwind */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Set */
+@import '_set/vars.css';
+
+/* Base */
+@import '_app/fonts.css';
+@import '_app/reset.css';
+@import '_app/icons.css';
+@import '_app/measure.css';
+@import '_app/typography.css';
+
+/* Layouts */
+@import '_layouts/box.css';
+@import '_layouts/container.css';
+
+/* Form */
+@import '_form/buttons.css';
+@import '_form/forms.css';
+@import '_form/check.css';
+@import '_form/checkbox.css';
+@import '_form/counter.css';
+@import '_form/select.css';
+@import '_form/datepicker.css';
+
+/* Parts */
+@import '_app/ideil.css';
+@import '_app/logo.css';
+@import '_app/nav.css';
+@import '_app/socials.css';
+@import '_app/header.css';
+@import '_app/menu.css';
+@import '_app/footer.css';
+
+/* Components */

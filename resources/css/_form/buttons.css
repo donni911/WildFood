@@ -1,0 +1,82 @@
+.f-btn {
+  --icon-size: theme(spacing.6);
+  appearance: none;
+  height: theme(spacing.12);
+  display: inline-flex;
+  gap: theme(spacing.2);
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  padding: 0 theme(spacing.5);
+  font-size: theme(fontSize.md);
+  line-height: theme(lineHeight.tight);
+  font-weight: 400;
+  position: relative;
+  max-width: 100%;
+  transition-property: background-color, color, border-color, box-shadow;
+
+  &:disabled,
+  &.is-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &--sm {
+    height: theme(spacing.10);
+  }
+
+  &--lg {
+    height: theme(spacing.16);
+  }
+
+  &--primary {
+    background-color: theme(colors.primary.DEFAULT);
+    color: theme(colors.white);
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      background-color: color(theme(colors.primary.DEFAULT) blackness(+10%));
+      color: theme(colors.white);
+    }
+  }
+
+  &--rounded {
+    border-radius: 999px;
+  }
+
+  &--link {
+    &:hover {
+      text-decoration: none;
+      color: theme(colors.primary.DEFAULT);
+    }
+  }
+
+  &--overlay {
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &--arrow {
+    width: theme(spacing.16);
+    height: theme(spacing.16);
+    padding: theme(spacing[2.5]);
+    border-radius: 999px;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

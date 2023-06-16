@@ -1,0 +1,120 @@
+.c-footer {
+    margin-top: theme(spacing.15);
+    background-color: theme(colors.text);
+    color: theme(colors.body);
+    padding: theme(spacing.5) 0;
+    position: relative;
+    z-index: 1;
+
+    @screen md {
+        padding: theme(spacing.8) 0;
+        margin-top: theme(spacing.20);
+    }
+
+    &__top {
+        display: grid;
+        gap: theme(spacing.5);
+        margin-bottom: theme(spacing.10);
+
+        @screen md {
+            margin-bottom: theme(spacing.5);
+            justify-content: space-between;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @screen xl {
+            margin-bottom: theme(spacing.24);
+        }
+    }
+
+    &__bottom {
+        display: grid;
+        gap: theme(spacing.10);
+
+        @screen md {
+            gap: theme(spacing.5);
+            align-items: flex-end;
+            justify-content: space-between;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        &-left {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        &-right {
+            display: flex;
+
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+    }
+
+    &__privacy {
+        width: 100%;
+        margin-bottom: theme(spacing.7);
+
+        @screen sm {
+            width: auto;
+            margin-bottom: 0;
+        }
+
+        @screen md {
+            order: 1;
+        }
+    }
+
+    &__copy {
+        padding-right: theme(spacing.5);
+    }
+
+    &__contacts {
+        line-height: 1;
+
+        @screen xl {
+            width: 100%;
+            max-width: 66.666%;
+            margin-left: auto;
+        }
+
+        dd {
+            margin-bottom: theme(spacing.4);
+        }
+
+        &-lg {
+            font-size: theme(fontSize.6);
+            font-weight: 700;
+
+            @screen sm {
+                font-size: theme(fontSize.8);
+            }
+
+            @screen lg {
+                font-size: theme(fontSize.9);
+            }
+
+            @screen 2xl {
+                font-size: theme(fontSize.11);
+            }
+        }
+    }
+
+    .c-logo {
+
+        @screen md {
+            max-width: 20rem;
+        }
+    }
+
+    .c-ideil {
+        flex-shrink: 0;
+
+        @screen xl {
+            width: 100%;
+            max-width: 66.666%;
+            margin-left: auto;
+        }
+    }
+}

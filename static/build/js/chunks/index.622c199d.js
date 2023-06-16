@@ -1,0 +1,1 @@
+(async()=>{const o=document.querySelector(".vue-feedback-form");if(!o)return;const{createApp:e,defineAsyncComponent:n}=await import("./vue.runtime.esm-bundler.11d0564a.js"),t=n(()=>import("./FormComponent.a80ec918.js"));e(t).mount(o)})();

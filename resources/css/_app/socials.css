@@ -1,0 +1,18 @@
+.c-socials {
+    --icon-size: theme(spacing.6);
+
+    &__title {
+        margin-bottom: theme(spacing.5);
+        font-size: theme(fontSize.xs);
+    }
+
+    &__list {
+        display: flex;
+        margin: calc(theme(spacing.4) * -1);
+    }
+
+    &__link {
+        padding: theme(spacing.4);
+        display: block;
+    }
+}

@@ -1,0 +1,48 @@
+/* Font weight hint
+// 100 – thin
+// 200 – extra light
+// 300 – light
+// 400 – regular (normal)
+// 500 – medium
+// 600 – semibold
+// 700 – bold
+// 800 – extrabold
+// 900 – black */
+
+@font-face {
+  font-family: "CooperBlack";
+  font-display: swap;
+  src: local(CooperBlack),
+    url("../../fonts/Cooper-Black-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Gellix";
+  font-display: swap;
+  src: local(Gellix), url("../../fonts/Gellix-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Gellix";
+  font-display: swap;
+  src: local(Gellix), url("../../fonts/Gellix-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gellix";
+  font-display: swap;
+  src: local(Gellix), url("../../fonts/Gellix-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Gellix";
+  font-display: swap;
+  src: local(Gellix), url("../../fonts/Gellix-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Manrope";
+  font-display: swap;
+  src: local(Gellix), url("../../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+}

@@ -1,0 +1,51 @@
+.c-tooltip {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0px;
+    width: max-content;
+    max-width: theme(spacing.50);
+    background-color: theme(colors.white);
+    box-shadow: theme(boxShadow.lg);
+    color: theme(colors.black);
+    font-size: theme(fontSize.2xs);
+    z-index: theme(zIndex.50);
+    padding: theme(spacing.3) theme(spacing.4);
+    line-height: theme(lineHeight.tight);
+    border-radius: theme(borderRadius.none);
+    transition-property: opacity,
+        visibility;
+    opacity: 0;
+    visibility: hidden;
+
+    &[data-show] {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__arrow {
+        position: absolute;
+        width: theme(spacing.2);
+        height: theme(spacing.2);
+        transform: rotate(45deg);
+        background: inherit;
+    }
+
+    dl {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 calc(theme(spacing[2.5]) * -1);
+
+        dt {
+            color: theme(colors.black / 50%);
+            width: 66.666%;
+            margin-bottom: theme(spacing[2.5]);
+        }
+
+        dd {
+            width: 33.333%;
+            text-align: right;
+            margin-bottom: theme(spacing[2.5]);
+        }
+    }
+}

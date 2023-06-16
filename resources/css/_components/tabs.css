@@ -1,0 +1,63 @@
+.c-tabs {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    min-width: 0;
+    flex-shrink: 0;
+    max-width: 100%;
+    line-height: theme(lineHeight.tight);
+
+    &__list {
+        white-space: nowrap;
+        flex-grow: 1;
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-right: theme(spacing.3);
+        }
+
+        &.is-active {
+            pointer-events: none;
+        }
+    }
+
+    &__link {
+        background-color: theme(colors.gray.100);
+        color: theme(colors.black);
+        display: flex;
+        font-weight: 700;
+        gap: theme(spacing.2);
+        height: theme(spacing.11);
+        padding: 0 theme(spacing.5);
+        align-items: center;
+        border-radius: 99px;
+
+        &:hover {
+            background-color: theme(colors.gray.200);
+            color: theme(colors.text);
+        }
+
+        &.is-active {
+            pointer-events: none;
+            background-color: theme(colors.primary.DEFAULT);
+            color: theme(colors.white);
+        }
+    }
+
+    &__count {
+        opacity: .6;
+        font-weight: 400;
+    }
+
+    &__pane {
+
+        &:not(.is-shown) {
+            display: none;
+        }
+    }
+}
