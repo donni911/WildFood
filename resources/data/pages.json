@@ -1,14 +1,7 @@
 [
   {
-    "html": "test.html",
-    "title": "Test",
-    "slug": "test",
-    "desktop": false,
-    "responsive": false
-  },
-  {
     "html": "home.html",
-    "title": "Wildfood",
+    "title": "Home",
     "slug": "home",
     "desktop": false,
     "responsive": false

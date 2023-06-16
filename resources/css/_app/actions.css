@@ -1,0 +1,39 @@
+.c-actions {
+  --icon-size: theme(spacing.6);
+
+  &__title {
+    margin-bottom: theme(spacing.5);
+    font-size: theme(fontSize.xs);
+  }
+
+  &__list {
+    display: flex;
+    margin: calc(theme(spacing.4) * -1);
+  }
+
+  &__link {
+    padding: theme(spacing.4);
+    display: block;
+    position: relative;
+  }
+
+  &__count {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 150%;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+    background-color: theme(colors.primary.DEFAULT);
+  }
+}

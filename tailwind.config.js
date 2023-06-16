@@ -78,7 +78,7 @@ module.exports = {
         },
 
         body: "#F9F6EE",
-        local: "EDE8DE",
+        local: "#EDE8DE",
         text: "#111",
       },
       maxWidth: {

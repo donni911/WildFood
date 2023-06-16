@@ -14,23 +14,11 @@
     "isDynamicEntry": true,
     "src": "../node_modules/@splidejs/splide/dist/js/splide.esm.js"
   },
-  "../node_modules/vue/dist/vue.runtime.esm-bundler.js": {
-    "file": "js/chunks/vue.runtime.esm-bundler.11d0564a.js",
-    "isDynamicEntry": true,
-    "src": "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
-  },
-  "_badger-modal.cjs.da3cf959.js": {
-    "file": "js/chunks/badger-modal.cjs.da3cf959.js",
-    "isDynamicEntry": true
-  },
-  "_measure.4f9128f4.js": {
-    "file": "js/chunks/measure.4f9128f4.js"
-  },
-  "_virtual_svg-icons-register.644d7813.js": {
-    "file": "js/chunks/virtual_svg-icons-register.644d7813.js"
+  "_virtual_svg-icons-register.0d86c2ad.js": {
+    "file": "js/chunks/virtual_svg-icons-register.0d86c2ad.js"
   },
   "css/app.css": {
-    "file": "css/app.5b1b608f.css",
+    "file": "css/app.f8a1e487.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -45,22 +33,58 @@
     "src": "css/home.css"
   },
   "css/test.css": {
-    "file": "css/test.bb001265.css",
+    "file": "css/test.cae8e648.css",
     "isEntry": true,
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.1b457e42.css",
+    "file": "css/utilities.9ddf16b0.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
-  "fonts/Roboto-Bold.woff2": {
-    "file": "fonts/Roboto-Bold.4d7dd6e0.woff2",
-    "src": "fonts/Roboto-Bold.woff2"
+  "fonts/Cooper-Black-Regular.woff": {
+    "file": "fonts/Cooper-Black-Regular.cd1c76e2.woff",
+    "src": "fonts/Cooper-Black-Regular.woff"
   },
-  "fonts/Roboto-Regular.woff2": {
-    "file": "fonts/Roboto-Regular.8cef0863.woff2",
-    "src": "fonts/Roboto-Regular.woff2"
+  "fonts/Gellix-Bold.woff2": {
+    "file": "fonts/Gellix-Bold.ff27c7e2.woff2",
+    "src": "fonts/Gellix-Bold.woff2"
+  },
+  "fonts/Gellix-Medium.woff2": {
+    "file": "fonts/Gellix-Medium.63d2a94a.woff2",
+    "src": "fonts/Gellix-Medium.woff2"
+  },
+  "fonts/Gellix-Regular.woff2": {
+    "file": "fonts/Gellix-Regular.cbdc2520.woff2",
+    "src": "fonts/Gellix-Regular.woff2"
+  },
+  "fonts/Gellix-SemiBold.woff2": {
+    "file": "fonts/Gellix-SemiBold.e051981d.woff2",
+    "src": "fonts/Gellix-SemiBold.woff2"
+  },
+  "fonts/Manrope-Regular.woff": {
+    "file": "fonts/Manrope-Regular.1b2c7e68.woff",
+    "src": "fonts/Manrope-Regular.woff"
+  },
+  "img/banner-image.png": {
+    "file": "img/banner-image.2744fa40.png",
+    "src": "img/banner-image.png"
+  },
+  "img/cat-dog-big.png": {
+    "file": "img/cat-dog-big.9fd5aa80.png",
+    "src": "img/cat-dog-big.png"
+  },
+  "img/cat-dog-eat.png": {
+    "file": "img/cat-dog-eat.972a6674.png",
+    "src": "img/cat-dog-eat.png"
+  },
+  "img/cat-quiz.png": {
+    "file": "img/cat-quiz.71a70867.png",
+    "src": "img/cat-quiz.png"
+  },
+  "img/corm.png": {
+    "file": "img/corm.77744eec.png",
+    "src": "img/corm.png"
   },
   "img/demo/mark.png": {
     "file": "img/mark.410e3449.png",
@@ -74,25 +98,37 @@
     "file": "img/test_1920x980@2x.941e4a24.jpg",
     "src": "img/demo/test_1920x980@2x.jpg"
   },
-  "img/svg/ideil.svg": {
-    "file": "img/ideil.40b29ec2.svg",
-    "src": "img/svg/ideil.svg"
+  "img/dog&cat.png": {
+    "file": "img/dog_cat.fdaae146.png",
+    "src": "img/dog&cat.png"
   },
-  "img/svg/madeby-light_en.svg": {
-    "file": "img/madeby-light_en.db33d240.svg",
-    "src": "img/svg/madeby-light_en.svg"
+  "img/dog-big-2.png": {
+    "file": "img/dog-big-2.be0c19df.png",
+    "src": "img/dog-big-2.png"
   },
-  "img/svg/madeby-light_uk.svg": {
-    "file": "img/madeby-light_uk.b00aa174.svg",
-    "src": "img/svg/madeby-light_uk.svg"
+  "img/dog-cat-eat.png": {
+    "file": "img/dog-cat-eat.4e168f57.png",
+    "src": "img/dog-cat-eat.png"
   },
-  "img/svg/madeby_en.svg": {
-    "file": "img/madeby_en.6e0f21d1.svg",
-    "src": "img/svg/madeby_en.svg"
+  "img/dog-quiz.png": {
+    "file": "img/dog-quiz.542e2807.png",
+    "src": "img/dog-quiz.png"
   },
-  "img/svg/madeby_uk.svg": {
-    "file": "img/madeby_uk.8a4bff5b.svg",
-    "src": "img/svg/madeby_uk.svg"
+  "img/dogs-eat.png": {
+    "file": "img/dogs-eat.c1a34a31.png",
+    "src": "img/dogs-eat.png"
+  },
+  "img/food-processing.png": {
+    "file": "img/food-processing.243c2fb3.png",
+    "src": "img/food-processing.png"
+  },
+  "img/handshakedog.png": {
+    "file": "img/handshakedog.000dde1c.png",
+    "src": "img/handshakedog.png"
+  },
+  "img/svg/logo.svg": {
+    "file": "img/logo.686f2ef8.svg",
+    "src": "img/svg/logo.svg"
   },
   "img/svg/mark.svg": {
     "file": "img/mark.a6a36703.svg",
@@ -107,9 +143,9 @@
     "src": "img/svg/mark.svg?url"
   },
   "js@pub/app.js": {
-    "file": "js/6.bc22a907.js",
+    "file": "js/6.83afd183.js",
     "imports": [
-      "_virtual_svg-icons-register.644d7813.js"
+      "_virtual_svg-icons-register.0d86c2ad.js"
     ],
     "isEntry": true,
     "src": "js@pub/app.js"
@@ -118,17 +154,15 @@
     "dynamicImports": [
       "js@src/modules/carousel/index.js",
       "js@src/modules/collapse/index.js",
-      "js@src/modules/feedback/index.js",
       "js@src/modules/gallery/index.js",
       "js@src/modules/header/index.js",
       "js@src/modules/map/index.js",
-      "js@src/modules/modal/index.js",
       "js@src/modules/tabs/index.js",
       "js@src/modules/tooltip/index.js"
     ],
-    "file": "js/5.599511e0.js",
+    "file": "js/5.e8ebe2ca.js",
     "imports": [
-      "_virtual_svg-icons-register.644d7813.js"
+      "_virtual_svg-icons-register.0d86c2ad.js"
     ],
     "isEntry": true,
     "src": "js@src/app.js"
@@ -150,36 +184,13 @@
     "isDynamicEntry": true,
     "src": "js@src/modules/collapse/index.js"
   },
-  "js@src/modules/feedback/components/FormComponent.vue": {
-    "dynamicImports": [
-      "_badger-modal.cjs.da3cf959.js"
-    ],
-    "file": "js/chunks/FormComponent.a80ec918.js",
-    "imports": [
-      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "js@src/modules/feedback/components/FormComponent.vue"
-  },
-  "js@src/modules/feedback/index.js": {
-    "dynamicImports": [
-      "../node_modules/vue/dist/vue.runtime.esm-bundler.js",
-      "js@src/modules/feedback/components/FormComponent.vue"
-    ],
-    "file": "js/chunks/index.622c199d.js",
-    "isDynamicEntry": true,
-    "src": "js@src/modules/feedback/index.js"
-  },
   "js@src/modules/gallery/index.js": {
     "file": "js/chunks/index.4e547c74.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/gallery/index.js"
   },
   "js@src/modules/header/index.js": {
-    "file": "js/chunks/index.48d0ac85.js",
-    "imports": [
-      "_measure.4f9128f4.js"
-    ],
+    "file": "js/chunks/index.08da6a3f.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/header/index.js"
   },
@@ -191,15 +202,6 @@
     "file": "js/chunks/index.f754b9c4.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/map/index.js"
-  },
-  "js@src/modules/modal/index.js": {
-    "file": "js/chunks/index.5c6c619c.js",
-    "imports": [
-      "_badger-modal.cjs.da3cf959.js",
-      "_measure.4f9128f4.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "js@src/modules/modal/index.js"
   },
   "js@src/modules/tabs/index.js": {
     "dynamicImports": [

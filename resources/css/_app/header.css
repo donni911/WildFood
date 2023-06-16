@@ -1,145 +1,133 @@
 .c-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: theme(zIndex.20);
-    line-height: 1;
-    color: theme(colors.text);
-    background-color: theme(colors.body);
-    border-bottom: 1px solid theme(colors.gray.200);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: theme(zIndex.20);
+  line-height: 1;
+  color: theme(colors.text);
+  background-color: theme(colors.body);
 
+  &__inner {
+    height: theme(spacing.headerHeight);
+    display: flex;
+    align-items: center;
+    /* padding-top: theme(spacing[2.5]); */
+    /* padding-bottom: theme(spacing[2.5]); */
+  }
 
-    &__inner {
-        height: theme(spacing.headerHeight);
-        display: flex;
-        align-items: center;
-        /* padding-top: theme(spacing[2.5]); */
-        /* padding-bottom: theme(spacing[2.5]); */
+  &__main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: theme(spacing.8);
+    margin: 0 auto;
+    align-self: center;
+    transition-property: width, padding;
+  }
+
+  &__hamburger {
+    margin-left: auto;
+    line-height: 0;
+
+    @screen lg {
+      display: none;
     }
 
-    &__main {
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
+    &-btn {
+      display: block;
+      margin: calc(theme(spacing.5) * -1);
+      padding: theme(spacing.5);
     }
 
-    &__logo {
-        margin-right: theme(spacing.8);
-        align-self: center;
-        transition-property: width, padding;
+    &-icon {
+      display: block;
+      height: theme(spacing.4);
+      width: theme(spacing.6);
+      position: relative;
 
-        @screen xl {
-            margin-right: theme(spacing.15);
+      div {
+        height: theme(spacing[0.5]);
+        width: 100%;
+        position: absolute;
+        flex-shrink: 0;
+        left: 0;
+        transform-origin: center;
+        background-color: currentColor;
+        transition-property: width, inset, transform;
+
+        &:nth-child(1) {
+          top: 0;
         }
+
+        &:nth-child(2) {
+          top: calc(50% - 1px);
+        }
+
+        &:nth-child(3) {
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @screen lg {
+      display: block;
+    }
+  }
+
+  &__actions {
+    --icon-size: theme(spacing.6);
+    display: none;
+
+    @screen lg {
+      display: block;
+      /* margin-left: auto; */
     }
 
-    &__hamburger {
-        margin-left: auto;
-        line-height: 0;
-
-        @screen lg {
-            display: none;
+    .c-socials {
+      @screen xl {
+        &__list {
+          margin-left: calc(-1 * theme(spacing.4));
+          margin-right: calc(-1 * theme(spacing.4));
         }
 
-        &-btn {
-            display: block;
-            margin: calc(theme(spacing.5) * -1);
-            padding: theme(spacing.5);
+        &__link {
+          padding-left: theme(spacing.4);
+          padding-right: theme(spacing.4);
         }
-
-        &-icon {
-            display: block;
-            height: theme(spacing.4);
-            width: theme(spacing.6);
-            position: relative;
-
-            div {
-                height: theme(spacing[0.5]);
-                width: 100%;
-                position: absolute;
-                flex-shrink: 0;
-                left: 0;
-                transform-origin: center;
-                background-color: currentColor;
-                transition-property: width, inset, transform;
-
-                &:nth-child(1) {
-                    top: 0;
-                }
-
-                &:nth-child(2) {
-                    top: calc(50% - 1px);
-                }
-
-                &:nth-child(3) {
-                    bottom: 0;
-                }
-            }
-        }
+      }
     }
-
-    &__nav {
-        display: none;
-
-        @screen lg {
-            display: block;
-        }
-    }
-
-    &__socials {
-        --icon-size: theme(spacing.6);
-        display: none;
-
-        @screen lg {
-            display: block;
-            margin-left: auto;
-        }
-
-        .c-socials {
-
-            @screen xl {
-
-                &__list {
-                    margin-left: calc(-1 * theme(spacing.4));
-                    margin-right: calc(-1 * theme(spacing.4));
-                }
-
-                &__link {
-                    padding-left: theme(spacing.4);
-                    padding-right: theme(spacing.4);
-                }
-            }
-        }
-    }
+  }
 }
 
 .is-menu-open {
+  .c-header {
+    &__hamburger {
+      &-icon {
+        div {
+          &:nth-child(1) {
+            top: calc(50% - 1px);
+            transform: rotate(45deg);
+          }
 
-    .c-header {
+          &:nth-child(2) {
+            width: 0;
+            left: 50%;
+          }
 
-        &__hamburger {
-
-            &-icon {
-
-                div {
-
-                    &:nth-child(1) {
-                        top: calc(50% - 1px);
-                        transform: rotate(45deg);
-                    }
-
-                    &:nth-child(2) {
-                        width: 0;
-                        left: 50%;
-                    }
-
-                    &:nth-child(3) {
-                        top: calc(50% - 1px);
-                        transform: rotate(-45deg);
-                    }
-                }
-            }
+          &:nth-child(3) {
+            top: calc(50% - 1px);
+            transform: rotate(-45deg);
+          }
         }
+      }
     }
+  }
 }

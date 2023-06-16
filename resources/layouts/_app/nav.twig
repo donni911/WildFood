@@ -1,9 +1,25 @@
 <nav class="c-nav {{ class }}">
     <ul class="c-nav__list">
         {% for item in nav %}
-            <li class="c-nav__item">
-                <a href="{{ item.link }}" class="c-nav__link">{{ item.title }}</a>
-            </li>
+            {% if item.dropdown is defined %}
+                <li class="c-nav__item c-nav__item--dropdown">
+                    <a href="{{ item.link }}" class="c-nav__link">{{ item.title }}</a>
+                    <div class="c-nav__link-icon">
+                        {% include "./icon.twig" with { id: 'angle' } %}
+                    </div>
+                    <ul class="c-nav__dropdown">
+                        {% for itemDropdown in item.dropdown %}
+                            <li class="c-nav__dropdown-link">
+                                <a href="{{ itemDropdown.link }}" class="c-nav__link">{{ itemDropdown.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% else %}
+                <li class="c-nav__item">
+                    <a href="{{ item.link }}" class="c-nav__link">{{ item.title }}</a>
+                </li>
+            {% endif %}
         {% endfor %}
     </ul>
 </nav>

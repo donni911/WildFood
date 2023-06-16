@@ -1,0 +1,15 @@
+<div class="c-actions {{ class }}">
+    <ul class="c-actions__list">
+        {% for item in actions %}
+            <li class="c-actions__item">
+                <a href="{{ item.link }}" target="_blank" class="c-actions__link">
+                    {% if item.id == 'cart' %}
+                        <span class='c-actions__count'>3</span>
+                    {% endif %}
+                    <span class="sr-only">{{ item.title }}</span>
+                    {% include "../_app/icon.twig" with {  id: item.id } %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
