@@ -4,6 +4,7 @@
   --transition-property: var(--transition-duration) var(--transition-function);
 
   --header-height: 80px;
+  --header-height-sm: 60px;
 
   --page-space: theme(spacing.10);
 

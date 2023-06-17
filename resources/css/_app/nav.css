@@ -5,9 +5,10 @@
   &__list {
     display: inline-flex;
     flex-wrap: wrap;
-    row-gap: theme(spacing.2);
+    row-gap: theme(spacing.8);
     column-gap: var(--col-gap);
     margin: calc(theme(spacing[2.5]) * -1) 0;
+    width: 100%;
   }
 
   &__link {

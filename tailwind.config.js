@@ -110,6 +110,7 @@ module.exports = {
         pageSpace: "var(--page-space)",
 
         headerHeight: "var(--header-height)",
+        headerHeightSm: "var(--header-height-sm)",
 
         inputHeight: "var(--input-height)",
 

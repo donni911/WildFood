@@ -12,9 +12,12 @@
   }
 
   &__link {
-    padding: theme(spacing.4);
     display: block;
     position: relative;
+    padding: theme(spacing.4) theme(spacing[2.5]);
+    @screen lg {
+      padding: theme(spacing.4);
+    }
   }
 
   &__count {

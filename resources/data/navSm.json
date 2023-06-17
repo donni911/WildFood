@@ -1,0 +1,38 @@
+[
+  {
+    "id": "about-us",
+    "link": "/layouts/about-us.html",
+    "title": "About us",
+    "icon": "handDog"
+  },
+  {
+    "id": "why-raw",
+    "link": "/layouts/about-us.html",
+    "title": "Why Raw Food",
+    "icon": "cormDog"
+  },
+  {
+    "id": "blog",
+    "link": "/layouts/blog.html",
+    "title": "Blog",
+    "icon": "blog"
+  },
+  {
+    "id": "reviews",
+    "link": "/layouts/blog.html",
+    "title": "Reviews",
+    "icon": "star"
+  },
+  {
+    "id": "how-it-works",
+    "link": "/layouts/blog.html",
+    "title": "How it works",
+    "icon": "works"
+  },
+  {
+    "id": "shop",
+    "link": "/layouts/blog.html",
+    "title": "Shop",
+    "icon": "bag"
+  }
+]

@@ -1,18 +1,18 @@
 .c-logo {
+  width: 100%;
+
+  svg,
+  svg > * {
+    fill: currentColor;
+  }
+
+  svg,
+  img {
     width: 100%;
+    height: auto;
+  }
 
-    svg,
-    svg > * {
-        fill: currentColor;
-    }
-
-    svg,
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    &__link {
-        display: block;
-    }
+  &__link {
+    display: block;
+  }
 }
