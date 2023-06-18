@@ -1,19 +1,30 @@
 .f-btn {
   --icon-size: theme(spacing.6);
   appearance: none;
-  height: theme(spacing.12);
+  /* height: theme(spacing.12); */
   display: inline-flex;
   gap: theme(spacing.2);
   vertical-align: middle;
   align-items: center;
   justify-content: center;
-  padding: 0 theme(spacing.5);
-  font-size: theme(fontSize.md);
-  line-height: theme(lineHeight.tight);
-  font-weight: 400;
+  padding: 10px 26px 13px 26px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  color: #fff;
   position: relative;
   max-width: 100%;
   transition-property: background-color, color, border-color, box-shadow;
+  border-radius: 999px;
+
+  @screen sm {
+    font-size: 24px;
+    padding: 12px 30px 15px 30px;
+  }
+
+  &--banner {
+    background-color: theme(colors.btnBanner);
+  }
 
   &:disabled,
   &.is-disabled {

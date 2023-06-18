@@ -17,11 +17,11 @@
                 </div>
                 {% include "./socials.twig" with {class:'c-footer__socials'} %}
             </div>
-            <div class="c-footer__section grid gap-4 sm:grid-cols-2 pt-4">
+            <div class="c-footer__section grid gap-5 sm:grid-cols-2 pt-4">
                 <ul class="flex flex-col gap-5">
                     {% for page in pages %}
                         <li>
-                            <a href="{{ page.html }}" class='text-[30px] leading-5'>{{ page.title }}</a>
+                            <a href="{{ page.html }}" class='text-[30px] leading-[130%]'>{{ page.title }}</a>
                         </li>
                     {% endfor %}
 
@@ -29,7 +29,7 @@
                 <ul class='flex flex-col gap-5'>
                     {% for page in pagesAdditional %}
                         <li>
-                            <a href="{{ page.html }}" class='text-[30px]'>{{ page.title }}</a>
+                            <a href="{{ page.html }}" class='text-[30px] leading-[130%]'>{{ page.title }}</a>
                         </li>
                     {% endfor %}
                 </ul>

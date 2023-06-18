@@ -1,2 +1,98 @@
 /* Components */
 /* @import '_components/tabs.css'; */
+
+.c-banner {
+  position: relative;
+
+  background: theme(colors.local);
+  padding: 62px 20px 150px 20px;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  @screen sm {
+    padding: 62px 20px 62px 20px;
+    min-height: 420px;
+  }
+
+  @screen lg {
+    border-radius: 60px;
+    padding: 160px 100px;
+  }
+
+  @screen xl {
+    min-height: 730px;
+  }
+
+  &__wrapper {
+    max-width: 740px;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: -16%;
+    right: -16%;
+
+    @screen xl {
+      bottom: -15%;
+      right: -10%;
+    }
+
+    img {
+      width: 270px;
+
+      @screen sm {
+        width: 300px;
+      }
+
+      @screen lg {
+        width: 450px;
+      }
+
+      @screen xl {
+        width: 700px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: "CooperBlack";
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 32px;
+
+    margin-bottom: 8px;
+
+    @screen md {
+      font-size: 44px;
+    }
+
+    @screen lg {
+      font-size: 50px;
+    }
+
+    @screen xl {
+      font-size: 74px;
+    }
+
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    line-height: 130%;
+    font-size: 14px;
+    max-width: 144px;
+
+    margin-bottom: 22px;
+
+    @screen sm {
+      max-width: 100%;
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  }
+}

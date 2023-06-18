@@ -79,6 +79,8 @@ module.exports = {
 
         body: "#F9F6EE",
         local: "#EDE8DE",
+        yellow: "#F6BB33",
+        btnBanner: "#A2CAC8",
         text: "#111",
         brown: "#4a3d304d",
       },
