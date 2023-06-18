@@ -12,14 +12,18 @@
 
   --col-gap: theme(spacing.8);
 
-  --input-color: currentColor;
+  --input-color: #000;
   --input-border-color: currentColor;
   --input-border-active-color: theme(colors.primary.DEFAULT);
   --input-height: theme(spacing.13);
   --input-border-width: 2px;
-  --input-pt: theme(spacing.4);
-  --input-pb: theme(spacing.1);
-  --input-spacing: var(--input-pt) 0 var(--input-pb);
+  --input-pt: theme(spacing.6);
+  --input-pb: theme(spacing.6);
+  --input-pr: theme(spacing.15);
+  --input-pb: theme(spacing.6);
+  --input-pl: theme(spacing.8);
+  --input-spacing: var(--input-pt) var(--input-pr) var(--input-pb)
+    var(--input-pl);
   --input-font-size: theme(fontSize.base);
   --input-line-height: calc(
     var(--input-height) - var(--input-top) - var(--input-border-width)

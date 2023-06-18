@@ -1,10 +1,17 @@
 [
   {
     "id": "facebook",
-    "title": "Facebook"
+    "title": "Facebook",
+    "href": "https://www.facebook.com/"
+  },
+  {
+    "id": "whatsapp",
+    "title": "WhatsApp",
+    "href": "https://www.whatsapp.com/"
   },
   {
     "id": "instagram",
-    "title": "Instagram"
+    "title": "Instagram",
+    "href": "https://www.instagram.com/"
   }
 ]

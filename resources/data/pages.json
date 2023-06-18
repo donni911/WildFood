@@ -16,7 +16,21 @@
   {
     "html": "blog.html",
     "title": "Blog",
-    "slug": "about",
+    "slug": "blog",
+    "desktop": false,
+    "responsive": false
+  },
+  {
+    "html": "blog.html",
+    "title": "Shop",
+    "slug": "shop",
+    "desktop": false,
+    "responsive": false
+  },
+  {
+    "html": "blog.html",
+    "title": "Delivery",
+    "slug": "delivery",
     "desktop": false,
     "responsive": false
   }

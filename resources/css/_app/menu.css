@@ -23,16 +23,21 @@
     width: 100%;
     position: relative;
     display: flex;
-    padding-top: var(--header-height);
     transform: translateY(-20px);
     transition-property: transform;
+
+    padding-top: var(--header-height-sm);
+
+    @screen lg {
+      padding-top: var(--header-height);
+    }
 
     > .l-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding-top: theme(spacing.10);
-      padding-bottom: theme(spacing.15);
+      /* padding-bottom: theme(spacing.15); */
     }
   }
 
@@ -51,21 +56,6 @@
 
       &__link {
         padding: theme(spacing.2);
-      }
-    }
-  }
-
-  &__socials {
-    --icon-size: theme(spacing.6);
-    margin-top: auto;
-
-    .c-socials {
-      &__list {
-        margin: calc(theme(spacing.5) * -1);
-      }
-
-      &__link {
-        padding: theme(spacing.5);
       }
     }
   }

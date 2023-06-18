@@ -14,11 +14,11 @@
     "isDynamicEntry": true,
     "src": "../node_modules/@splidejs/splide/dist/js/splide.esm.js"
   },
-  "_virtual_svg-icons-register.0d86c2ad.js": {
-    "file": "js/chunks/virtual_svg-icons-register.0d86c2ad.js"
+  "_virtual_svg-icons-register.ca8dec66.js": {
+    "file": "js/chunks/virtual_svg-icons-register.ca8dec66.js"
   },
   "css/app.css": {
-    "file": "css/app.f8a1e487.css",
+    "file": "css/app.080799bf.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -38,7 +38,7 @@
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.9ddf16b0.css",
+    "file": "css/utilities.be680e14.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -143,9 +143,9 @@
     "src": "img/svg/mark.svg?url"
   },
   "js@pub/app.js": {
-    "file": "js/6.83afd183.js",
+    "file": "js/6.41e57a55.js",
     "imports": [
-      "_virtual_svg-icons-register.0d86c2ad.js"
+      "_virtual_svg-icons-register.ca8dec66.js"
     ],
     "isEntry": true,
     "src": "js@pub/app.js"
@@ -160,9 +160,9 @@
       "js@src/modules/tabs/index.js",
       "js@src/modules/tooltip/index.js"
     ],
-    "file": "js/5.e8ebe2ca.js",
+    "file": "js/5.bd4ffacc.js",
     "imports": [
-      "_virtual_svg-icons-register.0d86c2ad.js"
+      "_virtual_svg-icons-register.ca8dec66.js"
     ],
     "isEntry": true,
     "src": "js@src/app.js"

@@ -1,0 +1,32 @@
+.c-socials {
+  --icon-size: theme(spacing.11);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  margin-top: auto;
+
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+  &__mail {
+    display: flex;
+    color: theme(colors.brown);
+    font-size: theme(fontSize.sm);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
+.c-mail__btn {
+  &:hover {
+    border-color: theme(colors.primary.DEFAULT);
+
+    .f-icon {
+      transform: translateX(4px);
+      fill: theme(colors.primary.DEFAULT);
+    }
+  }
+}

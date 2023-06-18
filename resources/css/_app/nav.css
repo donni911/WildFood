@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     row-gap: theme(spacing.8);
     column-gap: var(--col-gap);
-    margin: calc(theme(spacing[2.5]) * -1) 0;
+    /* margin: calc(theme(spacing[2.5]) * -1) 0; */
     width: 100%;
   }
 

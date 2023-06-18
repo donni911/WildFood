@@ -1,0 +1,23 @@
+[
+  {
+    "html": "blog.html",
+    "title": "Privacy policy",
+    "slug": "privacy",
+    "desktop": false,
+    "responsive": false
+  },
+  {
+    "html": "blog.html",
+    "title": "Refund policy",
+    "slug": "refund",
+    "desktop": false,
+    "responsive": false
+  },
+  {
+    "html": "blog.html",
+    "title": "Terms of service",
+    "slug": "terms",
+    "desktop": false,
+    "responsive": false
+  }
+]

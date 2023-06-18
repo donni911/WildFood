@@ -26,10 +26,10 @@
 @import "_form/datepicker.css";
 
 /* Parts */
-@import "_app/ideil.css";
 @import "_app/logo.css";
 @import "_app/nav.css";
 @import "_app/actions.css";
+@import "_app/socials.css";
 @import "_app/header.css";
 @import "_app/menu.css";
 @import "_app/footer.css";

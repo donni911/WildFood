@@ -23,7 +23,11 @@
   &__count {
     position: absolute;
     top: 8px;
-    right: 8px;
+    right: 2px;
+
+    @screen lg {
+      right: 8px;
+    }
 
     color: #fff;
     font-size: 10px;

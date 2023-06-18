@@ -1,12 +1,16 @@
-<nav class="c-nav {{ class }}">
+<nav
+    class="c-nav {{ class }}">
     <ul class="c-nav__list">
-        {% for item in navSm %}
-            <li class="c-nav__item">
-                <div class='c-nav__icon'>
-                    {% include "./icon.twig" with { id: item.icon } %}
-                </div>
-                <a href="{{ item.link }}" class="c-nav__link">{{ item.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+            {% for item in navSm %}
+                <li class="c-nav__item">
+                    <div class='c-nav__icon'>
+                        {% include "./icon.twig" with { id: item.icon } %}
+                    </div>
+                    <a href="{{ item.link }}" class="c-nav__link">{{ item.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    <div class='pt-8 pb-15'>
+        {% include "./socials.twig" with {class:'c-menu__socials' }%}
+    </div>
 </nav>

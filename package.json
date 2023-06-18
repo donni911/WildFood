@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "vite build",
-    "dev": "vite"
+    "dev": "vite",
+    "deploy": "vite build && firebase deploy"
   },
   "devDependencies": {
     "@floating-ui/dom": "^1.2.9",

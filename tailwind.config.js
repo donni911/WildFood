@@ -80,6 +80,7 @@ module.exports = {
         body: "#F9F6EE",
         local: "#EDE8DE",
         text: "#111",
+        brown: "#4a3d304d",
       },
       maxWidth: {
         xs: screens.xs.min,

@@ -1,25 +1,39 @@
 <footer class="c-footer">
     <div class="l-container c-footer__inner">
-        <div class="c-footer__top">
-            {% include "./logo.twig" with {
+        <div class="c-footer__wrapper">
+            <div class="c-footer__section">
+                {% include "./logo.twig" with {
                 class: 'c-footer__logo',
             } %}
+                <p class='c-footer__description'>Sign up for our email newsletters and stay informed about our latest product launches, exclusive promotions and other valuable insights.</p>
+                <div class="f-group">
+                    <input type="email" class="f-input" placeholder='Email'>
+                    <button class='c-mail__btn f-icon__wrap'>
+                        {% include "./icon.twig" with {
+                                id:'arrow-sm',
+                                classIcon: 'f-icon',
+                            } %}
+                    </button>
+                </div>
+                {% include "./socials.twig" with {class:'c-footer__socials'} %}
+            </div>
+            <div class="c-footer__section grid gap-4 sm:grid-cols-2 pt-4">
+                <ul class="flex flex-col gap-5">
+                    {% for page in pages %}
+                        <li>
+                            <a href="{{ page.html }}" class='text-[30px] leading-5'>{{ page.title }}</a>
+                        </li>
+                    {% endfor %}
 
-            <dl class="c-footer__contacts">
-                <dt class="sr-only">Email</dt>
-                <dd class="c-footer__contacts-lg">
-                    <a href="mailto:welcome@ideil.com">welcome@ideil.com</a>
-                </dd>
-                <dt class="sr-only">Телефон</dt>
-                <dd>
-                    <a href="tel:+380 332 28 50 43">+380 332 28 50 43</a>
-                </dd>
-            </dl>
-        </div>
-
-        <div class="c-footer__bottom">
-            <div class="c-footer__copy">© {{ "now"|date("Y") }} <span class="whitespace-nowrap md:sr-only lg:not-sr-only">Всі права захищені</span></div>
-            {% include "./ideil.twig" %}
+                </ul>
+                <ul class='flex flex-col gap-5'>
+                    {% for page in pagesAdditional %}
+                        <li>
+                            <a href="{{ page.html }}" class='text-[30px]'>{{ page.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
 </footer>
