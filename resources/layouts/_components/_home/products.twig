@@ -1,0 +1,59 @@
+{% set items = [
+    {
+        image:"../img/corm.png",
+        pieces:'14pcs * 3,5oz',
+        title:'Kittens',
+        price:'43.10',
+        url:'/'
+    },
+    {
+        image:"../img/corm.png",
+        pieces:'14pcs * 4,2oz',
+        title:'Dogs',
+        price:'46.28',
+        url:'/'
+    },
+    {
+        image:"../img/corm.png",
+        pieces:'14pcs * 2,8oz',
+        title:'Cats',
+        price:'43.10',
+        url:'/'
+    }
+] %}
+<div class="l-container">
+    <section class="c-products">
+        <div class="c-products__side">
+            <h2 class='c-products__title'>Our products</h2>
+            <p class='c-products__description'>Give your favorite person the food they deserve.</p>
+            <a href='/' class="f-btn f-btn--primary-ghost f-btn--icon">
+                View all
+                <div class='f-btn__icon'>
+                    {% include "../../_app/icon.twig" with { id: 'arrow' } %}
+                </div>
+            </a>
+        </div>
+        <div class="c-products__products">
+            <ul class='c-products__list'>
+                {% for item in items %}
+                    <li class='c-products__item'>
+                        <a href='{{ item.url }}' class="c-product">
+                            <div class="c-product__image">
+                                <img src="{{ item.image }}" alt="">
+                            </div>
+                            <div class="c-product__wrap">
+                                <span class="c-product__pieces">{{item.pieces}}</span>
+                                <h3 class='c-product__title'>Starter KIT for
+                                    <span class='c-product__title__head'>{{item.title}}</span>
+                                </h3>
+                                <h4 class='c-product__price'>
+                                    ${{ item.price }}
+                                </h4>
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+</div>

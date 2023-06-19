@@ -4,11 +4,6 @@
     "isDynamicEntry": true,
     "src": "../node_modules/@googlemaps/js-api-loader/dist/index.esm.js"
   },
-  "../node_modules/@splidejs/splide-extension-intersection/dist/js/splide-extension-intersection.esm.js": {
-    "file": "js/chunks/splide-extension-intersection.esm.796d9111.js",
-    "isDynamicEntry": true,
-    "src": "../node_modules/@splidejs/splide-extension-intersection/dist/js/splide-extension-intersection.esm.js"
-  },
   "../node_modules/@splidejs/splide/dist/js/splide.esm.js": {
     "file": "js/chunks/splide.esm.4df1a7b1.js",
     "isDynamicEntry": true,
@@ -18,7 +13,7 @@
     "file": "js/chunks/virtual_svg-icons-register.ca8dec66.js"
   },
   "css/app.css": {
-    "file": "css/app.c6c05a0e.css",
+    "file": "css/app.613a31e9.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -28,12 +23,12 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.abf0866d.css",
+    "file": "css/home.19549e97.css",
     "isEntry": true,
     "src": "css/home.css"
   },
   "css/test.css": {
-    "file": "css/test.cae8e648.css",
+    "file": "css/test.d020ee3c.css",
     "isEntry": true,
     "src": "css/test.css"
   },
@@ -85,18 +80,6 @@
   "img/corm.png": {
     "file": "img/corm.77744eec.png",
     "src": "img/corm.png"
-  },
-  "img/demo/mark.png": {
-    "file": "img/mark.410e3449.png",
-    "src": "img/demo/mark.png"
-  },
-  "img/demo/test_1920x980.jpg": {
-    "file": "img/test_1920x980.d493489b.jpg",
-    "src": "img/demo/test_1920x980.jpg"
-  },
-  "img/demo/test_1920x980@2x.jpg": {
-    "file": "img/test_1920x980@2x.941e4a24.jpg",
-    "src": "img/demo/test_1920x980@2x.jpg"
   },
   "img/dog&cat.png": {
     "file": "img/dog_cat.fdaae146.png",
@@ -160,7 +143,7 @@
       "js@src/modules/tabs/index.js",
       "js@src/modules/tooltip/index.js"
     ],
-    "file": "js/5.bd4ffacc.js",
+    "file": "js/5.d80f89b6.js",
     "imports": [
       "_virtual_svg-icons-register.ca8dec66.js"
     ],
@@ -169,10 +152,9 @@
   },
   "js@src/modules/carousel/index.js": {
     "dynamicImports": [
-      "../node_modules/@splidejs/splide/dist/js/splide.esm.js",
-      "../node_modules/@splidejs/splide-extension-intersection/dist/js/splide-extension-intersection.esm.js"
+      "../node_modules/@splidejs/splide/dist/js/splide.esm.js"
     ],
-    "file": "js/chunks/index.37f0e9b0.js",
+    "file": "js/chunks/index.94fc6631.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/carousel/index.js"
   },
@@ -185,7 +167,7 @@
     "src": "js@src/modules/collapse/index.js"
   },
   "js@src/modules/gallery/index.js": {
-    "file": "js/chunks/index.4e547c74.js",
+    "file": "js/chunks/index.4ed993c7.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/gallery/index.js"
   },

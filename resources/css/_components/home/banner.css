@@ -1,0 +1,102 @@
+.c-banner {
+  position: relative;
+
+  background: theme(colors.local);
+  padding: 62px 20px 150px 20px;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  @screen sm {
+    padding: 62px 20px 62px 20px;
+    min-height: 420px;
+  }
+
+  @screen lg {
+    border-radius: 60px;
+    padding: 160px 100px;
+  }
+
+  @screen xl {
+    min-height: 730px;
+  }
+
+  &__wrapper {
+    max-width: 740px;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: -16%;
+    right: -16%;
+    width: 270px;
+
+    @screen xs {
+      width: 350px;
+    }
+
+    @screen md {
+      width: 400px;
+    }
+
+    @screen lg {
+      width: 500px;
+      right: -10%;
+    }
+
+    @screen xl {
+      width: 700px;
+      right: -20%;
+    }
+
+    @screen 2xl {
+      bottom: -20%;
+      right: -10%;
+    }
+  }
+
+  &__title {
+    font-family: "CooperBlack";
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 32px;
+
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 8px;
+
+    @screen sm {
+      font-size: 38px;
+    }
+
+    @screen lg {
+      font-size: 50px;
+    }
+
+    @screen xl {
+      font-size: 74px;
+    }
+
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    line-height: 130%;
+    font-size: 14px;
+    max-width: 144px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 22px;
+
+    @screen md {
+      max-width: 100%;
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+  }
+}
