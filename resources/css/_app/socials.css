@@ -21,12 +21,22 @@
 }
 
 .c-mail__btn {
-  &:hover {
-    border-color: theme(colors.primary.DEFAULT);
+  .i-icon {
+    width: 15px;
+    transition: theme(transitionDuration.base)
+      theme(transitionTimingFunction.base) transform;
 
-    .f-icon {
-      transform: translateX(4px);
-      fill: theme(colors.primary.DEFAULT);
+    will-change: transform;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      border-color: theme(colors.primary.DEFAULT);
+
+      .i-icon {
+        transform: translateX(4px);
+        fill: theme(colors.primary.DEFAULT);
+      }
     }
   }
 }

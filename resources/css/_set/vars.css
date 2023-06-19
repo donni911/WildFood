@@ -10,7 +10,7 @@
 
   --box-space: theme(spacing.5);
 
-  --col-gap: theme(spacing.8);
+  --col-gap: theme(spacing.5);
 
   --input-color: #000;
   --input-border-color: currentColor;

@@ -6,9 +6,8 @@
 {# {% set htmlClass = 'is-nospace' %} #}
 
 {% block content %}
-    <div class="l-container">
-        <div class="c-home">
-            {% include "./_components/_home/banner.twig" %}
-        </div>
+    <div class="c-home">
+        {% include "./_components/_home/banner.twig" %}
+        {% include "./_components/carousel.twig" %}
     </div>
 {% endblock %}

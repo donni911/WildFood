@@ -8,12 +8,7 @@
                 <p class='c-footer__description'>Sign up for our email newsletters and stay informed about our latest product launches, exclusive promotions and other valuable insights.</p>
                 <div class="f-group">
                     <input type="email" class="f-input" placeholder='Email'>
-                    <button class='c-mail__btn f-icon__wrap'>
-                        {% include "./icon.twig" with {
-                                id:'arrow-sm',
-                                classIcon: 'f-icon',
-                            } %}
-                    </button>
+                    {% include "../_components/button-round.twig" with { class:'c-mail__btn', id: 'arrow-sm' } %}
                 </div>
                 {% include "./socials.twig" with {class:'c-footer__socials'} %}
             </div>

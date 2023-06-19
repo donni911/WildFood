@@ -18,7 +18,7 @@
     "file": "js/chunks/virtual_svg-icons-register.ca8dec66.js"
   },
   "css/app.css": {
-    "file": "css/app.080799bf.css",
+    "file": "css/app.c6c05a0e.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -28,7 +28,7 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.e3b0c442.css",
+    "file": "css/home.abf0866d.css",
     "isEntry": true,
     "src": "css/home.css"
   },
@@ -38,7 +38,7 @@
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.be680e14.css",
+    "file": "css/utilities.2fa1163f.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -67,7 +67,7 @@
     "src": "fonts/Manrope-Regular.woff"
   },
   "img/banner-image.png": {
-    "file": "img/banner-image.2744fa40.png",
+    "file": "img/banner-image.4a79d99f.png",
     "src": "img/banner-image.png"
   },
   "img/cat-dog-big.png": {

@@ -1,0 +1,53 @@
+{% set items = [
+    {
+        icon:'carousel-icon-1',
+        title:'Wheat gluten, dairy, GMO and soy free'
+    },
+    {
+        icon:'carousel-icon-2',
+        title:'No additives, natural flavor only'
+    },
+    {
+        icon:'carousel-icon-3',
+        title:'No artificial preservatives added'
+    },
+    {
+        icon:'carousel-icon-1',
+        title:'Wheat gluten, dairy, GMO and soy free'
+    },
+    {
+        icon:'carousel-icon-2',
+        title:'No additives, natural flavor only'
+    },
+    {
+        icon:'carousel-icon-3',
+        title:'No artificial preservatives added'
+    },
+] %}
+
+<section class='c-carousel c-carousel--3  no-pagination'>
+    <div class="l-container">
+        <div class="c-carousel__inner splide">
+            <div class="splide__arrows">
+                {% include "../_components/button-round.twig" with {class: 'splide__arrow splide__arrow--prev f-btn--round-primary', id:'arrow'} %}
+                {% include "../_components/button-round.twig" with {class: 'splide__arrow splide__arrow--next f-btn--round-primary', id:'arrow'} %}
+            </div>
+            <div class="splide__track">
+                <ul class="splide__list">
+                    {% for item in items %}
+                        <li class="splide__slide">
+                            <div class="c-carousel__slide">
+                                <div class="c-carousel__icon">
+                                    {% include "../_app/icon.twig" with { id:item.icon } %}
+                                </div>
+                                <h4 class='c-carousel__title'>
+                                    {{ item.title }}
+                                </h4>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class='splide__pagination'></div>
+        </div>
+    </section>

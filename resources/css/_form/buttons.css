@@ -46,11 +46,13 @@
     background-color: theme(colors.primary.DEFAULT);
     color: theme(colors.white);
 
-    &:hover,
-    &:focus {
-      opacity: 1;
-      background-color: color(theme(colors.primary.DEFAULT) blackness(+10%));
-      color: theme(colors.white);
+    @media (any-hover: hover) {
+      &:hover,
+      &:focus {
+        opacity: 1;
+        background-color: color(theme(colors.primary.DEFAULT) blackness(+10%));
+        color: theme(colors.white);
+      }
     }
   }
 
@@ -91,5 +93,30 @@
   &--disabled {
     opacity: 0.5;
     pointer-events: none;
+  }
+}
+
+.f-btn--round {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  width: 47px;
+  height: 47px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-primary {
+    border: theme(colors.primary.DEFAULT) solid 2px;
+
+    .f-icon .i-icon {
+      width: 26px;
+    }
+  }
+
+  @media (any-hover: hover) {
   }
 }
