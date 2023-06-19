@@ -35,26 +35,29 @@
     position: absolute;
     bottom: -16%;
     right: -16%;
+    width: 270px;
 
-    @screen xl {
-      bottom: -15%;
+    @screen sm {
+      width: 300px;
+    }
+
+    @screen md {
+      width: 400px;
+    }
+
+    @screen lg {
+      width: 500px;
       right: -10%;
     }
 
-    img {
-      width: 270px;
+    @screen xl {
+      width: 700px;
+      right: -20%;
+    }
 
-      @screen sm {
-        width: 300px;
-      }
-
-      @screen lg {
-        width: 450px;
-      }
-
-      @screen xl {
-        width: 700px;
-      }
+    @screen 2xl {
+      bottom: -20%;
+      right: -10%;
     }
   }
 
@@ -66,8 +69,8 @@
 
     margin-bottom: 8px;
 
-    @screen md {
-      font-size: 44px;
+    @screen sm {
+      font-size: 38px;
     }
 
     @screen lg {
@@ -86,13 +89,14 @@
     line-height: 130%;
     font-size: 14px;
     max-width: 144px;
-
+    position: relative;
+    z-index: 1;
     margin-bottom: 22px;
 
-    @screen sm {
+    @screen md {
       max-width: 100%;
-      font-size: 24px;
       margin-bottom: 40px;
+      font-size: 24px;
     }
   }
 }
