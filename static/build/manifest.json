@@ -13,7 +13,7 @@
     "file": "js/chunks/virtual_svg-icons-register.ca8dec66.js"
   },
   "css/app.css": {
-    "file": "css/app.613a31e9.css",
+    "file": "css/app.1ecdd783.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -23,7 +23,7 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.19549e97.css",
+    "file": "css/home.ee33760e.css",
     "isEntry": true,
     "src": "css/home.css"
   },
@@ -78,7 +78,7 @@
     "src": "img/cat-quiz.png"
   },
   "img/corm.png": {
-    "file": "img/corm.77744eec.png",
+    "file": "img/corm.43fb487f.png",
     "src": "img/corm.png"
   },
   "img/dog&cat.png": {
