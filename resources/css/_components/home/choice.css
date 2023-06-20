@@ -1,0 +1,18 @@
+.c-choice__quiz {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  border-radius: 32px;
+  overflow: hidden;
+
+  .o-box {
+    &:before {
+      padding-bottom: 62.16%;
+    }
+
+    &::after {
+      background: #fff;
+    }
+  }
+}

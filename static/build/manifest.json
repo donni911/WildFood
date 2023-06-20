@@ -13,7 +13,7 @@
     "file": "js/chunks/virtual_svg-icons-register.ca8dec66.js"
   },
   "css/app.css": {
-    "file": "css/app.1ecdd783.css",
+    "file": "css/app.bc649599.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -23,7 +23,7 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.ee33760e.css",
+    "file": "css/home.1c73b1fc.css",
     "isEntry": true,
     "src": "css/home.css"
   },
@@ -33,25 +33,49 @@
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.2fa1163f.css",
+    "file": "css/utilities.69a23ab7.css",
     "isEntry": true,
     "src": "css/utilities.css"
+  },
+  "fonts/Cooper-Black-Regular.ttf": {
+    "file": "fonts/Cooper-Black-Regular.14c2eb57.ttf",
+    "src": "fonts/Cooper-Black-Regular.ttf"
   },
   "fonts/Cooper-Black-Regular.woff": {
     "file": "fonts/Cooper-Black-Regular.cd1c76e2.woff",
     "src": "fonts/Cooper-Black-Regular.woff"
   },
+  "fonts/Gellix-Bold.ttf": {
+    "file": "fonts/Gellix-Bold.0672fa03.ttf",
+    "src": "fonts/Gellix-Bold.ttf"
+  },
   "fonts/Gellix-Bold.woff2": {
     "file": "fonts/Gellix-Bold.ff27c7e2.woff2",
     "src": "fonts/Gellix-Bold.woff2"
+  },
+  "fonts/Gellix-ExtraBold.ttf": {
+    "file": "fonts/Gellix-ExtraBold.e3ab82fd.ttf",
+    "src": "fonts/Gellix-ExtraBold.ttf"
+  },
+  "fonts/Gellix-Medium.ttf": {
+    "file": "fonts/Gellix-Medium.8b77572e.ttf",
+    "src": "fonts/Gellix-Medium.ttf"
   },
   "fonts/Gellix-Medium.woff2": {
     "file": "fonts/Gellix-Medium.63d2a94a.woff2",
     "src": "fonts/Gellix-Medium.woff2"
   },
+  "fonts/Gellix-Regular.ttf": {
+    "file": "fonts/Gellix-Regular.2dac824c.ttf",
+    "src": "fonts/Gellix-Regular.ttf"
+  },
   "fonts/Gellix-Regular.woff2": {
     "file": "fonts/Gellix-Regular.cbdc2520.woff2",
     "src": "fonts/Gellix-Regular.woff2"
+  },
+  "fonts/Gellix-SemiBold.ttf": {
+    "file": "fonts/Gellix-SemiBold.ea7e0646.ttf",
+    "src": "fonts/Gellix-SemiBold.ttf"
   },
   "fonts/Gellix-SemiBold.woff2": {
     "file": "fonts/Gellix-SemiBold.e051981d.woff2",

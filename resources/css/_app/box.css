@@ -1,0 +1,20 @@
+.o-box {
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 79.3%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background-color: theme(colors.local);
+    z-index: -1;
+  }
+}

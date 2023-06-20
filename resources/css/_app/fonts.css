@@ -13,36 +13,45 @@
   font-family: "CooperBlack";
   font-display: swap;
   src: local(CooperBlack),
-    url("../../fonts/Cooper-Black-Regular.woff") format("woff");
+    url("../../fonts/Cooper-Black-Regular.woff") format("woff"),
+    url("../../fonts/Cooper-Black-Regular.ttf") format("ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Gellix";
   font-display: swap;
-  src: local(Gellix), url("../../fonts/Gellix-Regular.woff2") format("woff2");
+  src: local(GellixRegular),
+    url("../../fonts/Gellix-Regular.woff2") format("woff2"),
+    url("../../fonts/Gellix-Regular.ttf") format("ttf");
   font-weight: 400;
 }
 @font-face {
   font-family: "Gellix";
   font-display: swap;
-  src: local(Gellix), url("../../fonts/Gellix-Medium.woff2") format("woff2");
+  src: local(GellixMedium),
+    url("../../fonts/Gellix-Medium.woff2") format("woff2"),
+    url("../../fonts/Gellix-Medium.ttf") format("ttf");
   font-weight: 500;
 }
 @font-face {
   font-family: "Gellix";
   font-display: swap;
-  src: local(Gellix), url("../../fonts/Gellix-SemiBold.woff2") format("woff2");
+  src: local(GellixSemiBold),
+    url("../../fonts/Gellix-SemiBold.woff2") format("woff2"),
+    url("../../fonts/Gellix-SemiBold.ttf") format("ttf");
   font-weight: 600;
 }
 @font-face {
   font-family: "Gellix";
   font-display: swap;
-  src: local(Gellix), url("../../fonts/Gellix-Bold.woff2") format("woff2");
+  src: local(GellixBold), url("../../fonts/Gellix-Bold.woff2") format("woff2"),
+    url("../../fonts/Gellix-Bold.ttf") format("ttf");
   font-weight: 700;
 }
 @font-face {
   font-family: "Manrope";
   font-display: swap;
-  src: local(Gellix), url("../../fonts/Manrope-Regular.woff") format("woff");
+  src: local(GellixRegular),
+    url("../../fonts/Manrope-Regular.woff") format("woff");
   font-weight: 400;
 }
