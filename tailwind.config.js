@@ -57,6 +57,9 @@ module.exports = {
       "28px": "28px", // 28px
     },
     extend: {
+      borderRadius: {
+        "image": "32px",
+      },
       colors: {
         gray: {
           DEFAULT: "#E3E3E3",
