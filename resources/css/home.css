@@ -1,7 +1,8 @@
 /* Components */
-/* @import '_components/tabs.css'; */
 
+@import "_components/tabs.css";
 @import "_components/home/banner.css";
 @import "_components/home/products.css";
 @import "_components/home/quality.css";
+@import "_components/home/honest.css";
 @import "_components/home/choice.css";

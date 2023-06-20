@@ -9,11 +9,22 @@
     "isDynamicEntry": true,
     "src": "../node_modules/@splidejs/splide/dist/js/splide.esm.js"
   },
+  "../node_modules/vue/dist/vue.runtime.esm-bundler.js": {
+    "file": "js/chunks/vue.runtime.esm-bundler.9d3395d8.js",
+    "imports": [
+      "_runtime-core.esm-bundler.f225f592.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
+  },
+  "_runtime-core.esm-bundler.f225f592.js": {
+    "file": "js/chunks/runtime-core.esm-bundler.f225f592.js"
+  },
   "_virtual_svg-icons-register.ca8dec66.js": {
     "file": "js/chunks/virtual_svg-icons-register.ca8dec66.js"
   },
   "css/app.css": {
-    "file": "css/app.bc649599.css",
+    "file": "css/app.c4be3779.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -23,7 +34,7 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.1c73b1fc.css",
+    "file": "css/home.39ca551d.css",
     "isEntry": true,
     "src": "css/home.css"
   },
@@ -33,7 +44,7 @@
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.69a23ab7.css",
+    "file": "css/utilities.e0d7e344.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -164,10 +175,11 @@
       "js@src/modules/gallery/index.js",
       "js@src/modules/header/index.js",
       "js@src/modules/map/index.js",
+      "js@src/modules/quiz/index.js",
       "js@src/modules/tabs/index.js",
       "js@src/modules/tooltip/index.js"
     ],
-    "file": "js/5.d80f89b6.js",
+    "file": "js/5.0ded6d87.js",
     "imports": [
       "_virtual_svg-icons-register.ca8dec66.js"
     ],
@@ -208,6 +220,23 @@
     "file": "js/chunks/index.f754b9c4.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/map/index.js"
+  },
+  "js@src/modules/quiz/components/QuizComponent.vue": {
+    "file": "js/chunks/QuizComponent.69453fee.js",
+    "imports": [
+      "_runtime-core.esm-bundler.f225f592.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "js@src/modules/quiz/components/QuizComponent.vue"
+  },
+  "js@src/modules/quiz/index.js": {
+    "dynamicImports": [
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "js@src/modules/quiz/components/QuizComponent.vue"
+    ],
+    "file": "js/chunks/index.2bfa6fb3.js",
+    "isDynamicEntry": true,
+    "src": "js@src/modules/quiz/index.js"
   },
   "js@src/modules/tabs/index.js": {
     "dynamicImports": [

@@ -1,0 +1,77 @@
+{% set tabs = [
+    {
+        title: 'Dogs',
+        id: 'tabs1',
+        pane:{
+            image:'../img/dog-cat.png',
+            pros:[
+                {
+                    title:'50%',
+                    subtitle:'meat'
+                },
+                {
+                    title:'17%',
+                    subtitle:'bones'
+                },
+                {
+                    title:'13%',
+                    subtitle:'kidneys'
+                },
+                {
+                    title:'4%',
+                    subtitle:'liver'
+                },
+                {
+                    title:'16%',
+                    subtitle:'vegetables'
+                },
+                {
+                    title:'',
+                    subtitle:''
+                },
+            ]
+        }
+    },
+    {
+        title: 'Cats',
+        id: 'tabs2',
+    },
+] %}
+
+<div class="l-container">
+    <section class="c-honest flex lg-max:flex-col gap-[115px]" data-tabs-parent>
+        <div class="xl:max-w-[500px] flex-col flex">
+            <h4 class='c-title c-title--h4 mb-5 lg:mb-8'>Honest Ingredient List</h4>
+            {% include "../../_components/tabs.twig" with { links: tabs, class: 'c-honest__tabs mb-5 lg:mb-18 order-3' } %}
+            <button class="f-btn f-btn--primary-ghost w-fit mb-9">Learn More</button>
+        </div>
+        <div class="xl:max-w-[847px] w-full">
+            {% for item in tabs %}
+                <div class="c-tabs__pane h-full {{ loop.first ? 'is-shown' }}" id="{{ item.id }}" data-tabs-pane>
+                    <div class="c-honest__pane  h-full flex gap-5">
+                        <div style='background-image: url({{ item.pane.image }})' class="c-honest__box w-1/2 overflow-hidden rounded-image">
+                            <div class="c-honest__box__wrap">
+                                {% for item in item.pane.pros %}
+                                    <div class='c-honest__box__unit {{  item.title ? ' ': ' c-honest__box__unit--empty'  }}'>
+                                        <h5 class='c-honest__box__title'>
+                                            {{ item.title }}
+                                        </h5>
+                                        <span class='c-honest__box__subtitle'>{{ item.subtitle }}</span>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="w-1/2">2</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+
+{# <div class="c-honest__pane w-full h-full">
+                        <div class="c-honest__pane w-1/2">
+                            dsa
+                        </div>
+                        <div class="c-honest__pane w-1/2">dasda</div>
+                    </div> #}

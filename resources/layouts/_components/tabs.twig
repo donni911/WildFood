@@ -1,23 +1,20 @@
-<div class="c-tabs u-scroll--shadow {{ class }}">
-    <div class="c-tabs__scroll u-scroll">
-        <ul class="c-tabs__list">
-            {% set links = links ?? ['Таб', 'Таб', 'Таб', 'Таб'] %}
+<div class="c-tabs {{ class }}">
+    <ul class="c-tabs__list">
+        {% set links = links ?? ['Таб', 'Таб', 'Таб', 'Таб'] %}
 
-            {% for item in links %}
-                <li class="c-tabs__item">
-                    <a
-                        href="{{ item.link ?? ('#' ~ item.id) }}"
-                        class="c-tabs__link {{ loop.first and not noActive ? 'is-active' }} {{ item.class }}"
-                        {{ item.id ? 'data-tabs-target' }}
-                        {{ item.attributes }}
-                    >
-                        {{ item.title ?? item }}
-                        {% if item.count or withCount %}
-                            <span class="c-tabs__count">{{ item.count ?? random(1..30) }}</span>
-                        {% endif %}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+        {% for item in links %}
+            <li class="c-tabs__item">
+                <a href="{{ item.link ?? ('#' ~ item.id) }}" class="c-tabs__link {{ loop.first and not noActive ? 'is-active' }} {{ item.class }}" {{ item.id ? 'data-tabs-target' }} {{ item.attributes }}>
+                    {{ item.title ?? item }}
+                    {% if item.count or withCount %}
+                        <span class="c-tabs__count">{{ item.count ?? random(1..30) }}</span>
+                    {% endif %}
+                </a>
+                <div class='c-tabs__arrow'>
+                    {% include "../_app/icon.twig" with { id: 'arrow-lg' } %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
 </div>

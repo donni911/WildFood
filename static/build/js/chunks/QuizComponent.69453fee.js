@@ -1,0 +1,2 @@
+import{q as r,Q as _,r as c}from"./runtime-core.esm-bundler.f225f592.js";const a=(e,t)=>{const o=e.__vccOpts||e;for(const[s,n]of t)o[s]=n;return o},i={},l={class:"c-choice__quiz"},d=c("div",{class:"o-box flex items-center justify-center z-10"},[c("h2",{class:"text-xl font-bold"},"Quiz Vue")],-1),f=[d];function u(e,t){return _(),r("div",l,f)}const h=a(i,[["render",u]]);export{h as default};
+//# sourceMappingURL=QuizComponent.69453fee.js.map

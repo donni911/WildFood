@@ -1,0 +1,57 @@
+.c-honest {
+  padding: 40px 0px;
+
+  @screen lg {
+    padding: 80px 0px;
+  }
+
+  &__box {
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0px;
+      background: linear-gradient(45deg, #4b3e31, #4b3e3100), #ede8de;
+      opacity: 0.8;
+
+      z-index: 10;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 130%;
+      color: #fff;
+    }
+
+    &__subtitle {
+      color: #c3bbab;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    &__wrap {
+      position: relative;
+      display: grid;
+
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 80px;
+      z-index: 20;
+
+      height: 100%;
+      padding: 32px;
+    }
+
+    &__unit {
+      &--empty {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+      }
+    }
+  }
+}
