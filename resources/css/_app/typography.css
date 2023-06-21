@@ -47,14 +47,12 @@
   }
 
   &--h5 {
-    font-size: theme(fontSize.4);
+    font-size: 28px;
 
     @screen lg {
-      font-size: theme(fontSize.5);
-    }
-
-    @screen xl {
-      font-size: theme(fontSize.6);
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 130%;
     }
   }
 
@@ -69,7 +67,6 @@
 
 .c-description {
   color: theme(colors.primary.DEFAULT);
-  margin-bottom: 10px;
   line-height: 130%;
   font-weight: 500;
 

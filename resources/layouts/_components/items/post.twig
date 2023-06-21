@@ -1,0 +1,15 @@
+<article class="c-blog__post {{ class }}">
+    <picture class="o-box c-blog__post__image">
+        <img src="{{ img }}" alt="">
+    </picture>
+    <div class='px-4 py-5 xl:p-[32px] flex flex-col gap-5 c-blog__post__main'>
+        <h5 class='c-title c-title--h5'>{{title}}</h5>
+        <p class='c-description text-sm font-medium u-text-long'>{{text}}</p>
+        <a href="/" class="c-blog__link f-btn max-w-max mt-auto f-btn--icon f-btn--pure w-fit">
+            Read More
+            <div class='f-btn__icon'>
+                {% include "../../_app/icon.twig" with { id: 'arrow-sm' } %}
+            </div>
+        </a>
+    </div>
+</article>

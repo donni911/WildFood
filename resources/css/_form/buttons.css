@@ -61,9 +61,10 @@
     border: 2px solid theme(colors.primary.DEFAULT);
     color: theme(colors.primary.DEFAULT);
     font-size: 24px;
+    font-weight: 500;
 
     @screen md-max {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 16px;
     }
 
@@ -94,6 +95,10 @@
         width: 30px;
       }
     }
+
+    &--up {
+      margin-left: 0;
+    }
   }
 
   &--rounded {
@@ -101,9 +106,11 @@
   }
 
   &--link {
-    &:hover {
-      text-decoration: none;
-      color: theme(colors.primary.DEFAULT);
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: none;
+        color: theme(colors.primary.DEFAULT);
+      }
     }
   }
 
@@ -135,9 +142,30 @@
     pointer-events: none;
   }
 
-  &:hover {
+  @media (any-hover: hover) {
+    &:hover {
+      .f-btn__icon {
+        transform: translateX(5px);
+
+        &--up {
+          transform: translate(5px, -5px);
+        }
+      }
+    }
+  }
+
+  &--pure {
+    @screen lg {
+      margin: -12px -30px;
+    }
+
+    margin: -10px -26px -13px -26px;
+    color: theme(colors.text);
+    font-weight: 600;
+    font-size: 20px;
+
     .f-btn__icon {
-      transform: translateX(5px);
+      padding-top: 6px;
     }
   }
 }

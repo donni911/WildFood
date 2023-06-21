@@ -1,0 +1,27 @@
+<div class="l-container">
+    <section class="c-blog">
+        <div class='flex flex-col justify-between sm:items-center sm:flex-row gap-4 lg:gap-5 mb-10 lg:mb-12'>
+            <h2 class='c-title c-title--h2'>Blog</h2>
+            <a href='/' class="f-btn f-btn--primary-ghost f-btn--icon sm-max:w-fit h-fit">
+                <div class='f-btn__icon f-btn__icon--up'>
+                    {% include "../../_app/icon.twig" with { classIcon: '-rotate-45', id: 'arrow' } %}
+                </div>
+                More News
+            </a>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-4">
+            {% include "../items/post.twig" with {class:'col-span-1 c-blog__post--lg', img:'../img/handshakedog.png', 
+            title: 'How to help your pet transition to Biologically Appropriate Raw Food', text:'Use flat plates or shallow dishes for cats (as many cats purposely You can add some pull food onto the floor). Dont rush the transition. Let your pet get used to the new type of meat and dont give all types of meat at once' }%}
+            <div class="col-span-1 grid grid-rows-2 gap-4">
+                {% include "../items/post.twig" with {img:'../img/cat-dog-eat.png' , class:'row-span-1',
+                title:'Daily Feeding Guidelines',
+                text:'Feed according to the age, size and activity of your dog. Feed defrosted at room temperature and refrigerate unused rest. You can add some You can add some',
+                } %}
+                {% include "../items/post.twig" with {img:'../img/dogs-eat.png', class:'row-span-1',
+                title:'Daily Feeding Guidelines',
+                text:'Feed according to the age, size and activity of your dog. Feed defrosted at room temperature and refrigerate unused rest. You can add some You can add some',
+                } %}
+            </div>
+        </div>
+    </section>
+</div>
