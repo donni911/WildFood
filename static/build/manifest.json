@@ -24,7 +24,7 @@
     "file": "js/chunks/virtual_svg-icons-register.767c5017.js"
   },
   "css/app.css": {
-    "file": "css/app.97db5717.css",
+    "file": "css/app.db4c1269.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -34,17 +34,17 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.8e36586c.css",
+    "file": "css/home.0ba81313.css",
     "isEntry": true,
     "src": "css/home.css"
   },
   "css/test.css": {
-    "file": "css/test.226927e2.css",
+    "file": "css/test.d170cb1f.css",
     "isEntry": true,
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.10a391e7.css",
+    "file": "css/utilities.c13b6b25.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -116,9 +116,13 @@
     "file": "img/corm.43fb487f.png",
     "src": "img/corm.png"
   },
-  "img/dog-big-2.png": {
-    "file": "img/dog-big-2.be0c19df.png",
-    "src": "img/dog-big-2.png"
+  "img/dog-big-2.jpg": {
+    "file": "img/dog-big-2.6db61461.jpg",
+    "src": "img/dog-big-2.jpg"
+  },
+  "img/dog-big-22.png": {
+    "file": "img/dog-big-22.81bb8fe1.png",
+    "src": "img/dog-big-22.png"
   },
   "img/dog-cat-eat.png": {
     "file": "img/dog-cat-eat.4e168f57.png",

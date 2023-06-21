@@ -17,4 +17,14 @@
     background-color: theme(colors.local);
     z-index: -1;
   }
+
+  &--1 {
+    &::before {
+      padding-bottom: initial;
+
+      @screen lg {
+        padding-bottom: 100%;
+      }
+    }
+  }
 }

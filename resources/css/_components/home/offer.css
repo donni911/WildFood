@@ -1,0 +1,44 @@
+.c-offer {
+  padding: 60px 0px 40px 0px;
+
+  @screen xl {
+    padding: 80px 0px;
+  }
+
+  &__image {
+    max-width: 415px;
+    height: 100%;
+    position: relative;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+  }
+
+  &__absolute {
+    position: relative;
+
+    @screen lg-max {
+      background-image: url("../img/dog-big-2.jpg");
+      background-repeat: no-repeat;
+
+      background-position: center;
+      background-size: cover;
+
+      * {
+        z-index: 10;
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        background-color: #ede8decf;
+        border-radius: 32px;
+
+        inset: 0px;
+      }
+    }
+  }
+}
