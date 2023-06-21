@@ -20,11 +20,11 @@
   "_runtime-core.esm-bundler.f225f592.js": {
     "file": "js/chunks/runtime-core.esm-bundler.f225f592.js"
   },
-  "_virtual_svg-icons-register.ca8dec66.js": {
-    "file": "js/chunks/virtual_svg-icons-register.ca8dec66.js"
+  "_virtual_svg-icons-register.767c5017.js": {
+    "file": "js/chunks/virtual_svg-icons-register.767c5017.js"
   },
   "css/app.css": {
-    "file": "css/app.c4be3779.css",
+    "file": "css/app.97db5717.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -34,17 +34,17 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.39ca551d.css",
+    "file": "css/home.8e36586c.css",
     "isEntry": true,
     "src": "css/home.css"
   },
   "css/test.css": {
-    "file": "css/test.d020ee3c.css",
+    "file": "css/test.226927e2.css",
     "isEntry": true,
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.e0d7e344.css",
+    "file": "css/utilities.10a391e7.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -116,10 +116,6 @@
     "file": "img/corm.43fb487f.png",
     "src": "img/corm.png"
   },
-  "img/dog&cat.png": {
-    "file": "img/dog_cat.fdaae146.png",
-    "src": "img/dog&cat.png"
-  },
   "img/dog-big-2.png": {
     "file": "img/dog-big-2.be0c19df.png",
     "src": "img/dog-big-2.png"
@@ -127,6 +123,10 @@
   "img/dog-cat-eat.png": {
     "file": "img/dog-cat-eat.4e168f57.png",
     "src": "img/dog-cat-eat.png"
+  },
+  "img/dog-cat.png": {
+    "file": "img/dog-cat.fdaae146.png",
+    "src": "img/dog-cat.png"
   },
   "img/dog-quiz.png": {
     "file": "img/dog-quiz.542e2807.png",
@@ -161,9 +161,9 @@
     "src": "img/svg/mark.svg?url"
   },
   "js@pub/app.js": {
-    "file": "js/6.41e57a55.js",
+    "file": "js/6.14847ebe.js",
     "imports": [
-      "_virtual_svg-icons-register.ca8dec66.js"
+      "_virtual_svg-icons-register.767c5017.js"
     ],
     "isEntry": true,
     "src": "js@pub/app.js"
@@ -179,9 +179,9 @@
       "js@src/modules/tabs/index.js",
       "js@src/modules/tooltip/index.js"
     ],
-    "file": "js/5.0ded6d87.js",
+    "file": "js/5.742ea66c.js",
     "imports": [
-      "_virtual_svg-icons-register.ca8dec66.js"
+      "_virtual_svg-icons-register.767c5017.js"
     ],
     "isEntry": true,
     "src": "js@src/app.js"

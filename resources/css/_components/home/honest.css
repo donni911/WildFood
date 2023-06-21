@@ -6,7 +6,21 @@
   }
 
   &__box {
-    height: 100%;
+    background-position: center;
+
+    @screen lg {
+      width: 50%;
+      min-height: 412px;
+    }
+
+    @screen xl {
+      height: 100%;
+      width: 100%;
+      max-width: 410px;
+      height: 410px;
+    }
+
+    overflow: hidden;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,7 +31,7 @@
       inset: 0px;
       background: linear-gradient(45deg, #4b3e31, #4b3e3100), #ede8de;
       opacity: 0.8;
-
+      border-radius: 32px;
       z-index: 10;
     }
 
@@ -32,6 +46,7 @@
       color: #c3bbab;
       font-weight: 600;
       font-size: 24px;
+      line-height: 1;
     }
 
     &__wrap {
@@ -39,8 +54,7 @@
       display: grid;
 
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px 80px;
-      z-index: 20;
+      z-index: 10;
 
       height: 100%;
       padding: 32px;

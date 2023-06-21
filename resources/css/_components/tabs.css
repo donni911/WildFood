@@ -15,11 +15,11 @@
 
     gap: 30px;
 
-    @screen lg-max {
+    @screen xl-max {
       justify-content: center;
     }
 
-    @screen lg {
+    @screen xl {
       gap: 8px;
       flex-direction: column;
     }
@@ -52,12 +52,12 @@
       inset: 0px;
     }
 
-    @screen lg {
+    @screen xl {
       font-size: 80px;
       margin-right: 8px;
     }
 
-    @screen lg-max {
+    @screen xl-max {
       &:after {
         content: "";
         position: absolute;
@@ -84,7 +84,7 @@
         transform: translateX(0px);
       }
 
-      @screen lg-max {
+      @screen xl-max {
         &:after {
           transform: translateY(0px);
           opacity: 1;
@@ -107,7 +107,7 @@
   &__arrow {
     display: none;
 
-    @screen lg {
+    @screen xl {
       display: block;
       opacity: 0;
       margin-top: 10px;
@@ -133,5 +133,13 @@
     &:not(.is-shown) {
       display: none;
     }
+  }
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+
+  &:not(.is-shown) {
+    opacity: 0;
   }
 }

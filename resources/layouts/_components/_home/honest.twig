@@ -29,28 +29,75 @@
                     title:'',
                     subtitle:''
                 },
+            ],
+            boxes: [
+                {
+                    text:'Biologically Appropriate Raw Food',
+                },
+                {
+                    text:'AAFCO Standards',
+                },
+                {
+                    text:'Produced in Accordance with FDA Guidanct',
+                },
+                {
+                    text:'Formulated by Vets and Nutritionists',
+                },
             ]
         }
     },
     {
         title: 'Cats',
         id: 'tabs2',
+   pane:{
+            image:'../img/dog-cat.png',
+            pros:[
+                {
+                    title:'35%',
+                    subtitle:'meat'
+                },
+                {
+                    title:'3%',
+                    subtitle:'bones'
+                },
+                {
+                    title:'2%',
+                    subtitle:'kidneys'
+                },
+                {
+                    title:'10%',
+                    subtitle:'liver'
+                },
+                {
+                    title:'44%',
+                    subtitle:'vegetables'
+                },
+            ],
+            boxes: [
+                {
+                    text:'Biologically Appropriate Raw Food',
+                },
+                {
+                    text:'AAFCO Standards',
+                },
+            ]
+        }
     },
 ] %}
 
 <div class="l-container">
-    <section class="c-honest flex lg-max:flex-col gap-[115px]" data-tabs-parent>
-        <div class="xl:max-w-[500px] flex-col flex">
+    <section class="c-honest flex xl-max:flex-col gap-5" data-tabs-parent>
+        <div class="xl:max-w-[320px] w-full flex-col flex">
             <h4 class='c-title c-title--h4 mb-5 lg:mb-8'>Honest Ingredient List</h4>
-            {% include "../../_components/tabs.twig" with { links: tabs, class: 'c-honest__tabs mb-5 lg:mb-18 order-3' } %}
-            <button class="f-btn f-btn--primary-ghost w-fit mb-9">Learn More</button>
+            {% include "../../_components/tabs.twig" with { links: tabs, class: 'c-honest__tabs mb-5 xl:mb-18 xl-max:order-3' } %}
+            <button class="f-btn f-btn--primary-ghost w-fit mt-auto xl-max:mb-9">Learn More</button>
         </div>
-        <div class="xl:max-w-[847px] w-full">
+        <div class="w-full">
             {% for item in tabs %}
-                <div class="c-tabs__pane h-full {{ loop.first ? 'is-shown' }}" id="{{ item.id }}" data-tabs-pane>
-                    <div class="c-honest__pane  h-full flex gap-5">
-                        <div style='background-image: url({{ item.pane.image }})' class="c-honest__box w-1/2 overflow-hidden rounded-image">
-                            <div class="c-honest__box__wrap">
+                <div class="c-tabs__pane fade h-full {{ loop.first ? 'is-shown' }}" id="{{ item.id }}" data-tabs-pane>
+                    <div class="h-full flex justify-end lg-max:flex-col gap-5">
+                        <div class="c-honest__box rounded-image" style='background-image: url({{ item.pane.image }})'>
+                            <div class="c-honest__box__wrap gap-1">
                                 {% for item in item.pane.pros %}
                                     <div class='c-honest__box__unit {{  item.title ? ' ': ' c-honest__box__unit--empty'  }}'>
                                         <h5 class='c-honest__box__title'>
@@ -61,17 +108,14 @@
                                 {% endfor %}
                             </div>
                         </div>
-                        <div class="w-1/2">2</div>
+                        <div class="lg:w-1/2 xl:w-full xl:max-w-[410px] max-h-[410px] grid grid-cols-2 gap-5">
+                            {% for item in item.pane.boxes %}
+                                {% include "../items/box.twig" with {text: item.text} %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             {% endfor %}
         </div>
     </section>
 </div>
-
-{# <div class="c-honest__pane w-full h-full">
-                        <div class="c-honest__pane w-1/2">
-                            dsa
-                        </div>
-                        <div class="c-honest__pane w-1/2">dasda</div>
-                    </div> #}
