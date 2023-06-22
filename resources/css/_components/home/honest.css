@@ -26,13 +26,7 @@
     background-size: cover;
 
     &::before {
-      content: "";
-      position: absolute;
-      inset: 0px;
-      background: linear-gradient(45deg, #4b3e31, #4b3e3100), #ede8de;
-      opacity: 0.8;
       border-radius: 32px;
-      z-index: 8;
     }
 
     &__title {
@@ -67,5 +61,19 @@
         grid-column-start: 2;
       }
     }
+  }
+}
+
+.c-gradient {
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, #4b3e31, #4b3e3100), #ede8de;
+    opacity: 0.8;
+    z-index: 8;
   }
 }

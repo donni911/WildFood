@@ -5,8 +5,6 @@
     return;
   }
   
-  console.log(quizEl);
-
   const { createApp, defineAsyncComponent } = await import("vue");
   const QuizComponent = defineAsyncComponent(() =>
     import("./components/QuizComponent.vue")

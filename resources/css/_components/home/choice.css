@@ -4,22 +4,23 @@
   @screen lg {
     padding: 80px 0px;
   }
-  &__quiz {
-    height: 100%;
-    display: flex;
-    align-items: center;
+}
 
-    border-radius: 32px;
-    overflow: hidden;
+.c-quiz {
+  height: 100%;
+  display: flex;
+  align-items: center;
 
-    .o-box {
-      &:before {
-        padding-bottom: 62.16%;
-      }
+  border-radius: 32px;
+  overflow: hidden;
 
-      &::after {
-        background: #fff;
-      }
+  .o-box {
+    &:before {
+      padding-bottom: 62.16%;
+    }
+
+    &::after {
+      background: #fff;
     }
   }
 }

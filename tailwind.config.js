@@ -5,6 +5,7 @@ const screens = require("./resources/data/config/screens.json");
 module.exports = {
   content: [
     "./resources/js/**/*.{js,ts,tsx,vue}",
+    "./resources/js@src/**/*.{js,ts,tsx,vue}",
     "./resources/layouts/**/*.twig",
   ],
   prefix: "",
@@ -12,6 +13,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Gellix", ...defaultTheme.fontFamily.sans],
+      manrope: ["Manrope", ...defaultTheme.fontFamily.sans],
     },
     transitionTimingFunction: {
       base: "cubic-bezier(0.25, 0.1, 0.25, 1)",

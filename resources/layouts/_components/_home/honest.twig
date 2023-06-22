@@ -96,7 +96,7 @@
             {% for item in tabs %}
                 <div class="c-tabs__pane fade h-full {{ loop.first ? 'is-shown' }}" id="{{ item.id }}" data-tabs-pane>
                     <div class="h-full flex justify-end lg-max:flex-col gap-5">
-                        <div class="c-honest__box rounded-image" style='background-image: url({{ item.pane.image }})'>
+                        <div class="c-honest__box rounded-image c-gradient" style='background-image: url({{ item.pane.image }})'>
                             <div class="c-honest__box__wrap gap-1">
                                 {% for item in item.pane.pros %}
                                     <div class='c-honest__box__unit {{  item.title ? ' ': ' c-honest__box__unit--empty'  }}'>
