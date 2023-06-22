@@ -27,18 +27,18 @@
 
 <div class="c-accordion">
     {% for item in items %}
-        <div class="c-accordion__item {{ item.index == 1 ? 'is-open' }}" data-collapse-item>
+        <div class="c-accordion__item" data-collapse-item>
             <div class="c-accordion__heading">
                 <div class="flex items-center">
                     <h3 class="c-accordion__title">{{ item.question }}</h3>
                 </div>
 
-                <button type="button" aria-label="Відкрити відповідь" data-collapse-target="#accordionAnswer{{ item.index }}" class="c-accordion__btn f-btn--overlay {{ item.index == 1 ? 'is-open' }}">
+                <button type="button" aria-label="Відкрити відповідь" data-collapse-target="#accordionAnswer{{ item.index }}" class="c-accordion__btn f-btn--overlay">
                     <i class="c-accordion__icon"></i>
                 </button>
             </div>
 
-            <div class="c-accordion__collapse c-collapse {{ item.index == 1 ? 'is-open is-shown' }}" id="accordionAnswer{{ item.index }}" data-collapse-pane>
+            <div class="c-accordion__collapse c-collapse" id="accordionAnswer{{ item.index }}" data-collapse-pane>
                 <div class="c-accordion__collapse-inner" data-collapse-content>
                     <p>{{ item.answear }}</p>
                 </div>

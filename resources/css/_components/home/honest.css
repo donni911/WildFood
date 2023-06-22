@@ -32,7 +32,7 @@
       background: linear-gradient(45deg, #4b3e31, #4b3e3100), #ede8de;
       opacity: 0.8;
       border-radius: 32px;
-      z-index: 10;
+      z-index: 8;
     }
 
     &__title {
@@ -54,7 +54,7 @@
       display: grid;
 
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      z-index: 10;
+      z-index: 8;
 
       height: 100%;
       padding: 32px;
