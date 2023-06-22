@@ -5,7 +5,7 @@
         <input
             ref="input"
             type="text"
-            class="outline-none border-0 text-primary font-bold text-12 bg-transparent text-center placeholder:text-primary placeholder:opacity-50"
+            class="w-full outline-none border-0 text-primary font-bold text-10 lg:text-12 bg-transparent text-center placeholder:text-primary placeholder:opacity-50"
             placeholder="999lb"
         />
     </div>

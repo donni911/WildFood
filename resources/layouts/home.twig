@@ -6,15 +6,16 @@
 {# {% set htmlClass = 'is-nospace' %} #}
 
 {% block content %}
-    <div class="c-home">
+    <div
+        class="c-home">
         {# {% include "./_components/_home/banner.twig" %}
-        {% include "./_components/carousel.twig" %}
-        {% include "./_components/_home/products.twig" %}
-        {% include "./_components/_home/quality.twig" %} #}
+                {% include "./_components/carousel.twig" %}
+                {% include "./_components/_home/products.twig" %}
+                {% include "./_components/_home/quality.twig" %} #}
         {% include "./_components/_home/choice.twig" %}
-        {% include "./_components/_home/honest.twig" %}
-        {# {% include "./_components/_home/offer.twig" %}
-        {% include "./_components/_blog/blog.twig" with {title:'Blog'} %}
-        {% include "./_components/_home/toknow.twig" %} #}
+    {# {% include "./_components/_home/honest.twig" %}
+            {% include "./_components/_home/offer.twig" %} #}
+        {# {% include "./_components/_blog/blog.twig" with {title:'Blog'} %}
+                {% include "./_components/_home/toknow.twig" %} #}
     </div>
 {% endblock %}

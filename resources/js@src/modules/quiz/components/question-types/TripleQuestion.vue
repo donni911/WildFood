@@ -2,8 +2,6 @@
     <BoxIcon
         v-for="question in question.variants"
         :key="question.id"
-        :bgImage="question.bgImage"
-        :icon="question.icon"
         :title="question.title"
         class="md:min-h-[196px] rounded-[22px] sm:rounded-[32px]"
     />

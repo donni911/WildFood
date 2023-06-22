@@ -1,0 +1,2 @@
+import{V as e,s as t,t as o}from"./runtime-core.esm-bundler.205fac54.js";const n={xmlns:"http://www.w3.org/2000/svg",width:"16",height:"9"},s=o("path",{"fill-rule":"evenodd",d:"M.363.363a.9.9 0 0 0 0 1.273l7 7a.9.9 0 0 0 1.273 0l7-7A.9.9 0 1 0 14.363.363L8 6.727 1.636.363a.9.9 0 0 0-1.273 0Z","clip-rule":"evenodd"},null,-1),l=[s];function a(r,c){return e(),t("svg",n,l)}const h={render:a};export{h as default,a as render};
+//# sourceMappingURL=angle.eb8ccd80.js.map
