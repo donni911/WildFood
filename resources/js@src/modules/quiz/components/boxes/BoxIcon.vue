@@ -22,7 +22,6 @@ export default {
     components: {
         Icon,
     },
-
     props: {
         bgImage: {
             type: String,

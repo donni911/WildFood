@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "question": "Who is your furry?",
+    "variants": [
+      {
+        "bgImage": "cat-quiz.png",
+        "icon": "cat",
+        "title": "Cat"
+      },
+      {
+        "bgImage": "dog-quiz.png",
+        "icon": "dog",
+        "title": "Dog"
+      }
+    ],
+    "answear": "",
+    "type": "double"
+  },
+  {
+    "id": "2",
+    "question": "Current Weight",
+    "subtitle": "Write the weight of your pet",
+    "answear": "",
+    "type": "input"
+  }
+]
