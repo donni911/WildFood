@@ -1,16 +1,17 @@
 .c-blog {
   &__link {
-    /* position: static; */
-    /* &::before {
+    position: static;
+
+    &::before {
       content: "";
       position: absolute;
       inset: 0px;
-    } */
+    }
   }
 
   &__post {
     border-radius: 22px;
-    /* position: relative; */
+    position: relative;
 
     @screen lg {
       border-radius: 32px;
@@ -28,6 +29,12 @@
 
     &__image {
       display: block;
+    }
+
+    &__main {
+      @screen lg {
+        position: relative;
+      }
     }
 
     .o-box {

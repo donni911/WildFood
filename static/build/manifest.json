@@ -24,7 +24,7 @@
     "file": "js/chunks/virtual_svg-icons-register.767c5017.js"
   },
   "css/app.css": {
-    "file": "css/app.404e8243.css",
+    "file": "css/app.cca34354.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -34,17 +34,17 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.79f7cdc0.css",
+    "file": "css/home.2d334d91.css",
     "isEntry": true,
     "src": "css/home.css"
   },
   "css/test.css": {
-    "file": "css/test.d170cb1f.css",
+    "file": "css/test.5a81a6a4.css",
     "isEntry": true,
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.c7a41fb0.css",
+    "file": "css/utilities.32f809f5.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -183,7 +183,7 @@
       "js@src/modules/tabs/index.js",
       "js@src/modules/tooltip/index.js"
     ],
-    "file": "js/5.742ea66c.js",
+    "file": "js/5.5c862e8f.js",
     "imports": [
       "_virtual_svg-icons-register.767c5017.js"
     ],
@@ -202,7 +202,7 @@
     "dynamicImports": [
       "js@src/plugins/collapse/index.js"
     ],
-    "file": "js/chunks/index.570fad3e.js",
+    "file": "js/chunks/index.e7ee2840.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/collapse/index.js"
   },
@@ -259,7 +259,7 @@
     "src": "js@src/modules/tooltip/index.js"
   },
   "js@src/plugins/collapse/index.js": {
-    "file": "js/chunks/index.a89e8977.js",
+    "file": "js/chunks/index.11fd4df0.js",
     "isDynamicEntry": true,
     "src": "js@src/plugins/collapse/index.js"
   },

@@ -1,0 +1,7 @@
+.c-know {
+  padding: 60px 0px 40px 0px;
+
+  @screen lg {
+    padding: 80px 0px;
+  }
+}

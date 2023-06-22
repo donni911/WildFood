@@ -18,6 +18,18 @@
     font-weight: 500;
     line-height: 1.5;
   }
+
+  &__link {
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0px;
+    }
+  }
+
+  &__item {
+    position: relative;
+  }
 }
 
 .c-mail__btn {

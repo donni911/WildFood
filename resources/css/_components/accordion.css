@@ -1,97 +1,127 @@
 .c-accordion {
-    width: 100%;
+  width: 100%;
 
-    &__item {
+  &__item {
+    border-radius: 20px;
+    background-color: theme(colors.local);
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: theme(spacing.4);
+    gap: theme(spacing.12);
+
+    @screen md {
+      gap: theme(spacing.7);
+      padding: theme(spacing.8);
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    line-height: 1.2;
+
+    @screen md {
+      font-size: 24px;
+    }
+  }
+
+  &__count {
+    margin-left: theme(spacing.5);
+    display: inline-block;
+    background-color: theme(colors.black / 20%);
+    font-weight: 700;
+    border-radius: 999px;
+    padding: theme(spacing[0.5]) theme(spacing.2);
+
+    @screen md-max {
+      font-size: theme(fontSize.sm);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+
+    @screen lg {
+      width: 24px;
+      height: 24px;
     }
 
-    &__heading {
-        display: flex;
-        gap: theme(spacing.5);
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        padding: theme(spacing.5) 0;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      height: theme(spacing[0.5]);
+      width: 100%;
+      top: 50%;
+      border-radius: 20px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: currentColor;
+      transform-origin: center;
+      transition-property: transform;
+      transform: translate(-50%, -50%) rotate(var(--rotation, 0));
     }
 
-    &__title {
-        font-weight: 700;
-        line-height: 1.2;
-        font-size: theme(fontSize.md);
+    &:after {
+      --rotation: 90deg;
     }
 
-    &__count {
-        margin-left: theme(spacing.5);
-        display: inline-block;
-        background-color: theme(colors.black / 20%);
-        font-weight: 700;
-        border-radius: 999px;
-        padding: theme(spacing[0.5]) theme(spacing.2);
+    .is-open & {
+      &:after {
+        --rotation: 0;
+      }
+    }
+  }
 
-        @screen md-max {
-            font-size: theme(fontSize.sm);
-        }
+  &__btn {
+    --icon-size: theme(spacing.4);
+    width: theme(spacing.6);
+    height: theme(spacing.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .i-icon {
+      transition-property: transform;
     }
 
-    &__icon {
-        width: var(--icon-size);
-        height: var(--icon-size);
-        position: relative;
+    &.is-open {
+      .i-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
 
-        &:before,
-        &:after {
-            content: '';
-            position: absolute;
-            height: theme(spacing[0.5]);
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: currentColor;
-            transform-origin: center;
-            transition-property: transform;
-            transform: translate(-50%, -50%) rotate(var(--rotation, 0));
-        }
-
-        &:after {
-            --rotation: 90deg;
-        }
-
-        .is-open & {
-
-            &:after {
-                --rotation: 0;
-            }
-        }
+  &__item {
+    &:not(:first-child) {
+      border-top: 1px solid theme(colors.gray.200);
     }
 
-    &__btn {
-        --icon-size: theme(spacing.4);
-        width: theme(spacing.6);
-        height: theme(spacing.6);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .i-icon {
-            transition-property: transform;
-        }
-
-        &.is-open {
-
-            .i-icon {
-                transform: rotate(180deg);
-            }
-        }
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
+  }
 
-    &__item {
+  &__collapse-inner {
+    padding-left: theme(spacing.4);
+    padding-bottom: theme(spacing.4);
+    padding-right: theme(spacing.4);
 
-        &:not(:first-child) {
-            border-top: 1px solid theme(colors.gray.200);
-        }
+    font-weight: 500;
+    color: theme(colors.primary.DEFAULT);
+
+    @screen md {
+      padding-left: theme(spacing.8);
+      padding-bottom: theme(spacing.8);
+      padding-right: theme(spacing.8);
+      max-width: 600px;
     }
-
-    &__collapse-inner {
-        padding-bottom: theme(spacing.8);
-    }
+  }
 }

@@ -1,39 +1,46 @@
+{% set items = [
+    {
+        index:1,
+        question: 'Why is my pet drinking less water and having fewer bowel movements? Is this normal?',
+        answear: 'The stool of pets on a raw diet is smaller, less pungent, and occurs less frequently,
+         indicating proper digestive tract function. In contrast, commercial pet food often contains vegetable proteins that predators cannot digest and absorb, resulting in larger, smellier, and more frequent stool.',
+    },
+    {
+        index:2,
+        question: 'Why is my pet drinking less water and having fewer?',
+        answear: 'On a raw diet, pets get most of their liquid from food as it contains about 70% water, whereas commercial pet food is dehydrated, forcing pets to drink more water. 
+                The stool of pets on a raw diet is smaller, less pungent, and occurs less frequently, indicating proper digestive tract function. In contrast, commercial pet food often contains vegetable proteins that predators cannot digest and absorb, resulting in larger, smellier, and more frequent stool.',
+    },
+    {
+        index:3,
+        question: 'On a raw diet, pets get most of their liquid from food as it contains about 70% water, whereas commercial pet food is dehydrated, forcing pets to drink more water?',
+        answear: 'The stool of pets on a raw diet is smaller, less pungent, and occurs less frequently,
+         indicating proper digestive tract function. In contrast, commercial pet food often contains vegetable proteins that predators cannot digest and absorb, resulting in larger, smellier, and more frequent stool.',
+    },
+    {
+        index:4,
+        question: 'How much food does my pet need per day?',
+        answear: 'The stool of pets on a raw diet is smaller, less pungent, and occurs less frequently,
+         indicating proper digestive tract function. In contrast, commercial pet food often contains vegetable proteins that predators cannot digest and absorb, resulting in larger, smellier, and more frequent stool.',
+    },
+] %}
+
 <div class="c-accordion">
-    {% for index in 1..3 %}
-        <div
-            class="c-accordion__item {{ index == 1 ? 'is-open' }}"
-            data-collapse-item
-        >
+    {% for item in items %}
+        <div class="c-accordion__item {{ item.index == 1 ? 'is-open' }}" data-collapse-item>
             <div class="c-accordion__heading">
                 <div class="flex items-center">
-                    <h3 class="c-accordion__title">Питання {{ index }}</h3>
-                    <span class="c-accordion__count">3</span>
+                    <h3 class="c-accordion__title">{{ item.question }}</h3>
                 </div>
 
-                <button
-                    type="button"
-                    aria-label="Відкрити відповідь"
-                    data-collapse-target="#accordionAnswer{{ index }}"
-                    class="c-accordion__btn f-btn--overlay {{ index == 1 ? 'is-open' }}"
-                >
-                    {% if loop.index == 1 %}
-                        <i class="c-accordion__icon"></i>
-                    {% else %}
-                        {% include "../_app/icon.twig" with { id: 'angle' } %}
-                    {% endif %}
+                <button type="button" aria-label="Відкрити відповідь" data-collapse-target="#accordionAnswer{{ item.index }}" class="c-accordion__btn f-btn--overlay {{ item.index == 1 ? 'is-open' }}">
+                    <i class="c-accordion__icon"></i>
                 </button>
             </div>
 
-            <div
-                class="c-accordion__collapse c-collapse {{ index == 1 ? 'is-open is-shown' }}"
-                id="accordionAnswer{{ index }}"
-                data-collapse-pane
-            >
-                <div
-                    class="c-accordion__collapse-inner"
-                    data-collapse-content
-                >
-                    <p>Далеко-далеко за&nbsp;словесними горами країни голосних і&nbsp;приголосних живуть рибні тексти. Рибними, лишилося? До, маленька буквоград? Погляд безорфографічний, міста рядок, він промовою знаках своє те, рукописи вони безпечні&nbsp;до! Країну, дороге!</p>
+            <div class="c-accordion__collapse c-collapse {{ item.index == 1 ? 'is-open is-shown' }}" id="accordionAnswer{{ item.index }}" data-collapse-pane>
+                <div class="c-accordion__collapse-inner" data-collapse-content>
+                    <p>{{ item.answear }}</p>
                 </div>
             </div>
         </div>

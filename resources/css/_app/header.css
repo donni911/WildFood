@@ -7,6 +7,10 @@
   line-height: 1;
   color: theme(colors.text);
   background-color: theme(colors.body);
+  transition: theme(transitionTimingFunction.base)
+    theme(transitionDuration.base);
+
+  transition-property: box-shadow;
 
   &__inner {
     display: flex;
@@ -144,4 +148,9 @@
       }
     }
   }
+}
+
+.is-header-sticky .c-header {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.06),
+    0 0 1px rgba(0, 0, 0, 0.04);
 }
