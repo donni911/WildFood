@@ -4,15 +4,17 @@
             <a class="c-pagination__link" href="#" tabindex="-1" aria-disabled="true">
                 <span class="sr-only">Назад</span>
 
-                {% include "../_app/icon.twig" with { id: 'arrow', classIcon: 'i-icon--left' } %}
+                {% include "../_app/icon.twig" with { id: 'angle-pagination-right', classIcon: 'i-icon--left' } %}
             </a>
         </li>
 
         <li class="c-pagination__item is-active" aria-current="page">
-            <a class="c-pagination__link" href="#">1 <span class="sr-only">(current)</span></a>
+            <a class="c-pagination__link" href="#">1
+                <span class="sr-only">(current)</span>
+            </a>
         </li>
 
-        {% for page in 2..5 %}
+        {% for page in 2..3 %}
             <li class="c-pagination__item">
                 <a class="c-pagination__link" href="#">{{ page }}</a>
             </li>
@@ -23,14 +25,14 @@
         </li>
 
         <li class="c-pagination__item">
-            <a class="c-pagination__link" href="#">15</a>
+            <a class="c-pagination__link" href="#">10</a>
         </li>
 
         <li class="c-pagination__item is-next">
             <a class="c-pagination__link" href="#">
                 <span class="sr-only">Далі</span>
 
-                {% include "../_app/icon.twig" with { id: 'arrow' } %}
+                {% include "../_app/icon.twig" with { id: 'angle-pagination-right' } %}
             </a>
         </li>
     </ul>

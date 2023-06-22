@@ -2,5 +2,20 @@
 
 {% set pageTitle = 'Blog' %}
 {% set pageId = 'index' %}
-{# {% set styleLinks = ['home'] %} #}
+{% set styleLinks = ['blog'] %}
 {# {% set htmlClass = 'is-nospace' %} #}
+
+{% block content %}
+    <div class="c-blog">
+        <div class="l-container">
+            {% include "./_components/breadcrumbs.twig" %}
+        </div>
+
+        {% include "./_components/_blog/blog.twig" with { title: "Latest news" } %}
+        {% include "./_components/_blog/blog-grid.twig" %}
+        <div class="l-container">
+            {% include "./_components/pagination.twig" %}
+        </div>
+        {% include "./_components/_home/choice.twig" %}
+    </div>
+{% endblock %}

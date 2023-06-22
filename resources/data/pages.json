@@ -17,8 +17,8 @@
     "html": "blog.html",
     "title": "Blog",
     "slug": "blog",
-    "desktop": false,
-    "responsive": false
+    "desktop": true,
+    "responsive": true
   },
   {
     "html": "blog.html",

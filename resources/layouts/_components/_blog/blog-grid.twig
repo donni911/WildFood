@@ -1,0 +1,15 @@
+<div class="l-container">
+    <section class="c-blog-grid">
+        <div class='mb-13 lg:mb-14'>
+            <h2 class='c-title c-title--h2'>All News</h2>
+        </div>
+        <div class='grid md:grid-cols-2 gap-5'>
+            {% for i in 1..8 %}
+                {% include "../items/post.twig" with {img:'../img/cat-dog-eat.png' , class:'row-span-1',
+                title:'Daily Feeding Guidelines',
+                text:'Feed according to the age, size and activity of your dog. Feed defrosted at room temperature and refrigerate unused rest. You can add some You can add some',
+                } %}
+            {% endfor %}
+        </div>
+    </section>
+</div>

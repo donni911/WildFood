@@ -80,6 +80,8 @@ module.exports = {
           hover: "#D64535",
         },
 
+        pagination:'#C7C1B5',
+
         body: "#F9F6EE",
         local: "#EDE8DE",
         yellow: "#F6BB33",

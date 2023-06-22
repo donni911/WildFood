@@ -24,9 +24,14 @@
     "file": "js/chunks/virtual_svg-icons-register.767c5017.js"
   },
   "css/app.css": {
-    "file": "css/app.cca34354.css",
+    "file": "css/app.f25195e9.css",
     "isEntry": true,
     "src": "css/app.css"
+  },
+  "css/blog.css": {
+    "file": "css/blog.3cfd05b3.css",
+    "isEntry": true,
+    "src": "css/blog.css"
   },
   "css/error.css": {
     "file": "css/error.0edd1e54.css",
@@ -34,17 +39,17 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.2522d95b.css",
+    "file": "css/home.ccec056c.css",
     "isEntry": true,
     "src": "css/home.css"
   },
   "css/test.css": {
-    "file": "css/test.5a81a6a4.css",
+    "file": "css/test.14d9e491.css",
     "isEntry": true,
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.3493b40b.css",
+    "file": "css/utilities.1cc716b8.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -165,7 +170,7 @@
     "src": "img/svg/mark.svg?url"
   },
   "js@pub/app.js": {
-    "file": "js/6.14847ebe.js",
+    "file": "js/7.14847ebe.js",
     "imports": [
       "_virtual_svg-icons-register.767c5017.js"
     ],
@@ -183,7 +188,7 @@
       "js@src/modules/tabs/index.js",
       "js@src/modules/tooltip/index.js"
     ],
-    "file": "js/5.5c862e8f.js",
+    "file": "js/6.5c862e8f.js",
     "imports": [
       "_virtual_svg-icons-register.767c5017.js"
     ],
