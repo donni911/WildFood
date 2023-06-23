@@ -2,7 +2,6 @@
     <div class="c-breadcrumbs__scroll u-scroll">
         <ul class="c-breadcrumbs__list">
             {% set links = links ?? ['Home', pageTitle] %}
-
             {% for item in links %}
                 <li class="c-breadcrumbs__item">
                     {% if not loop.last %}

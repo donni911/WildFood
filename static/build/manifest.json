@@ -10,26 +10,25 @@
     "src": "../node_modules/@splidejs/splide/dist/js/splide.esm.js"
   },
   "../node_modules/vue/dist/vue.runtime.esm-bundler.js": {
-    "file": "js/chunks/vue.runtime.esm-bundler.dc0c75d9.js",
-    "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
-    ],
+    "file": "js/chunks/vue.runtime.esm-bundler.4a69af4e.js",
     "isDynamicEntry": true,
     "src": "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
   },
-  "_runtime-core.esm-bundler.205fac54.js": {
-    "file": "js/chunks/runtime-core.esm-bundler.205fac54.js"
+  "_virtual_svg-icons-register.c2529bc0.js": {
+    "file": "js/chunks/virtual_svg-icons-register.c2529bc0.js"
   },
-  "_virtual_svg-icons-register.95c291e0.js": {
-    "file": "js/chunks/virtual_svg-icons-register.95c291e0.js"
+  "css/about-us.css": {
+    "file": "css/about-us.8f6cd973.css",
+    "isEntry": true,
+    "src": "css/about-us.css"
   },
   "css/app.css": {
-    "file": "css/app.e7191e1e.css",
+    "file": "css/app.0c3d0f97.css",
     "isEntry": true,
     "src": "css/app.css"
   },
   "css/blog.css": {
-    "file": "css/blog.1042e3f4.css",
+    "file": "css/blog.29b6b581.css",
     "isEntry": true,
     "src": "css/blog.css"
   },
@@ -39,17 +38,17 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.181be215.css",
+    "file": "css/home.0f678249.css",
     "isEntry": true,
     "src": "css/home.css"
   },
   "css/test.css": {
-    "file": "css/test.14d9e491.css",
+    "file": "css/test.1d20db89.css",
     "isEntry": true,
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.81befd64.css",
+    "file": "css/utilities.c5152cc5.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -102,201 +101,233 @@
     "src": "fonts/Manrope-Regular.woff"
   },
   "icons/account.svg": {
-    "file": "js/chunks/account.e3c737ff.js",
+    "file": "js/chunks/account.71d3378a.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/account.svg"
   },
   "icons/angle-pagination-left.svg": {
-    "file": "js/chunks/angle-pagination-left.54a70db5.js",
+    "file": "js/chunks/angle-pagination-left.faaabc12.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/angle-pagination-left.svg"
   },
   "icons/angle-pagination-right.svg": {
-    "file": "js/chunks/angle-pagination-right.529f7534.js",
+    "file": "js/chunks/angle-pagination-right.5f176ce2.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/angle-pagination-right.svg"
   },
   "icons/angle.svg": {
-    "file": "js/chunks/angle.eb8ccd80.js",
+    "file": "js/chunks/angle.8d886593.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/angle.svg"
   },
   "icons/arrow-lg.svg": {
-    "file": "js/chunks/arrow-lg.04039619.js",
+    "file": "js/chunks/arrow-lg.ed08402b.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/arrow-lg.svg"
   },
   "icons/arrow-sm.svg": {
-    "file": "js/chunks/arrow-sm.64e88d6d.js",
+    "file": "js/chunks/arrow-sm.2c143b5a.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/arrow-sm.svg"
   },
   "icons/arrow.svg": {
-    "file": "js/chunks/arrow.9511aa3f.js",
+    "file": "js/chunks/arrow.50983da8.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/arrow.svg"
   },
   "icons/bag.svg": {
-    "file": "js/chunks/bag.5c1dfbe9.js",
+    "file": "js/chunks/bag.abc4c6dd.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/bag.svg"
   },
   "icons/blog.svg": {
-    "file": "js/chunks/blog.903bb9c0.js",
+    "file": "js/chunks/blog.da00fef4.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/blog.svg"
   },
-  "icons/calories.svg": {
-    "file": "js/chunks/calories.a3ab326b.js",
+  "icons/box.svg": {
+    "file": "js/chunks/box.8fb8c390.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "icons/box.svg"
+  },
+  "icons/calories.svg": {
+    "file": "js/chunks/calories.77751231.js",
+    "imports": [
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/calories.svg"
   },
   "icons/carousel-icon-1.svg": {
-    "file": "js/chunks/carousel-icon-1.c4000e91.js",
+    "file": "js/chunks/carousel-icon-1.47546dbc.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/carousel-icon-1.svg"
   },
   "icons/carousel-icon-2.svg": {
-    "file": "js/chunks/carousel-icon-2.7c2758ab.js",
+    "file": "js/chunks/carousel-icon-2.1a928e57.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/carousel-icon-2.svg"
   },
   "icons/carousel-icon-3.svg": {
-    "file": "js/chunks/carousel-icon-3.4af97702.js",
+    "file": "js/chunks/carousel-icon-3.d00dbf48.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/carousel-icon-3.svg"
   },
   "icons/cart.svg": {
-    "file": "js/chunks/cart.dfbde052.js",
+    "file": "js/chunks/cart.34fc828a.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/cart.svg"
   },
   "icons/cat.svg": {
-    "file": "js/chunks/cat.a3159ce6.js",
+    "file": "js/chunks/cat.f85d66c9.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/cat.svg"
   },
   "icons/close.svg": {
-    "file": "js/chunks/close.b3b0dc52.js",
+    "file": "js/chunks/close.ed0a0f36.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/close.svg"
   },
   "icons/cormDog.svg": {
-    "file": "js/chunks/cormDog.496248d4.js",
+    "file": "js/chunks/cormDog.01e48955.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/cormDog.svg"
   },
-  "icons/dog.svg": {
-    "file": "js/chunks/dog.0b3e4520.js",
+  "icons/cormdogg.svg": {
+    "file": "js/chunks/cormdogg.213af5c5.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "icons/cormdogg.svg"
+  },
+  "icons/dog.svg": {
+    "file": "js/chunks/dog.d9488463.js",
+    "imports": [
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/dog.svg"
   },
-  "icons/handDog.svg": {
-    "file": "js/chunks/handDog.33aaeed4.js",
+  "icons/frost.svg": {
+    "file": "js/chunks/frost.f5fb3ebb.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "icons/frost.svg"
+  },
+  "icons/handDog.svg": {
+    "file": "js/chunks/handDog.a8a24d45.js",
+    "imports": [
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/handDog.svg"
   },
   "icons/lettuce.svg": {
-    "file": "js/chunks/lettuce.1fd40a31.js",
+    "file": "js/chunks/lettuce.19bfe04d.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/lettuce.svg"
   },
   "icons/mark.svg": {
-    "file": "js/chunks/mark.82c7260a.js",
+    "file": "js/chunks/mark.02457f3c.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/mark.svg"
   },
   "icons/no-preservatives.svg": {
-    "file": "js/chunks/no-preservatives.cdcf7e13.js",
+    "file": "js/chunks/no-preservatives.0586fd3d.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/no-preservatives.svg"
   },
   "icons/salt-and-pepper.svg": {
-    "file": "js/chunks/salt-and-pepper.8a711d56.js",
+    "file": "js/chunks/salt-and-pepper.da1f7485.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/salt-and-pepper.svg"
   },
-  "icons/star.svg": {
-    "file": "js/chunks/star.ace2d76d.js",
+  "icons/shopping-list.svg": {
+    "file": "js/chunks/shopping-list.66d97d2e.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "icons/shopping-list.svg"
+  },
+  "icons/star.svg": {
+    "file": "js/chunks/star.3d705709.js",
+    "imports": [
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/star.svg"
   },
   "icons/works.svg": {
-    "file": "js/chunks/works.e06672eb.js",
+    "file": "js/chunks/works.a950f746.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/works.svg"
@@ -366,9 +397,9 @@
     "src": "img/svg/mark.svg?url"
   },
   "js@pub/app.js": {
-    "file": "js/7.28ca4884.js",
+    "file": "js/8.2193def1.js",
     "imports": [
-      "_virtual_svg-icons-register.95c291e0.js"
+      "_virtual_svg-icons-register.c2529bc0.js"
     ],
     "isEntry": true,
     "src": "js@pub/app.js"
@@ -384,9 +415,9 @@
       "js@src/modules/tabs/index.js",
       "js@src/modules/tooltip/index.js"
     ],
-    "file": "js/6.1403a81e.js",
+    "file": "js/7.5e787c41.js",
     "imports": [
-      "_virtual_svg-icons-register.95c291e0.js"
+      "_virtual_svg-icons-register.c2529bc0.js"
     ],
     "isEntry": true,
     "src": "js@src/app.js"
@@ -437,6 +468,7 @@
       "icons/arrow.svg",
       "icons/bag.svg",
       "icons/blog.svg",
+      "icons/box.svg",
       "icons/calories.svg",
       "icons/carousel-icon-1.svg",
       "icons/carousel-icon-2.svg",
@@ -445,18 +477,21 @@
       "icons/cat.svg",
       "icons/close.svg",
       "icons/cormDog.svg",
+      "icons/cormdogg.svg",
       "icons/dog.svg",
+      "icons/frost.svg",
       "icons/handDog.svg",
       "icons/lettuce.svg",
       "icons/mark.svg",
       "icons/no-preservatives.svg",
       "icons/salt-and-pepper.svg",
+      "icons/shopping-list.svg",
       "icons/star.svg",
       "icons/works.svg"
     ],
-    "file": "js/chunks/QuizComponent.49f40700.js",
+    "file": "js/chunks/QuizComponent.260d10f7.js",
     "imports": [
-      "_runtime-core.esm-bundler.205fac54.js"
+      "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
     "isDynamicEntry": true,
     "src": "js@src/modules/quiz/components/QuizComponent.vue"
@@ -466,7 +501,7 @@
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "js@src/modules/quiz/components/QuizComponent.vue"
     ],
-    "file": "js/chunks/index.7326894c.js",
+    "file": "js/chunks/index.fafdd043.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/quiz/index.js"
   },

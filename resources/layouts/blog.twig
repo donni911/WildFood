@@ -12,10 +12,11 @@
         </div>
 
         {% include "./_components/_blog/blog.twig" with { title: "Latest news" } %}
-        {% include "./_components/_blog/blog-grid.twig" %}
-        <div class="l-container">
+        <section class="c-blog-grid">
+            {% include "./_components/_blog/blog-grid.twig" %}
             {% include "./_components/pagination.twig" %}
-        </div>
+        </section>
+
         {% include "./_components/_home/choice.twig" %}
     </div>
 {% endblock %}

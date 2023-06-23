@@ -13,6 +13,7 @@
     position: absolute;
     inset: 0px;
     background-color: theme(colors.local);
+    border-radius: 32px;
     z-index: -1;
   }
 

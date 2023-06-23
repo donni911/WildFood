@@ -1,2 +1,0 @@
-import{V as t,s as e,t as o}from"./runtime-core.esm-bundler.205fac54.js";const s={xmlns:"http://www.w3.org/2000/svg",width:"64",height:"64",fill:"currentColor"},r=o("path",{d:"M32 2a20 20 0 0 0-20 20c0 18 20 40 20 40s20-22 20-40A20 20 0 0 0 32 2zm0 28a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"},null,-1),c=[r];function n(a,l){return t(),e("svg",s,c)}const h={render:n};export{h as default,n as render};
-//# sourceMappingURL=mark.82c7260a.js.map

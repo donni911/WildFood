@@ -3,12 +3,10 @@
   display: flex;
   font-size: theme(fontSize.sm);
   line-height: 1;
-  margin-bottom: theme(spacing.15);
   padding-top: theme(spacing.5);
 
   @screen lg {
     padding: theme(spacing.15) 0px theme(spacing[8]) 0;
-    margin-bottom: theme(spacing.20);
   }
 
   &__list {

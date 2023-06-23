@@ -24,3 +24,13 @@
     }
   }
 }
+
+.v-enter-active,
+.v-leave-active {
+  transition: theme(transitionTimingFunction.base) 0.15s opacity;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}

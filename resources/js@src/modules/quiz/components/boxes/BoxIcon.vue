@@ -5,9 +5,10 @@
             'c-gradient bg-no-repeat bg-center bg-cover': bgImage,
         }"
         :style="{
-            backgroundImage: bgImage && `url(../../../img/${bgImage})`,
+            backgroundImage: bgImage && `url(${bgImage})`,
         }"
     >
+        <img :src="'@img/' + bgImage" alt="" />
         <div class="relative z-10 flex items-center justify-center h-full">
             <span
                 class="font-semibold text-primary flex items-center gap-3 text-5.5"

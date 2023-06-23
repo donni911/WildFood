@@ -57,10 +57,10 @@
   }
 
   &--lg {
-    font-size: theme(fontSize[4.5]);
+    font-size: 16px;
 
     @screen xl {
-      font-size: theme(fontSize[5.5]);
+      font-size: 24px;
     }
   }
 }
@@ -72,5 +72,9 @@
 
   @screen lg {
     font-size: 24px;
+  }
+
+  &--classic {
+    color: theme(colors.text);
   }
 }

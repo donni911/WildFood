@@ -2,5 +2,17 @@
 
 {% set pageTitle = 'About us' %}
 {% set pageId = 'index' %}
-{# {% set styleLinks = ['home'] %} #}
+{% set styleLinks = ['about-us'] %}
 {# {% set htmlClass = 'is-nospace' %} #}
+
+{% block content %}
+    <div class="c-about">
+        <div class="l-container">
+            {% include "./_components/breadcrumbs.twig" %}
+        </div>
+        {% include "./_components/_about/weare.twig" %}
+        {% include "./_components/_about/story.twig" %}
+        {% include "./_components/_about/how.twig" %}
+        {% include "./_components/_home/choice.twig" %}
+    </div>
+{% endblock %}

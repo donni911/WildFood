@@ -3,7 +3,7 @@
 }
 
 .c-menu {
-  z-index: theme(zIndex.10);
+  z-index: theme(zIndex.50);
   overflow: hidden;
   position: fixed;
   display: flex;

@@ -9,6 +9,14 @@
     }
   }
 
+  &__news {
+    padding: 60px 0px 40px 0px;
+
+    @screen lg {
+      padding: 80px 0px;
+    }
+  }
+
   &__post {
     border-radius: 22px;
     position: relative;
