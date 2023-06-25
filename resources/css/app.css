@@ -2,6 +2,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
+/* @import "css/perfect-scrollbar.css"; */
+
 /* Set */
 @import "_set/vars.css";
 

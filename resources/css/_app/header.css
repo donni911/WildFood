@@ -35,7 +35,7 @@
     align-self: center;
     transition-property: width, padding;
 
-    width: 90px;
+    width: 94px;
 
     @screen lg {
       width: 158px;

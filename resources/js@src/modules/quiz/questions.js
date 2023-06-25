@@ -2,6 +2,7 @@ export default [
   {
     id: "1",
     question: "Who is your furry?",
+    name: "pet",
     variants: [
       {
         bgImage: "https://i.ibb.co/7nmg5xM/cat-quiz.png",
@@ -10,7 +11,6 @@ export default [
       },
       {
         bgImage: "https://i.ibb.co/zWvdFwd/dog-quiz.png",
-
         icon: "dog",
         title: "Dog",
       },
@@ -28,6 +28,7 @@ export default [
   {
     id: "3",
     question: "How old is your pet?",
+    name: "old",
     variants: [
       {
         title: "Up to 8 months",
@@ -45,6 +46,7 @@ export default [
   {
     id: "4",
     question: "Body condition",
+    name: "condition",
     variants: [
       {
         title: "Underweight",
@@ -62,6 +64,7 @@ export default [
   {
     id: "5",
     question: "Daily Activity",
+    name: "activity",
     variants: [
       {
         title: "Low",
@@ -95,6 +98,7 @@ export default [
     ],
     answear: "",
     type: "quarter",
+    input: "checkbox",
   },
   {
     id: "7",
@@ -118,11 +122,19 @@ export default [
       {
         title: "Duck",
       },
+
       {
         title: "Quail",
       },
     ],
     answear: "",
     type: "multiple",
+    input: "checkbox",
+  },
+  {
+    id: "8",
+    question: "Your Mail",
+    answear: "",
+    type: "mail",
   },
 ];

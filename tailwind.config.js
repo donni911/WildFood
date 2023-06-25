@@ -14,6 +14,7 @@ module.exports = {
     fontFamily: {
       sans: ["Gellix", ...defaultTheme.fontFamily.sans],
       manrope: ["Manrope", ...defaultTheme.fontFamily.sans],
+      cooper: ["CooperBlack", ...defaultTheme.fontFamily.sans],
     },
     transitionTimingFunction: {
       base: "cubic-bezier(0.25, 0.1, 0.25, 1)",

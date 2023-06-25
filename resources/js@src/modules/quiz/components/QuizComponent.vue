@@ -14,7 +14,10 @@
                     :key="questions[activeQuestion].id"
                     class="flex flex-grow pt-2 md:pt-[32px]"
                 >
-                    <div class="flex w-full flex-col justify-between">
+                    <div
+                        class="flex w-full flex-col justify-between"
+                        v-if="!quizFinished"
+                    >
                         <h3
                             :key="questions[activeQuestion].question"
                             class="font-semibold md:text-9 mb-4"
@@ -38,6 +41,8 @@
                             :question="questions[activeQuestion]"
                         />
                     </div>
+
+                    <QuizResults :results="questions" v-else />
                 </div>
             </transition>
         </div>
@@ -48,30 +53,35 @@
 import questions from "../questions.js";
 import QuestionsController from "./question-types/QuestionsController.vue";
 import QuizHeader from "./QuizHeader.vue";
+import QuizResults from "./QuizResults.vue";
 
 export default {
     data() {
         return {
             activeQuestion: 0,
             questions,
+            quizFinished: false,
         };
     },
 
     components: {
         QuestionsController,
         QuizHeader,
+        QuizResults,
     },
 
     methods: {
         nextQuestion() {
+            let results = this.questions.map((q) => q.answear);
             if (this.activeQuestion === this.questions.length - 1) {
                 this.finishQuiz();
             } else {
                 this.activeQuestion++;
             }
         },
+
         finishQuiz() {
-            console.log("Quiz finished!");
+            this.quizFinished = true;
         },
     },
 };

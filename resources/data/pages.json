@@ -10,8 +10,8 @@
     "html": "about-us.html",
     "title": "About us",
     "slug": "about",
-    "desktop": false,
-    "responsive": false
+    "desktop": true,
+    "responsive": true
   },
   {
     "html": "blog.html",

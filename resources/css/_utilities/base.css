@@ -110,3 +110,61 @@
     -webkit-line-clamp: 4; /* Adjust the number of lines you want to display */
   }
 }
+
+.c-border {
+  &-top,
+  &-last {
+    &:before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      background-color: white;
+      z-index: 1;
+      height: 3px;
+      width: 16px;
+    }
+  }
+  &-top {
+    &:before {
+      right: calc(100% - 16px);
+    }
+  }
+  &-last {
+    &:before {
+      left: calc(100% - 16px);
+    }
+  }
+}
+
+/* width */
+.c-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+/* Track */
+.c-scroll::-webkit-scrollbar-track {
+  background: theme(colors.local);
+  border-radius: 50px;
+}
+
+/* Handle */
+.c-scroll::-webkit-scrollbar-thumb {
+  background: theme(colors.primary.DEFAULT);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+.c-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.c-checkbox {
+  input {
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}

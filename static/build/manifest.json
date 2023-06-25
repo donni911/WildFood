@@ -23,12 +23,12 @@
     "src": "css/about-us.css"
   },
   "css/app.css": {
-    "file": "css/app.0c3d0f97.css",
+    "file": "css/app.69e61ca7.css",
     "isEntry": true,
     "src": "css/app.css"
   },
   "css/blog.css": {
-    "file": "css/blog.29b6b581.css",
+    "file": "css/blog.1482af6b.css",
     "isEntry": true,
     "src": "css/blog.css"
   },
@@ -38,7 +38,7 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.0f678249.css",
+    "file": "css/home.1095c582.css",
     "isEntry": true,
     "src": "css/home.css"
   },
@@ -48,7 +48,7 @@
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.c5152cc5.css",
+    "file": "css/utilities.16732ed6.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -415,7 +415,7 @@
       "js@src/modules/tabs/index.js",
       "js@src/modules/tooltip/index.js"
     ],
-    "file": "js/7.5e787c41.js",
+    "file": "js/7.648ba81c.js",
     "imports": [
       "_virtual_svg-icons-register.c2529bc0.js"
     ],
@@ -489,7 +489,7 @@
       "icons/star.svg",
       "icons/works.svg"
     ],
-    "file": "js/chunks/QuizComponent.260d10f7.js",
+    "file": "js/chunks/QuizComponent.338be076.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -501,7 +501,7 @@
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "js@src/modules/quiz/components/QuizComponent.vue"
     ],
-    "file": "js/chunks/index.fafdd043.js",
+    "file": "js/chunks/index.b0f3819a.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/quiz/index.js"
   },

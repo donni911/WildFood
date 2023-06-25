@@ -21,7 +21,7 @@
     position: relative;
 
     @screen lg-max {
-      background-image: url("../img/dog-big-2.jpg");
+      background-image: url("https://i.ibb.co/xgVHzT0/dog-big-2.jpg");
       background-repeat: no-repeat;
 
       background-position: center;

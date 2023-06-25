@@ -1,0 +1,50 @@
+<div class="c-scroll overflow-x-auto bg-local rounded-[20px]">
+    <table class="table-auto border-collapse mb-2">
+        <thead>
+            <tr>
+                <th class="c-border sticky z-10 left-0 bg-local p-4">
+                    <div class='top-4 absolute'>
+                        {% include "../../_app/icon.twig" with {id: 'pet-food', classIcon: 'w-12 h-12' } %}
+                    </div>
+                </th>
+                {% for item in titles %}
+                    <th class="px-4 py-2 bg-white">
+                        <div class='flex w-[115px] items-start gap-2 flex-col justify-start'>
+                            <div class=''>
+                                {% include "../../_app/icon.twig" with {id: item.icon, classIcon: 'w-5 h-5' } %}
+                            </div>
+                            <p class='text-start font-semibold text-xs text-primary'>
+                                {{ item.title }}
+                            </p>
+                        </div>
+                    </th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for advantage in advantages %}
+                <tr>
+                    <td class="sticky z-10 left-0 bg-local p-4">
+                        <div class='w-[90px]'>
+                            {% if advantage.title == 'Wildfood' %}
+                                {% include "../../_app/logo.twig" with { class: 'w-18' } %}
+                            {% else %}
+                                <p class='text-xs font-cooper'>
+                                    {{ advantage.title }}
+                                </p>
+                            {% endif %}
+                        </div>
+                    </td>
+
+                    {% for good in advantage.goods %}
+                        <td class="relative px-4 border-t-2 border-local py-3 pl-6 bg-white {% if loop.first %} c-border-top {% endif %} {% if loop.last %} c-border-last {% endif %}">
+                            <div class='w-[115px] font-bold leading-none {% if good.positive %} text-[#8EA43D] {% else %} text-[#E45B44] {% endif %}'>
+                                {{ good.text }}
+                            </div>
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

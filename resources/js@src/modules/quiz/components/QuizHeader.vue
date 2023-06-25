@@ -26,6 +26,11 @@
             <transition mode="out-in">
                 <button
                     :key="activeQuestion == questions.length - 1"
+                    :disabled="
+                        !questions[activeQuestion].answear ||
+                        (questions[activeQuestion].type === 'mail' &&
+                            !isMailValid)
+                    "
                     class="f-btn f-btn--primary-ghost h-fit"
                     @click="$emit('nextQuestion')"
                 >
@@ -63,6 +68,11 @@ export default {
             return this.questions.length >= 10
                 ? this.questions.length
                 : "0" + this.questions.length;
+        },
+
+        isMailValid() {
+            let mailQuestion = this.questions.find((q) => q.type === "mail");
+            return mailQuestion.answear.includes("@");
         },
     },
 };

@@ -13,20 +13,25 @@
         <template v-if="question.type === 'input'">
             <InputQuestion :question="question" />
         </template>
+        <template v-else-if="question.type === 'mail'">
+            <InputMail :question="question" />
+        </template>
         <template v-else>
-            <DoubleQuestion :question="question" />
+            <ListQuestion :question="question" />
         </template>
     </div>
 </template>
 
 <script>
-import DoubleQuestion from "./DoubleQuestion.vue";
+import ListQuestion from "./ListQuestion.vue";
+import InputMail from "./InputMail.vue";
 import InputQuestion from "./InputQuestion.vue";
 
 export default {
     components: {
-        DoubleQuestion,
+        ListQuestion,
         InputQuestion,
+        InputMail,
     },
     props: {
         question: {

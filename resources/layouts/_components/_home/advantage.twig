@@ -1,0 +1,135 @@
+{% set advantages = [
+    {
+        title:'Wildfood',
+        goods: [
+            {
+                text:'YES',positive: true
+            },
+            {
+                text:'YES',positive: true
+            },
+            {
+                text:'YES',positive: true
+            },
+            {
+                text:'YES',positive: true
+            },
+            {
+                text:'MINIMAL LEVEL',positive: true
+            },
+            {
+                text:'LOW LEVEL',positive: true
+            },
+        ]
+    },
+    { 
+        title:'Wet food',
+        subtitle:'(canned/pauches)',
+        goods: [
+            {
+                text:'NO',positive: false
+            },
+            {
+                text:'NO',positive: false
+            },
+            {
+                text:'NO',positive: false
+            },
+            {
+                text:'NO',positive: false
+            },
+            {
+                text:'HIGH LEVEL',positive: false
+            },
+            {
+                text:'HIGHLEVEL',positive: false
+            },
+        ]
+    },
+    { 
+        title:'Cooked food',
+        goods: [
+            {
+                text:'YES',positive: true
+            },
+            {
+                text:'NO',positive: false
+            },
+            {
+                text:'YES',positive: true
+            },
+            {
+                text:'NO',positive: false
+            },
+            {
+                text:'HIGH LEVEL',positive: false
+            },
+            {
+                text:'HIGHLEVEL',positive: false
+            },
+        ]
+    },
+    { 
+        title:'Kibble',
+        goods: [
+            {
+                text:'YES',positive: true
+            },
+            {
+                text:'YES',positive: true
+            },
+            {
+                text:'YES',positive: true
+            },
+            {
+                text:'NO',positive: false
+            },
+            {
+                text:'HIGH LEVEL',positive: false
+            },
+            {
+                text:'HIGHLEVEL',positive: false
+            },
+        ]
+    }
+],
+%}
+
+
+{% set titles = [
+    {
+        icon:'lettuce',
+        title:'Balanced & complete diet',
+    },
+    {
+        icon:'no-preservatives',
+        title:'No atrificials & preservatives',
+    },
+    {
+        icon:'calories',
+        title:'No flavor enhancers',
+    },
+    {
+        icon:'lettuce',
+        title:'No harmul fillers',
+    },
+    {
+        icon:'no-preservatives',
+        title:'Processing Level',
+    },
+    {
+        icon:'calories',
+        title:'Carbohydrates',
+    }
+] %}
+
+<div class="l-container">
+    <section class="lg:py-20 pt-15 pb-10 flex flex-col gap-5">
+        <div>
+            <h2 class='c-title c-title--h2 mb-20 lg-max:mb-10 max-w-[740px]'>Dry food with the freshness advantage</h2>
+        </div>
+        <div class='md:hidden'>
+            {% include "../items/grid-sm.twig" with {advantages, titles} %}
+        </div>
+    </section>
+</div>
