@@ -58,7 +58,7 @@ import QuizResults from "./QuizResults.vue";
 export default {
     data() {
         return {
-            activeQuestion: 5,
+            activeQuestion: 0,
             questions,
             quizFinished: false,
         };

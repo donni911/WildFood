@@ -1,25 +1,25 @@
 {
   "../node_modules/@googlemaps/js-api-loader/dist/index.esm.js": {
-    "file": "js/chunks/index.esm.f71438e2.js",
+    "file": "assets/index.esm-f71438e2.js",
     "isDynamicEntry": true,
     "src": "../node_modules/@googlemaps/js-api-loader/dist/index.esm.js"
   },
   "../node_modules/@splidejs/splide/dist/js/splide.esm.js": {
-    "file": "js/chunks/splide.esm.4df1a7b1.js",
+    "file": "assets/splide.esm-4df1a7b1.js",
     "isDynamicEntry": true,
     "src": "../node_modules/@splidejs/splide/dist/js/splide.esm.js"
   },
   "../node_modules/vue/dist/vue.runtime.esm-bundler.js": {
-    "file": "js/chunks/vue.runtime.esm-bundler.ec52a956.js",
+    "file": "assets/vue.runtime.esm-bundler-ec52a956.js",
     "isDynamicEntry": true,
     "src": "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
   },
-  "_index.d3e84801.js": {
-    "file": "js/chunks/index.d3e84801.js",
+  "_index-d3e84801.js": {
+    "file": "assets/index-d3e84801.js",
     "isDynamicEntry": true
   },
-  "_virtual_svg-icons-register.4276dcc4.js": {
-    "file": "js/chunks/virtual_svg-icons-register.4276dcc4.js"
+  "_virtual_svg-icons-register-4276dcc4.js": {
+    "file": "assets/virtual_svg-icons-register-4276dcc4.js"
   },
   "css/about-us.css": {
     "file": "css/about-us.8f6cd973.css",
@@ -52,7 +52,7 @@
     "src": "css/test.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.541a71a9.css",
+    "file": "css/utilities.0cd4e21b.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -105,7 +105,7 @@
     "src": "fonts/Manrope-Regular.woff"
   },
   "icons/account.svg": {
-    "file": "js/chunks/account.5baebbdd.js",
+    "file": "assets/account-2700e46d.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -113,7 +113,7 @@
     "src": "icons/account.svg"
   },
   "icons/angle-pagination-left.svg": {
-    "file": "js/chunks/angle-pagination-left.0843814a.js",
+    "file": "assets/angle-pagination-left-7141a00a.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -121,7 +121,7 @@
     "src": "icons/angle-pagination-left.svg"
   },
   "icons/angle-pagination-right.svg": {
-    "file": "js/chunks/angle-pagination-right.5f90620a.js",
+    "file": "assets/angle-pagination-right-6cff0830.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -129,7 +129,7 @@
     "src": "icons/angle-pagination-right.svg"
   },
   "icons/angle.svg": {
-    "file": "js/chunks/angle.7e059faf.js",
+    "file": "assets/angle-995b90de.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -137,7 +137,7 @@
     "src": "icons/angle.svg"
   },
   "icons/arrow-lg.svg": {
-    "file": "js/chunks/arrow-lg.6cc6437d.js",
+    "file": "assets/arrow-lg-35d32166.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -145,7 +145,7 @@
     "src": "icons/arrow-lg.svg"
   },
   "icons/arrow-sm.svg": {
-    "file": "js/chunks/arrow-sm.97abbb50.js",
+    "file": "assets/arrow-sm-8c866f38.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -153,7 +153,7 @@
     "src": "icons/arrow-sm.svg"
   },
   "icons/arrow.svg": {
-    "file": "js/chunks/arrow.0c4cc78b.js",
+    "file": "assets/arrow-93cecf19.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -161,7 +161,7 @@
     "src": "icons/arrow.svg"
   },
   "icons/bag.svg": {
-    "file": "js/chunks/bag.08794ca0.js",
+    "file": "assets/bag-9bf21e2e.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -169,7 +169,7 @@
     "src": "icons/bag.svg"
   },
   "icons/blog.svg": {
-    "file": "js/chunks/blog.68dd1133.js",
+    "file": "assets/blog-3de4765f.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -177,7 +177,7 @@
     "src": "icons/blog.svg"
   },
   "icons/box.svg": {
-    "file": "js/chunks/box.eacd0189.js",
+    "file": "assets/box-acd2197b.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -185,7 +185,7 @@
     "src": "icons/box.svg"
   },
   "icons/calories.svg": {
-    "file": "js/chunks/calories.4e456440.js",
+    "file": "assets/calories-ae794732.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -193,7 +193,7 @@
     "src": "icons/calories.svg"
   },
   "icons/carousel-icon-1.svg": {
-    "file": "js/chunks/carousel-icon-1.a2f0c417.js",
+    "file": "assets/carousel-icon-1-d136e236.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -201,7 +201,7 @@
     "src": "icons/carousel-icon-1.svg"
   },
   "icons/carousel-icon-2.svg": {
-    "file": "js/chunks/carousel-icon-2.5f7aed1b.js",
+    "file": "assets/carousel-icon-2-42bafe27.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -209,7 +209,7 @@
     "src": "icons/carousel-icon-2.svg"
   },
   "icons/carousel-icon-3.svg": {
-    "file": "js/chunks/carousel-icon-3.a7f0e7ad.js",
+    "file": "assets/carousel-icon-3-c14e539f.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -217,7 +217,7 @@
     "src": "icons/carousel-icon-3.svg"
   },
   "icons/cart.svg": {
-    "file": "js/chunks/cart.bd90c8ea.js",
+    "file": "assets/cart-bb30ac41.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -225,7 +225,7 @@
     "src": "icons/cart.svg"
   },
   "icons/cat.svg": {
-    "file": "js/chunks/cat.182f7572.js",
+    "file": "assets/cat-a856cd62.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -233,7 +233,7 @@
     "src": "icons/cat.svg"
   },
   "icons/close.svg": {
-    "file": "js/chunks/close.387ea63e.js",
+    "file": "assets/close-d665f3cb.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -241,7 +241,7 @@
     "src": "icons/close.svg"
   },
   "icons/cormDog.svg": {
-    "file": "js/chunks/cormDog.36fff64f.js",
+    "file": "assets/cormDog-77339725.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -249,7 +249,7 @@
     "src": "icons/cormDog.svg"
   },
   "icons/cormdogg.svg": {
-    "file": "js/chunks/cormdogg.02a1c509.js",
+    "file": "assets/cormdogg-9966a7ec.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -257,7 +257,7 @@
     "src": "icons/cormdogg.svg"
   },
   "icons/dog.svg": {
-    "file": "js/chunks/dog.a2e540bd.js",
+    "file": "assets/dog-887b4aea.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -265,7 +265,7 @@
     "src": "icons/dog.svg"
   },
   "icons/frost.svg": {
-    "file": "js/chunks/frost.27eda943.js",
+    "file": "assets/frost-d68cd9ce.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -273,7 +273,7 @@
     "src": "icons/frost.svg"
   },
   "icons/handDog.svg": {
-    "file": "js/chunks/handDog.6668d98a.js",
+    "file": "assets/handDog-83cb57d6.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -281,7 +281,7 @@
     "src": "icons/handDog.svg"
   },
   "icons/lettuce.svg": {
-    "file": "js/chunks/lettuce.29a62010.js",
+    "file": "assets/lettuce-f5ae2d2a.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -289,7 +289,7 @@
     "src": "icons/lettuce.svg"
   },
   "icons/mark.svg": {
-    "file": "js/chunks/mark.eb0c656a.js",
+    "file": "assets/mark-d1bd519d.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -297,7 +297,7 @@
     "src": "icons/mark.svg"
   },
   "icons/no-preservatives.svg": {
-    "file": "js/chunks/no-preservatives.7a13a618.js",
+    "file": "assets/no-preservatives-69114c32.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -305,7 +305,7 @@
     "src": "icons/no-preservatives.svg"
   },
   "icons/pet-food.svg": {
-    "file": "js/chunks/pet-food.bed5570a.js",
+    "file": "assets/pet-food-c813c943.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -313,7 +313,7 @@
     "src": "icons/pet-food.svg"
   },
   "icons/salt-and-pepper.svg": {
-    "file": "js/chunks/salt-and-pepper.0c7b0ddd.js",
+    "file": "assets/salt-and-pepper-c68672af.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -321,7 +321,7 @@
     "src": "icons/salt-and-pepper.svg"
   },
   "icons/shopping-list.svg": {
-    "file": "js/chunks/shopping-list.d059b7b6.js",
+    "file": "assets/shopping-list-70ee8c94.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -329,7 +329,7 @@
     "src": "icons/shopping-list.svg"
   },
   "icons/star.svg": {
-    "file": "js/chunks/star.22285e89.js",
+    "file": "assets/star-07faff4d.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -337,7 +337,7 @@
     "src": "icons/star.svg"
   },
   "icons/works.svg": {
-    "file": "js/chunks/works.572e1e82.js",
+    "file": "assets/works-45ab5452.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -404,14 +404,14 @@
     "assets": [
       "img/mark.a6a36703.svg"
     ],
-    "file": "js/chunks/mark.eb20d4d3.js",
+    "file": "assets/mark-83c9f026.js",
     "isDynamicEntry": true,
     "src": "img/svg/mark.svg?url"
   },
   "js@pub/app.js": {
-    "file": "js/8.057e5ab7.js",
+    "file": "js/app.0a6ba249.js",
     "imports": [
-      "_virtual_svg-icons-register.4276dcc4.js"
+      "_virtual_svg-icons-register-4276dcc4.js"
     ],
     "isEntry": true,
     "src": "js@pub/app.js"
@@ -420,17 +420,17 @@
     "dynamicImports": [
       "js@src/modules/carousel/index.js",
       "js@src/modules/collapse/index.js",
-      "_index.d3e84801.js",
+      "_index-d3e84801.js",
       "js@src/modules/header/index.js",
       "js@src/modules/map/index.js",
       "js@src/modules/quiz/index.js",
-      "_index.d3e84801.js",
+      "_index-d3e84801.js",
       "js@src/modules/tabs/index.js",
       "js@src/modules/tooltip/index.js"
     ],
-    "file": "js/7.40f6662d.js",
+    "file": "js/app.56f2d973.js",
     "imports": [
-      "_virtual_svg-icons-register.4276dcc4.js"
+      "_virtual_svg-icons-register-4276dcc4.js"
     ],
     "isEntry": true,
     "src": "js@src/app.js"
@@ -439,7 +439,7 @@
     "dynamicImports": [
       "../node_modules/@splidejs/splide/dist/js/splide.esm.js"
     ],
-    "file": "js/chunks/index.94fc6631.js",
+    "file": "assets/index-2b2d7671.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/carousel/index.js"
   },
@@ -447,12 +447,12 @@
     "dynamicImports": [
       "js@src/plugins/collapse/index.js"
     ],
-    "file": "js/chunks/index.e7ee2840.js",
+    "file": "assets/index-c8298bb1.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/collapse/index.js"
   },
   "js@src/modules/header/index.js": {
-    "file": "js/chunks/index.08da6a3f.js",
+    "file": "assets/index-08da6a3f.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/header/index.js"
   },
@@ -461,7 +461,7 @@
       "../node_modules/@googlemaps/js-api-loader/dist/index.esm.js",
       "img/svg/mark.svg?url"
     ],
-    "file": "js/chunks/index.f754b9c4.js",
+    "file": "assets/index-cc963c6d.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/map/index.js"
   },
@@ -498,7 +498,7 @@
       "icons/star.svg",
       "icons/works.svg"
     ],
-    "file": "js/chunks/QuizComponent.cfcb608d.js",
+    "file": "assets/QuizComponent-ba1b8447.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -510,7 +510,7 @@
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "js@src/modules/quiz/components/QuizComponent.vue"
     ],
-    "file": "js/chunks/index.819a4534.js",
+    "file": "assets/index-8c1e086a.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/quiz/index.js"
   },
@@ -518,7 +518,7 @@
     "dynamicImports": [
       "js@src/plugins/tabs/index.js"
     ],
-    "file": "js/chunks/index.cb45b5dd.js",
+    "file": "assets/index-e5a04381.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/tabs/index.js"
   },
@@ -526,22 +526,22 @@
     "dynamicImports": [
       "js@src/plugins/tooltip/index.js"
     ],
-    "file": "js/chunks/index.c5687758.js",
+    "file": "assets/index-76261f56.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/tooltip/index.js"
   },
   "js@src/plugins/collapse/index.js": {
-    "file": "js/chunks/index.11fd4df0.js",
+    "file": "assets/index-11fd4df0.js",
     "isDynamicEntry": true,
     "src": "js@src/plugins/collapse/index.js"
   },
   "js@src/plugins/tabs/index.js": {
-    "file": "js/chunks/index.de91991b.js",
+    "file": "assets/index-de91991b.js",
     "isDynamicEntry": true,
     "src": "js@src/plugins/tabs/index.js"
   },
   "js@src/plugins/tooltip/index.js": {
-    "file": "js/chunks/index.0e1a4059.js",
+    "file": "assets/index-0e1a4059.js",
     "isDynamicEntry": true,
     "src": "js@src/plugins/tooltip/index.js"
   }

@@ -5,6 +5,7 @@
         :class="{
             'c-gradient bg-no-repeat bg-center bg-cover': bgImage,
             'bg-yellow pointer-events-none': isActive,
+            'opacity-50': isActive && bgImage,
         }"
         :style="{
             backgroundImage: bgImage && `url(${bgImage})`,
