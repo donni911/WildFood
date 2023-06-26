@@ -60,9 +60,20 @@ export default {
         handleSelection(selectedValue) {
             this.question.answear = selectedValue;
         },
+
         handleCheckbox(selectedValues) {
-            this.question.answear = selectedValues;
+            let isInArr = this.selectedCheckboxValues.includes(selectedValues);
+            if (isInArr) {
+                this.selectedCheckboxValues =
+                    this.selectedCheckboxValues.filter(
+                        (value) => value !== selectedValues
+                    );
+            } else {
+                this.selectedCheckboxValues.push(selectedValues);
+            }
+            this.question.answear = this.selectedCheckboxValues;
         },
+
         isSelectedCheckbox(value) {
             return this.selectedCheckboxValues.includes(value);
         },

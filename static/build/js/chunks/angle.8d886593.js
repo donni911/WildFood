@@ -1,2 +1,0 @@
-import{openBlock as e,createElementBlock as t,createElementVNode as o}from"./vue.runtime.esm-bundler.4a69af4e.js";const n={xmlns:"http://www.w3.org/2000/svg",width:"16",height:"9"},l=o("path",{"fill-rule":"evenodd",d:"M.363.363a.9.9 0 0 0 0 1.273l7 7a.9.9 0 0 0 1.273 0l7-7A.9.9 0 1 0 14.363.363L8 6.727 1.636.363a.9.9 0 0 0-1.273 0Z","clip-rule":"evenodd"},null,-1),r=[l];function c(d,a){return e(),t("svg",n,r)}const h={render:c};export{h as default,c as render};
-//# sourceMappingURL=angle.8d886593.js.map

@@ -3,7 +3,7 @@
         class="bg-local hover:opacity-80 p-4 cursor-pointer transition-opacity"
         :class="{
             'c-gradient bg-no-repeat bg-center bg-cover': bgImage,
-            'opacity-50': isSelected,
+            'bg-yellow': isSelected,
         }"
         :style="{
             backgroundImage: bgImage && `url(${bgImage})`,
@@ -21,7 +21,7 @@
             <span
                 class="font-semibold text-primary flex text-center justify-center items-center gap-3 text-5.5"
                 :class="{
-                    'text-white': bgImage,
+                    'text-white': bgImage || isSelected,
                 }"
             >
                 <Icon v-if="icon" :name="icon" />
@@ -65,16 +65,8 @@ export default {
     },
     methods: {
         emitSelection() {
-            if (this.isSelected) {
-                this.selectedValues = this.selectedValues.filter(
-                    (value) => value !== this.title
-                );
-            } else {
-                this.selectedValues.push(this.title);
-            }
-            this.$emit("selection-change", this.selectedValues);
+            this.$emit("selection-change", this.title);
         },
     },
 };
 </script>
-  
