@@ -11,7 +11,7 @@ import svgLoader from "vite-svg-loader";
 import config from "./vite-config/config.js";
 import twigHtmlPlugin from "./vite-config/twig-html.js";
 
-export default defineConfig({ 
+export default defineConfig({
   server: {
     ...config.server,
   },
@@ -49,9 +49,8 @@ export default defineConfig({
 
           return `${folders}[name].[hash].[ext]`;
         },
-        // chunkFileNames: "js/chunks/[name].[hash].js",
-        // entryFileNames: "js/[name].[hash].js",
-        entryFileNames: "js/app.[hash].js",
+        chunkFileNames: "js/chunks/[name].[hash].js",
+        entryFileNames: "js/[name].[hash].js",
       },
       input: [
         ...globSync(path.resolve(`${config.rootDir}/css/*.css`)),

@@ -3,22 +3,22 @@
         title:'Wildfood',
         goods: [
             {
-                text:'YES',positive: true
+                text:'YES',positive: true,  border:true,
             },
             {
-                text:'YES',positive: true
+                text:'YES',positive: true,  border:true,
             },
             {
-                text:'YES',positive: true
+                text:'YES',positive: true,  border:true,
             },
             {
-                text:'YES',positive: true
+                text:'YES',positive: true,  border:true,
             },
             {
-                text:'MINIMAL LEVEL',positive: true
+                text:'MINIMAL LEVEL',positive: true,  border:true,
             },
             {
-                text:'LOW LEVEL',positive: true
+                text:'LOW LEVEL',positive: true,  border:true,
             },
         ]
     },
@@ -95,7 +95,6 @@
 ],
 %}
 
-
 {% set titles = [
     {
         icon:'lettuce',
@@ -128,6 +127,10 @@
         <div>
             <h2 class='c-title c-title--h2 mb-20 lg-max:mb-10 max-w-[740px]'>Dry food with the freshness advantage</h2>
         </div>
+        <div class='md-max:hidden'>
+            {% include "../items/grid-lg.twig" with {advantages, titles} %}
+        </div>
+
         <div class='md:hidden'>
             {% include "../items/grid-sm.twig" with {advantages, titles} %}
         </div>

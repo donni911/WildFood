@@ -1,2 +1,0 @@
-(async()=>{const o=[...document.querySelectorAll("[data-tooltip-target]"),...document.querySelectorAll("[data-tooltip]")];if(!o.length)return;const{default:e}=await import("./index-0e1a4059.js");o.forEach(t=>{const a=t.dataset.tooltipTarget,l=document.querySelector(a),c=t.dataset.tooltipPlacement,n=t.dataset.tooltipType,r=t.dataset.tooltip;new e({targetEl:t,tooltipEl:l,content:r,placement:c,type:n})})})();
-//# sourceMappingURL=index-76261f56.js.map

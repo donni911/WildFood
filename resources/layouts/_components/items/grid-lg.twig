@@ -1,0 +1,99 @@
+<table class="table-auto border-collapse w-full mb-2">
+    <thead>
+        <tr>
+            <th class="">
+                <div class='top-4 absolute'></div>
+            </th>
+            {% for advantage in advantages %}
+                <th class="pb-7">
+                    <div class='flex items-center justify-center'>
+                        {% if advantage.title == 'Wildfood' %}
+                            {% include "../../_app/logo.twig" with { class: 'w-[120px]' } %}
+                        {% else %}
+                            <p class='text-[32px] leading-none flex flex-col items-center font-cooper'>
+                                {{ advantage.title }}
+                                <span class='text-xs'>
+                                    {{ advantage.subtitle }}
+                                </span>
+                            </p>
+                        {% endif %}
+                    </div>
+                </th>
+            {% endfor %}
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for title in titles %}
+            {% if loop.last %}
+                <tr>
+                    <td class="p-[32px] bg-local {% if loop.last %} rounded-es-[32px] {% endif %}">
+                        <div class='flex gap-4'>
+                            <div class=''>
+                                {% include "../../_app/icon.twig" with {id: title.icon, classIcon: 'w-5 h-5' } %}
+                            </div>
+                            <p class='text-start font-semibold text-5 text-primary'>
+                                {{ title.title }}
+                            </p>
+                        </div>
+                    </td>
+                    {% for advantage in advantages %}
+                        {% set index = advantage.goods[loop.parent.loop.index - 1] %}
+                        <td class="p-[32px] bg-local relative {% if loop.last %} rounded-ee-[32px] {% endif %} {% if index.border %} before:content-[''] before:absolute before:inset-0 before:bg-white before:rounded-b-[24px] {% endif %}">
+                            <div class='font-bold flex items-center justify-center leading-none relative z-10 {% if index.positive %} text-[#8EA43D] {% else %} text-[#E45B44] {% endif %}'>
+                                <p class='text-5'>
+                                    {{ index.text }}</p>
+                            </div>
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% elseif loop.first %}
+                <tr>
+                    <td class="p-[32px] bg-local {% if loop.first %} rounded-ss-[32px] {% endif %} {% if loop.last %} rounded-se-[32px] {% endif %}">
+                        <div class='flex gap-4'>
+                            <div class=''>
+                                {% include "../../_app/icon.twig" with {id: title.icon, classIcon: 'w-5 h-5' } %}
+                            </div>
+                            <p class='text-start font-semibold text-5 text-primary'>
+                                {{ title.title }}
+                            </p>
+                        </div>
+                    </td>
+                    {% for advantage in advantages %}
+                        {% set index = advantage.goods[loop.parent.loop.index - 1] %}
+                        <td class="p-[32px] relative bg-local {% if loop.last %} rounded-se-[32px] {% endif %} {% if index.border %} before:content-[''] before:absolute before:inset-0 before:bg-white before:rounded-t-[24px] {% endif %}">
+                            <div class='relative z-10 font-bold flex items-center justify-center leading-none {% if index.positive %} text-[#8EA43D] {% else %} text-[#E45B44] {% endif %}'>
+                                <p class='text-5'>
+                                    {{ index.text }}</p>
+                            </div>
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% else %}
+                <tr>
+                    <td class="p-[24px] bg-local {% if loop.first %} rounded-ss-[32px] {% endif %} {% if loop.last %} rounded-es-[32px] {% endif %}">
+                        <div class='flex gap-4'>
+                            <div class=''>
+                                {% include "../../_app/icon.twig" with {id: title.icon, classIcon: 'w-5 h-5' } %}
+                            </div>
+                            <p class='text-start font-semibold text-5 text-primary'>
+                                {{ title.title }}
+                            </p>
+                        </div>
+                    </td>
+                    {% for advantage in advantages %}
+                        {% set index = advantage.goods[loop.parent.loop.index - 1] %}
+                        <td class="p-[32px] bg-local {% if index.border %} bg-white {% endif %}">
+                            <div class='font-bold flex items-center justify-center leading-none {% if index.positive %} text-[#8EA43D] {% else %} text-[#E45B44] {% endif %}'>
+                                <p class='text-5'>
+                                    {{ index.text }}
+                                </p>
+                            </div>
+                        </td>
+                    {% endfor %}
+                </tr>
+
+            {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
