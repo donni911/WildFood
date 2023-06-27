@@ -14,44 +14,6 @@
     "isDynamicEntry": true,
     "src": "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
   },
-  "_virtual_svg-icons-register.4276dcc4.js": {
-    "file": "js/chunks/virtual_svg-icons-register.4276dcc4.js"
-  },
-  "css/about-us.css": {
-    "file": "css/about-us.8f6cd973.css",
-    "isEntry": true,
-    "src": "css/about-us.css"
-  },
-  "css/app.css": {
-    "file": "css/app.69e61ca7.css",
-    "isEntry": true,
-    "src": "css/app.css"
-  },
-  "css/blog.css": {
-    "file": "css/blog.1482af6b.css",
-    "isEntry": true,
-    "src": "css/blog.css"
-  },
-  "css/error.css": {
-    "file": "css/error.0edd1e54.css",
-    "isEntry": true,
-    "src": "css/error.css"
-  },
-  "css/home.css": {
-    "file": "css/home.1095c582.css",
-    "isEntry": true,
-    "src": "css/home.css"
-  },
-  "css/test.css": {
-    "file": "css/test.1d20db89.css",
-    "isEntry": true,
-    "src": "css/test.css"
-  },
-  "css/utilities.css": {
-    "file": "css/utilities.eb952206.css",
-    "isEntry": true,
-    "src": "css/utilities.css"
-  },
   "fonts/Cooper-Black-Regular.ttf": {
     "file": "fonts/Cooper-Black-Regular.14c2eb57.ttf",
     "src": "fonts/Cooper-Black-Regular.ttf"
@@ -404,32 +366,6 @@
     "isDynamicEntry": true,
     "src": "img/svg/mark.svg?url"
   },
-  "js@pub/app.js": {
-    "file": "js/8.057e5ab7.js",
-    "imports": [
-      "_virtual_svg-icons-register.4276dcc4.js"
-    ],
-    "isEntry": true,
-    "src": "js@pub/app.js"
-  },
-  "js@src/app.js": {
-    "dynamicImports": [
-      "js@src/modules/carousel/index.js",
-      "js@src/modules/collapse/index.js",
-      "js@src/modules/gallery/index.js",
-      "js@src/modules/header/index.js",
-      "js@src/modules/map/index.js",
-      "js@src/modules/quiz/index.js",
-      "js@src/modules/tabs/index.js",
-      "js@src/modules/tooltip/index.js"
-    ],
-    "file": "js/7.6b8fdee5.js",
-    "imports": [
-      "_virtual_svg-icons-register.4276dcc4.js"
-    ],
-    "isEntry": true,
-    "src": "js@src/app.js"
-  },
   "js@src/modules/carousel/index.js": {
     "dynamicImports": [
       "../node_modules/@splidejs/splide/dist/js/splide.esm.js"
@@ -498,7 +434,7 @@
       "icons/star.svg",
       "icons/works.svg"
     ],
-    "file": "js/chunks/QuizComponent.b0349a2d.js",
+    "file": "js/chunks/QuizComponent.ca0f125b.js",
     "imports": [
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js"
     ],
@@ -510,9 +446,14 @@
       "../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "js@src/modules/quiz/components/QuizComponent.vue"
     ],
-    "file": "js/chunks/index.d1fea158.js",
+    "file": "js/chunks/index.bd904730.js",
     "isDynamicEntry": true,
     "src": "js@src/modules/quiz/index.js"
+  },
+  "js@src/modules/table/index.js": {
+    "file": "js/chunks/index.e7a21df2.js",
+    "isDynamicEntry": true,
+    "src": "js@src/modules/table/index.js"
   },
   "js@src/modules/tabs/index.js": {
     "dynamicImports": [
@@ -544,5 +485,57 @@
     "file": "js/chunks/index.0e1a4059.js",
     "isDynamicEntry": true,
     "src": "js@src/plugins/tooltip/index.js"
+  },
+  "layouts/404.css": {
+    "file": "css/404.0edd1e54.css",
+    "src": "layouts/404.css"
+  },
+  "layouts/about-us.css": {
+    "file": "css/about-us.8f6cd973.css",
+    "src": "layouts/about-us.css"
+  },
+  "layouts/blog.css": {
+    "file": "css/blog.1482af6b.css",
+    "src": "layouts/blog.css"
+  },
+  "layouts/home.css": {
+    "file": "css/home.1095c582.css",
+    "src": "layouts/home.css"
+  },
+  "layouts/index.css": {
+    "file": "css/index.a1c4f98d.css",
+    "src": "layouts/index.css"
+  },
+  "layouts/index.html": {
+    "assets": [
+      "fonts/Cooper-Black-Regular.cd1c76e2.woff",
+      "fonts/Cooper-Black-Regular.14c2eb57.ttf",
+      "fonts/Gellix-Regular.cbdc2520.woff2",
+      "fonts/Gellix-Regular.2dac824c.ttf",
+      "fonts/Gellix-Medium.63d2a94a.woff2",
+      "fonts/Gellix-Medium.8b77572e.ttf",
+      "fonts/Gellix-SemiBold.e051981d.woff2",
+      "fonts/Gellix-SemiBold.ea7e0646.ttf",
+      "fonts/Gellix-Bold.ff27c7e2.woff2",
+      "fonts/Gellix-Bold.0672fa03.ttf",
+      "fonts/Manrope-Regular.1b2c7e68.woff"
+    ],
+    "css": [
+      "css/index.a1c4f98d.css"
+    ],
+    "dynamicImports": [
+      "js@src/modules/carousel/index.js",
+      "js@src/modules/collapse/index.js",
+      "js@src/modules/gallery/index.js",
+      "js@src/modules/header/index.js",
+      "js@src/modules/map/index.js",
+      "js@src/modules/quiz/index.js",
+      "js@src/modules/table/index.js",
+      "js@src/modules/tabs/index.js",
+      "js@src/modules/tooltip/index.js"
+    ],
+    "file": "js/index.b352524c.js",
+    "isEntry": true,
+    "src": "layouts/index.html"
   }
 }

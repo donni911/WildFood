@@ -3,8 +3,8 @@
     "html": "home.html",
     "title": "Home",
     "slug": "home",
-    "desktop": false,
-    "responsive": false
+    "desktop": true,
+    "responsive": true
   },
   {
     "html": "about-us.html",
