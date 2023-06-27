@@ -1,6 +1,6 @@
 class ExpandableTable {
   constructor(containerSelector, expandableIndex) {
-    this.container = document.querySelector(containerSelector);
+    this.container = containerSelector;
     this.table = this.container.querySelector(".js-expand-table");
     this.btn = this.container.querySelector(".js-btn-expand");
     this.tableBody = this.table.querySelector("tbody");
@@ -41,4 +41,8 @@ class ExpandableTable {
   }
 }
 
-const expandableTable = new ExpandableTable(".js-expand", 6);
+const container = document.querySelector(".js-expand");
+
+if (container) {
+  const expandableTable = new ExpandableTable(container, 6);
+}

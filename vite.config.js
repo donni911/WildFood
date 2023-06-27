@@ -52,16 +52,16 @@ export default defineConfig({
         entryFileNames: "js/[name].[hash].js",
       },
 
-      input: [
-        ...globSync(`${config.rootDir}/modules/**/index.js`),
-        // ...globSync(`${config.rootDir}/vite.js`),
-      ],
-
       // input: [
-      //   ...globSync(path.resolve(`${config.rootDir}/css/*.css`)),
-      //   `${config.rootDir}/js@src/app.js`,
       //   `${config.rootDir}/js@pub/app.js`,
+      //   ...globSync(path.resolve(`${config.rootDir}/css/*.css`)),
       // ],
+
+      input: [
+        ...globSync(path.resolve(`${config.rootDir}/css/*.css`)),
+        // `${config.rootDir}/js@src/app.js`,
+        `${config.rootDir}/js@pub/app.js`,
+      ],
     },
   },
   resolve: {

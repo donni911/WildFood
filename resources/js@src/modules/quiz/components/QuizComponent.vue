@@ -36,12 +36,10 @@
                         >
                             {{ questions[activeQuestion]?.subtitle }}
                         </p>
-
                         <QuestionsController
                             :question="questions[activeQuestion]"
                         />
                     </div>
-
                     <QuizResults :results="questions" v-else />
                 </div>
             </transition>

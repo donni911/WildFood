@@ -1,11 +1,10 @@
-(async () => {
-    const tabsEls = document.querySelectorAll('[data-tabs-target]');
+// (async () => {
+import tabs from "@src/plugins/tabs";
+const tabsEls = document.querySelectorAll("[data-tabs-target]");
 
-    if (!tabsEls.length) {
-        return;
-    }
+if (tabsEls) {
+  // const { default: tabs } = await import('');
 
-    const { default: tabs } = await import('@src/plugins/tabs');
-
-    tabsEls.forEach(el => tabs(el));
-})();
+  tabsEls.forEach((el) => tabs(el));
+}
+// })();

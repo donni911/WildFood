@@ -1,33 +1,31 @@
-import { setSpaces, clearSpaces } from '@src/helpers/measure';
+import { setSpaces, clearSpaces } from "@src/helpers/measure";
 
-(() => {
-    const menuToggle = document.querySelector('[data-menu-toggle]');
+// (() => {
+const menuToggle = document.querySelector("[data-menu-toggle]");
 
-    if (!menuToggle) {
-        return;
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    document.documentElement.classList.toggle("is-menu-open");
+
+    if (document.documentElement.classList.contains("is-menu-open")) {
+      setSpaces();
+    } else {
+      clearSpaces();
     }
+  });
 
-    menuToggle.addEventListener('click', () => {
-        document.documentElement.classList.toggle('is-menu-open');
+  const checkScroll = () => {
+    if (document.documentElement.scrollTop >= 10) {
+      document.documentElement.classList.add("is-header-sticky");
+    } else {
+      document.documentElement.classList.remove("is-header-sticky");
+    }
+  };
 
-        if (document.documentElement.classList.contains('is-menu-open')) {
-            setSpaces();
-        } else {
-            clearSpaces();
-        }
-    });
+  checkScroll();
 
-    const checkScroll = () => {
-        if (document.documentElement.scrollTop >= 10) {
-            document.documentElement.classList.add('is-header-sticky');
-        } else {
-            document.documentElement.classList.remove('is-header-sticky');
-        }
-    };
-
+  document.addEventListener("scroll", () => {
     checkScroll();
-
-    document.addEventListener('scroll', () => {
-        checkScroll();
-    });
-})();
+  });
+}
+// })();
