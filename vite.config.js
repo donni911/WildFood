@@ -19,7 +19,6 @@ export default defineConfig({
   root: path.resolve(config.rootDir),
   publicDir: path.resolve(config.publicDir),
   build: {
-    sourcemap: true,
     outDir: path.resolve(config.buildDir),
     emptyOutDir: true,
     copyPublicDir: false,

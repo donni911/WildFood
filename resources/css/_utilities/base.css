@@ -168,3 +168,28 @@
     width: 1px;
   }
 }
+
+.el-hidden {
+  display: none;
+
+  &.active {
+    display: table-row;
+  }
+}
+
+.el-active {
+  td:first-child {
+    border-bottom-left-radius: 32px;
+  }
+
+  td:nth-child(2) {
+    &:before {
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+    }
+  }
+
+  td:last-child {
+    border-bottom-right-radius: 32px;
+  }
+}

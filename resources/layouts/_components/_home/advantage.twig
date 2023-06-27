@@ -15,6 +15,12 @@
                 text:'YES',positive: true,  border:true,
             },
             {
+                text:'YES',positive: true,  border:true,
+            },
+            {
+                text:'YES',positive: true,  border:true,
+            },
+            {
                 text:'MINIMAL LEVEL',positive: true,  border:true,
             },
             {
@@ -26,6 +32,12 @@
         title:'Wet food',
         subtitle:'(canned/pauches)',
         goods: [
+            {
+                text:'NO',positive: false
+            },
+            {
+                text:'NO',positive: false
+            },
             {
                 text:'NO',positive: false
             },
@@ -53,6 +65,12 @@
                 text:'YES',positive: true
             },
             {
+                text:'YES',positive: true
+            },
+            {
+                text:'YES',positive: true
+            },
+            {
                 text:'NO',positive: false
             },
             {
@@ -72,6 +90,12 @@
     { 
         title:'Kibble',
         goods: [
+            {
+                text:'YES',positive: true
+            },
+            {
+                text:'YES',positive: true
+            },
             {
                 text:'YES',positive: true
             },
@@ -117,6 +141,14 @@
         title:'Processing Level',
     },
     {
+        icon:'lettuce',
+        title:'No harmul fillers',
+    },
+    {
+        icon:'no-preservatives',
+        title:'Processing Level',
+    },
+    {
         icon:'calories',
         title:'Carbohydrates',
     }
@@ -127,11 +159,12 @@
         <div>
             <h2 class='c-title c-title--h2 mb-20 lg-max:mb-10 max-w-[740px]'>Dry food with the freshness advantage</h2>
         </div>
-        <div class='md-max:hidden'>
+        <div class='lg-max:hidden js-expand'>
             {% include "../items/grid-lg.twig" with {advantages, titles} %}
+            <button class="f-btn f-btn--primary-ghost mt-5 font-bold text-sm border-[2px] js-btn-expand">SEE MORE</button>
         </div>
 
-        <div class='md:hidden'>
+        <div class='lg:hidden'>
             {% include "../items/grid-sm.twig" with {advantages, titles} %}
         </div>
     </section>
