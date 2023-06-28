@@ -88,7 +88,8 @@
     transition: transform theme(transitionTimingFunction.base)
       theme(transitionDuration.base);
 
-    .i-icon {
+    .i-icon,
+    svg {
       width: 20px;
 
       @screen md {
@@ -98,6 +99,10 @@
 
     &--up {
       margin-left: 0;
+    }
+
+    &--rotate-45 {
+      transform: rotate(-45deg);
     }
   }
 
@@ -148,7 +153,9 @@
         transform: translateX(5px);
 
         &--up {
-          transform: translate(5px, -5px);
+          transform: translate(5px, -5px) rotate(-45deg);
+
+          /* transform: rotate(-45deg); */
         }
       }
     }

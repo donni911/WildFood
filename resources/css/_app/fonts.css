@@ -51,7 +51,13 @@
 @font-face {
   font-family: "Manrope";
   font-display: swap;
-  src: local(GellixRegular),
+  src: local(ManropeRegular),
     url("../../fonts/Manrope-Regular.woff") format("woff");
   font-weight: 400;
+}
+@font-face {
+  font-family: "Manrope";
+  font-display: swap;
+  src: local(ManropeMedium), url("../../fonts/Manrope-Medium.ttf") format("ttf");
+  font-weight: 500;
 }

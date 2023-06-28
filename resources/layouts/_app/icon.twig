@@ -1,3 +1,7 @@
-<svg class="i-icon i-{{ id }} {{ classIcon }}">
+{# <div class="i-icon i-{{ id }} {{ classIcon }}"> #}
+    {% include "../../icons/" ~ id ~ '.svg' %}
+{# </div> #}
+
+{# <svg class="i-icon i-{{ id }} {{ classIcon }}">
     <use xlink:href="#icon-{{ type ? type ~ '-' : '' }}{{ id }}"/>
-</svg>
+</svg> #}

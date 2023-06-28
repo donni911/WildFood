@@ -2,10 +2,10 @@
     <div
         class="sm-max:flex-col w-full pb-2 md:pb-5 md:border-b-2 md:border-primary flex sm:items-center justify-between gap-5 h-fit"
     >
-        <div
-            class="text-primary font-normal font-manrope text-xs md:text-[24px]"
-        >
-            <span class="inline-flex justify-between text-6 md:text-[34px]">
+        <div class="text-primary font-sans text-xs md:text-[24px]">
+            <span
+                class="inline-flex font-manrope font-medium justify-between text-6 md:text-[34px]"
+            >
                 <transition mode="out-in">
                     <span
                         class="min-w-[32px] md:min-w-[42px]"

@@ -37,14 +37,14 @@
       display: grid;
       place-items: center;
       --icon-size: calc(var(--btn-size) * 0.5);
-      background-color: theme(colors.local);
+      background-color: theme(colors.body);
 
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       z-index: 10;
 
-      .i-icon {
+      svg {
         width: 29px;
       }
 
@@ -61,7 +61,7 @@
       }
 
       &--prev {
-        .i-icon {
+        svg {
           transform: rotate(180deg);
         }
 
@@ -210,7 +210,7 @@
   }
 
   &__icon {
-    .i-icon {
+    svg {
       width: 40px;
       height: 40px;
 

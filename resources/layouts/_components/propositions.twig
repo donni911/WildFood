@@ -20,8 +20,8 @@
 <div class='grid sm-max:grid-cols-2 sm:grid-cols-2 gap-5 xl:grid-cols-4'>
     {% for item in boxWork %}
         <div class="min-h-[160px] xl:min-h-[270px] 2xl:min-h-[305px] flex flex-col items-center sm-max:gap-2.5 gap-5 justify-center sm-max:p-[22px] p-8 rounded-[20px] md:rounded-[32px] bg-local">
-            <div>
-                {% include "../_app/icon.twig" with {  id: item.icon, classIcon: 'w-8 h-8 sm:w-15 sm:h-15' } %}
+            <div class='[&>svg]:w-8 [&>svg]:h-8 [&>svg]:sm:w-15 [&>svg]:sm:h-15'>
+                {% include "../_app/icon.twig" with { id: item.icon } %}
             </div>
             <h3 class='font-semibold sm-max:text-sm text-5 xl:text-6 text-center text-primary'>{{item.title}}</h3>
         </div>

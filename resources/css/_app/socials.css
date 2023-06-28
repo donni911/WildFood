@@ -33,7 +33,8 @@
 }
 
 .c-mail__btn {
-  .i-icon {
+  .i-icon,
+  svg {
     width: 15px;
     transition: theme(transitionDuration.base)
       theme(transitionTimingFunction.base) transform;
@@ -45,7 +46,8 @@
     &:hover {
       border-color: theme(colors.primary.DEFAULT);
 
-      .i-icon {
+      .i-icon,
+      svg {
         transform: translateX(4px);
         fill: theme(colors.primary.DEFAULT);
       }

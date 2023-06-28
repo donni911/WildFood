@@ -5,7 +5,7 @@
     "src": "css/about-us.css"
   },
   "css/app.css": {
-    "file": "css/app.9aea9599.css",
+    "file": "css/app.a149899c.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -20,12 +20,12 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.1095c582.css",
+    "file": "css/home.0494df85.css",
     "isEntry": true,
     "src": "css/home.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.f6b721f7.css",
+    "file": "css/utilities.989926b2.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -44,6 +44,10 @@
   "fonts/Gellix-Bold.woff2": {
     "file": "fonts/Gellix-Bold.ff27c7e2.woff2",
     "src": "fonts/Gellix-Bold.woff2"
+  },
+  "fonts/Gellix-ExtraBold.ttf": {
+    "file": "fonts/Gellix-ExtraBold.e3ab82fd.ttf",
+    "src": "fonts/Gellix-ExtraBold.ttf"
   },
   "fonts/Gellix-Medium.ttf": {
     "file": "fonts/Gellix-Medium.8b77572e.ttf",
@@ -69,12 +73,16 @@
     "file": "fonts/Gellix-SemiBold.e051981d.woff2",
     "src": "fonts/Gellix-SemiBold.woff2"
   },
+  "fonts/Manrope-Medium.ttf": {
+    "file": "fonts/Manrope-Medium.562fb5d8.ttf",
+    "src": "fonts/Manrope-Medium.ttf"
+  },
   "fonts/Manrope-Regular.woff": {
     "file": "fonts/Manrope-Regular.1b2c7e68.woff",
     "src": "fonts/Manrope-Regular.woff"
   },
   "icons/account.svg": {
-    "file": "js/chunks/account.64214d1a.js",
+    "file": "js/chunks/account.228bfa93.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -82,7 +90,7 @@
     "src": "icons/account.svg"
   },
   "icons/angle-pagination-left.svg": {
-    "file": "js/chunks/angle-pagination-left.ff362c70.js",
+    "file": "js/chunks/angle-pagination-left.31a5d1ef.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -90,7 +98,7 @@
     "src": "icons/angle-pagination-left.svg"
   },
   "icons/angle-pagination-right.svg": {
-    "file": "js/chunks/angle-pagination-right.bda2ead5.js",
+    "file": "js/chunks/angle-pagination-right.907f9331.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -98,7 +106,7 @@
     "src": "icons/angle-pagination-right.svg"
   },
   "icons/angle.svg": {
-    "file": "js/chunks/angle.cb31b5cc.js",
+    "file": "js/chunks/angle.99a386f7.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -106,7 +114,7 @@
     "src": "icons/angle.svg"
   },
   "icons/arrow-lg.svg": {
-    "file": "js/chunks/arrow-lg.c9b8fde5.js",
+    "file": "js/chunks/arrow-lg.f513cce3.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -114,7 +122,7 @@
     "src": "icons/arrow-lg.svg"
   },
   "icons/arrow-sm.svg": {
-    "file": "js/chunks/arrow-sm.0076a000.js",
+    "file": "js/chunks/arrow-sm.0a129cf8.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -122,7 +130,7 @@
     "src": "icons/arrow-sm.svg"
   },
   "icons/arrow.svg": {
-    "file": "js/chunks/arrow.3f035104.js",
+    "file": "js/chunks/arrow.6cd09042.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -130,7 +138,7 @@
     "src": "icons/arrow.svg"
   },
   "icons/bag.svg": {
-    "file": "js/chunks/bag.d1322325.js",
+    "file": "js/chunks/bag.f7d99f33.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -138,7 +146,7 @@
     "src": "icons/bag.svg"
   },
   "icons/blog.svg": {
-    "file": "js/chunks/blog.844070c7.js",
+    "file": "js/chunks/blog.fc8864ab.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -146,7 +154,7 @@
     "src": "icons/blog.svg"
   },
   "icons/box.svg": {
-    "file": "js/chunks/box.ba300bbb.js",
+    "file": "js/chunks/box.80be1aa1.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -154,7 +162,7 @@
     "src": "icons/box.svg"
   },
   "icons/calories.svg": {
-    "file": "js/chunks/calories.044877e9.js",
+    "file": "js/chunks/calories.f0df28b4.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -162,7 +170,7 @@
     "src": "icons/calories.svg"
   },
   "icons/carousel-icon-1.svg": {
-    "file": "js/chunks/carousel-icon-1.13d161b2.js",
+    "file": "js/chunks/carousel-icon-1.d1735e63.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -170,7 +178,7 @@
     "src": "icons/carousel-icon-1.svg"
   },
   "icons/carousel-icon-2.svg": {
-    "file": "js/chunks/carousel-icon-2.9d7faba6.js",
+    "file": "js/chunks/carousel-icon-2.a869d4c9.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -178,7 +186,7 @@
     "src": "icons/carousel-icon-2.svg"
   },
   "icons/carousel-icon-3.svg": {
-    "file": "js/chunks/carousel-icon-3.4221e905.js",
+    "file": "js/chunks/carousel-icon-3.a4657ec8.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -186,7 +194,7 @@
     "src": "icons/carousel-icon-3.svg"
   },
   "icons/cart.svg": {
-    "file": "js/chunks/cart.86c03888.js",
+    "file": "js/chunks/cart.d3f778e3.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -194,7 +202,7 @@
     "src": "icons/cart.svg"
   },
   "icons/cat.svg": {
-    "file": "js/chunks/cat.e1210696.js",
+    "file": "js/chunks/cat.56c2c773.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -202,7 +210,7 @@
     "src": "icons/cat.svg"
   },
   "icons/close.svg": {
-    "file": "js/chunks/close.2de16053.js",
+    "file": "js/chunks/close.ea06e494.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -210,7 +218,7 @@
     "src": "icons/close.svg"
   },
   "icons/cormDog.svg": {
-    "file": "js/chunks/cormDog.279678c0.js",
+    "file": "js/chunks/cormDog.beeea5c0.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -218,7 +226,7 @@
     "src": "icons/cormDog.svg"
   },
   "icons/cormdogg.svg": {
-    "file": "js/chunks/cormdogg.253aa8ae.js",
+    "file": "js/chunks/cormdogg.a16aa5a6.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -226,15 +234,23 @@
     "src": "icons/cormdogg.svg"
   },
   "icons/dog.svg": {
-    "file": "js/chunks/dog.1fe9100d.js",
+    "file": "js/chunks/dog.98a2da1a.js",
     "imports": [
       "js@pub/app.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/dog.svg"
   },
+  "icons/facebook.svg": {
+    "file": "js/chunks/facebook.f21140d5.js",
+    "imports": [
+      "js@pub/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "icons/facebook.svg"
+  },
   "icons/frost.svg": {
-    "file": "js/chunks/frost.e7455970.js",
+    "file": "js/chunks/frost.72020d69.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -242,15 +258,23 @@
     "src": "icons/frost.svg"
   },
   "icons/handDog.svg": {
-    "file": "js/chunks/handDog.0f0f55fd.js",
+    "file": "js/chunks/handDog.4cbd60ab.js",
     "imports": [
       "js@pub/app.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/handDog.svg"
   },
+  "icons/instagram.svg": {
+    "file": "js/chunks/instagram.8b9baa02.js",
+    "imports": [
+      "js@pub/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "icons/instagram.svg"
+  },
   "icons/lettuce.svg": {
-    "file": "js/chunks/lettuce.89f482fc.js",
+    "file": "js/chunks/lettuce.94fa3c92.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -258,7 +282,7 @@
     "src": "icons/lettuce.svg"
   },
   "icons/mark.svg": {
-    "file": "js/chunks/mark.d38b0f91.js",
+    "file": "js/chunks/mark.2128c94c.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -266,7 +290,7 @@
     "src": "icons/mark.svg"
   },
   "icons/no-preservatives.svg": {
-    "file": "js/chunks/no-preservatives.aae40169.js",
+    "file": "js/chunks/no-preservatives.e9265a44.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -274,7 +298,7 @@
     "src": "icons/no-preservatives.svg"
   },
   "icons/pet-food.svg": {
-    "file": "js/chunks/pet-food.f0aeb5d6.js",
+    "file": "js/chunks/pet-food.89303056.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -282,7 +306,7 @@
     "src": "icons/pet-food.svg"
   },
   "icons/salt-and-pepper.svg": {
-    "file": "js/chunks/salt-and-pepper.88444f21.js",
+    "file": "js/chunks/salt-and-pepper.ebef38ba.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -290,7 +314,7 @@
     "src": "icons/salt-and-pepper.svg"
   },
   "icons/shopping-list.svg": {
-    "file": "js/chunks/shopping-list.d2f66eb6.js",
+    "file": "js/chunks/shopping-list.70ceeef5.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -298,15 +322,23 @@
     "src": "icons/shopping-list.svg"
   },
   "icons/star.svg": {
-    "file": "js/chunks/star.81a9ae31.js",
+    "file": "js/chunks/star.935e97ea.js",
     "imports": [
       "js@pub/app.js"
     ],
     "isDynamicEntry": true,
     "src": "icons/star.svg"
   },
+  "icons/whatsapp.svg": {
+    "file": "js/chunks/whatsapp.46744d41.js",
+    "imports": [
+      "js@pub/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "icons/whatsapp.svg"
+  },
   "icons/works.svg": {
-    "file": "js/chunks/works.63c71fa1.js",
+    "file": "js/chunks/works.7ba1ae4e.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -325,9 +357,17 @@
     "file": "img/cat-dog-eat.972a6674.png",
     "src": "img/cat-dog-eat.png"
   },
+  "img/cat-quiz.png": {
+    "file": "img/cat-quiz.65fcbd75.png",
+    "src": "img/cat-quiz.png"
+  },
   "img/corm.png": {
     "file": "img/corm.43fb487f.png",
     "src": "img/corm.png"
+  },
+  "img/dog-big-2.jpg": {
+    "file": "img/dog-big-2.6db61461.jpg",
+    "src": "img/dog-big-2.jpg"
   },
   "img/dog-big-22.png": {
     "file": "img/dog-big-22.81bb8fe1.png",
@@ -341,9 +381,17 @@
     "file": "img/dog-cat.fdaae146.png",
     "src": "img/dog-cat.png"
   },
+  "img/dog-quiz.png": {
+    "file": "img/dog-quiz.542e2807.png",
+    "src": "img/dog-quiz.png"
+  },
   "img/dogs-eat.png": {
     "file": "img/dogs-eat.c1a34a31.png",
     "src": "img/dogs-eat.png"
+  },
+  "img/food-processing.png": {
+    "file": "img/food-processing.243c2fb3.png",
+    "src": "img/food-processing.png"
   },
   "img/handshakedog.png": {
     "file": "img/handshakedog.000dde1c.png",
@@ -371,8 +419,10 @@
       "icons/cormDog.svg",
       "icons/cormdogg.svg",
       "icons/dog.svg",
+      "icons/facebook.svg",
       "icons/frost.svg",
       "icons/handDog.svg",
+      "icons/instagram.svg",
       "icons/lettuce.svg",
       "icons/mark.svg",
       "icons/no-preservatives.svg",
@@ -380,9 +430,10 @@
       "icons/salt-and-pepper.svg",
       "icons/shopping-list.svg",
       "icons/star.svg",
+      "icons/whatsapp.svg",
       "icons/works.svg"
     ],
-    "file": "js/6.85222729.js",
+    "file": "js/6.8b158b29.js",
     "isEntry": true,
     "src": "js@pub/app.js"
   }
