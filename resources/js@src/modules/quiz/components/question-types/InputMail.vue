@@ -8,6 +8,7 @@
                 ref="input"
                 type="mail"
                 v-model="question.answear"
+                @change="$emit('choosedVariant', { mail: question.answear })"
                 class="w-full outline-none flex-grow border-0 text-primary font-bold text-6 lg:text-8 bg-transparent text-center placeholder:text-primary placeholder:opacity-50"
                 placeholder="mail@mail.com"
             />

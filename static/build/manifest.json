@@ -5,12 +5,12 @@
     "src": "css/about-us.css"
   },
   "css/app.css": {
-    "file": "css/app.a149899c.css",
+    "file": "css/app.5bcfc654.css",
     "isEntry": true,
     "src": "css/app.css"
   },
   "css/blog.css": {
-    "file": "css/blog.1482af6b.css",
+    "file": "css/blog.a5efcec5.css",
     "isEntry": true,
     "src": "css/blog.css"
   },
@@ -20,12 +20,12 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.0494df85.css",
+    "file": "css/home.9bd088a2.css",
     "isEntry": true,
     "src": "css/home.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.989926b2.css",
+    "file": "css/utilities.592e1542.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -82,7 +82,7 @@
     "src": "fonts/Manrope-Regular.woff"
   },
   "icons/account.svg": {
-    "file": "js/chunks/account.228bfa93.js",
+    "file": "js/chunks/account.a709a745.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -90,7 +90,7 @@
     "src": "icons/account.svg"
   },
   "icons/angle-pagination-left.svg": {
-    "file": "js/chunks/angle-pagination-left.31a5d1ef.js",
+    "file": "js/chunks/angle-pagination-left.abd83bb3.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -98,7 +98,7 @@
     "src": "icons/angle-pagination-left.svg"
   },
   "icons/angle-pagination-right.svg": {
-    "file": "js/chunks/angle-pagination-right.907f9331.js",
+    "file": "js/chunks/angle-pagination-right.63e7d18f.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -106,7 +106,7 @@
     "src": "icons/angle-pagination-right.svg"
   },
   "icons/angle.svg": {
-    "file": "js/chunks/angle.99a386f7.js",
+    "file": "js/chunks/angle.99fb251a.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -114,7 +114,7 @@
     "src": "icons/angle.svg"
   },
   "icons/arrow-lg.svg": {
-    "file": "js/chunks/arrow-lg.f513cce3.js",
+    "file": "js/chunks/arrow-lg.fa5edeae.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -122,7 +122,7 @@
     "src": "icons/arrow-lg.svg"
   },
   "icons/arrow-sm.svg": {
-    "file": "js/chunks/arrow-sm.0a129cf8.js",
+    "file": "js/chunks/arrow-sm.adca516d.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -130,7 +130,7 @@
     "src": "icons/arrow-sm.svg"
   },
   "icons/arrow.svg": {
-    "file": "js/chunks/arrow.6cd09042.js",
+    "file": "js/chunks/arrow.66975eb7.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -138,7 +138,7 @@
     "src": "icons/arrow.svg"
   },
   "icons/bag.svg": {
-    "file": "js/chunks/bag.f7d99f33.js",
+    "file": "js/chunks/bag.ddad5839.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -146,7 +146,7 @@
     "src": "icons/bag.svg"
   },
   "icons/blog.svg": {
-    "file": "js/chunks/blog.fc8864ab.js",
+    "file": "js/chunks/blog.57a335d9.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -154,7 +154,7 @@
     "src": "icons/blog.svg"
   },
   "icons/box.svg": {
-    "file": "js/chunks/box.80be1aa1.js",
+    "file": "js/chunks/box.442d23b5.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -162,7 +162,7 @@
     "src": "icons/box.svg"
   },
   "icons/calories.svg": {
-    "file": "js/chunks/calories.f0df28b4.js",
+    "file": "js/chunks/calories.104d183d.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -170,7 +170,7 @@
     "src": "icons/calories.svg"
   },
   "icons/carousel-icon-1.svg": {
-    "file": "js/chunks/carousel-icon-1.d1735e63.js",
+    "file": "js/chunks/carousel-icon-1.47edd9a8.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -178,7 +178,7 @@
     "src": "icons/carousel-icon-1.svg"
   },
   "icons/carousel-icon-2.svg": {
-    "file": "js/chunks/carousel-icon-2.a869d4c9.js",
+    "file": "js/chunks/carousel-icon-2.23cd2ddc.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -186,7 +186,7 @@
     "src": "icons/carousel-icon-2.svg"
   },
   "icons/carousel-icon-3.svg": {
-    "file": "js/chunks/carousel-icon-3.a4657ec8.js",
+    "file": "js/chunks/carousel-icon-3.98fd2ee1.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -194,7 +194,7 @@
     "src": "icons/carousel-icon-3.svg"
   },
   "icons/cart.svg": {
-    "file": "js/chunks/cart.d3f778e3.js",
+    "file": "js/chunks/cart.03bd8fc5.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -202,7 +202,7 @@
     "src": "icons/cart.svg"
   },
   "icons/cat.svg": {
-    "file": "js/chunks/cat.56c2c773.js",
+    "file": "js/chunks/cat.625792bc.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -210,7 +210,7 @@
     "src": "icons/cat.svg"
   },
   "icons/close.svg": {
-    "file": "js/chunks/close.ea06e494.js",
+    "file": "js/chunks/close.445015c0.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -218,7 +218,7 @@
     "src": "icons/close.svg"
   },
   "icons/cormDog.svg": {
-    "file": "js/chunks/cormDog.beeea5c0.js",
+    "file": "js/chunks/cormDog.1ab5fc32.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -226,7 +226,7 @@
     "src": "icons/cormDog.svg"
   },
   "icons/cormdogg.svg": {
-    "file": "js/chunks/cormdogg.a16aa5a6.js",
+    "file": "js/chunks/cormdogg.6dd3f4ba.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -234,7 +234,7 @@
     "src": "icons/cormdogg.svg"
   },
   "icons/dog.svg": {
-    "file": "js/chunks/dog.98a2da1a.js",
+    "file": "js/chunks/dog.77da8e30.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -242,7 +242,7 @@
     "src": "icons/dog.svg"
   },
   "icons/facebook.svg": {
-    "file": "js/chunks/facebook.f21140d5.js",
+    "file": "js/chunks/facebook.04f416ec.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -250,7 +250,7 @@
     "src": "icons/facebook.svg"
   },
   "icons/frost.svg": {
-    "file": "js/chunks/frost.72020d69.js",
+    "file": "js/chunks/frost.11181f9c.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -258,7 +258,7 @@
     "src": "icons/frost.svg"
   },
   "icons/handDog.svg": {
-    "file": "js/chunks/handDog.4cbd60ab.js",
+    "file": "js/chunks/handDog.a64bef33.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -266,7 +266,7 @@
     "src": "icons/handDog.svg"
   },
   "icons/instagram.svg": {
-    "file": "js/chunks/instagram.8b9baa02.js",
+    "file": "js/chunks/instagram.ebfe9499.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -274,7 +274,7 @@
     "src": "icons/instagram.svg"
   },
   "icons/lettuce.svg": {
-    "file": "js/chunks/lettuce.94fa3c92.js",
+    "file": "js/chunks/lettuce.b55d91a7.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -282,7 +282,7 @@
     "src": "icons/lettuce.svg"
   },
   "icons/mark.svg": {
-    "file": "js/chunks/mark.2128c94c.js",
+    "file": "js/chunks/mark.b004b600.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -290,7 +290,7 @@
     "src": "icons/mark.svg"
   },
   "icons/no-preservatives.svg": {
-    "file": "js/chunks/no-preservatives.e9265a44.js",
+    "file": "js/chunks/no-preservatives.c752d15a.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -298,7 +298,7 @@
     "src": "icons/no-preservatives.svg"
   },
   "icons/pet-food.svg": {
-    "file": "js/chunks/pet-food.89303056.js",
+    "file": "js/chunks/pet-food.8eee5502.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -306,7 +306,7 @@
     "src": "icons/pet-food.svg"
   },
   "icons/salt-and-pepper.svg": {
-    "file": "js/chunks/salt-and-pepper.ebef38ba.js",
+    "file": "js/chunks/salt-and-pepper.4277bd68.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -314,7 +314,7 @@
     "src": "icons/salt-and-pepper.svg"
   },
   "icons/shopping-list.svg": {
-    "file": "js/chunks/shopping-list.70ceeef5.js",
+    "file": "js/chunks/shopping-list.1db3e438.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -322,7 +322,7 @@
     "src": "icons/shopping-list.svg"
   },
   "icons/star.svg": {
-    "file": "js/chunks/star.935e97ea.js",
+    "file": "js/chunks/star.79055eee.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -330,7 +330,7 @@
     "src": "icons/star.svg"
   },
   "icons/whatsapp.svg": {
-    "file": "js/chunks/whatsapp.46744d41.js",
+    "file": "js/chunks/whatsapp.9a6a0f19.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -338,7 +338,7 @@
     "src": "icons/whatsapp.svg"
   },
   "icons/works.svg": {
-    "file": "js/chunks/works.7ba1ae4e.js",
+    "file": "js/chunks/works.b230c6ac.js",
     "imports": [
       "js@pub/app.js"
     ],
@@ -433,7 +433,7 @@
       "icons/whatsapp.svg",
       "icons/works.svg"
     ],
-    "file": "js/6.8b158b29.js",
+    "file": "js/6.72472176.js",
     "isEntry": true,
     "src": "js@pub/app.js"
   }

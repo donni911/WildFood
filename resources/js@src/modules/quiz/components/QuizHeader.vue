@@ -3,7 +3,7 @@
         class="sm-max:flex-col w-full pb-2 md:pb-5 md:border-b-2 md:border-primary flex sm:items-center justify-between gap-5 h-fit"
     >
         <div class="text-primary font-sans text-xs md:text-[24px]">
-            <span
+            <!-- <span
                 class="inline-flex font-manrope font-medium justify-between text-6 md:text-[34px]"
             >
                 <transition mode="out-in">
@@ -14,11 +14,12 @@
                     >
                 </transition>
                 /
-            </span>
-            {{ questionsLength }}
+            </span> -->
+            <!-- {{ questionsLength }} -->
         </div>
         <div class="c-quiz__nav sm:w-1/2 flex sm:justify-end gap-1.5 md:gap-3">
             <button
+                v-if="!finalQuestion"
                 class="f-btn f-btn--primary-ghost h-fit"
                 :disabled="activeQuestion == 0"
                 @click="$emit('previousQuestion')"
@@ -34,13 +35,11 @@
                             !isMailValid)
                     "
                     class="f-btn f-btn--primary-ghost h-fit"
-                    @click="$emit('nextQuestion')"
+                    @click="
+                        finalQuestion ? $emit('result') : $emit('nextQuestion')
+                    "
                 >
-                    {{
-                        activeQuestion == questions.length - 1
-                            ? "Finish"
-                            : "Next"
-                    }}
+                    {{ finalQuestion ? "Finish" : "Next" }}
                 </button>
             </transition>
         </div>
@@ -59,6 +58,10 @@ export default {
     },
 
     computed: {
+        finalQuestion() {
+            return this.questions[this.activeQuestion].final;
+        },
+
         activeQuestionComputed() {
             const questionIndex = this.activeQuestion + 1;
             return questionIndex >= 10

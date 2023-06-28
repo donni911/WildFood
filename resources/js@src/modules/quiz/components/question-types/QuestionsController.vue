@@ -14,10 +14,13 @@
             <InputQuestion :question="question" />
         </template>
         <template v-else-if="question.type === 'mail'">
-            <InputMail :question="question" />
+            <InputMail :question="question" @choosedVariant="choosedVariant" />
         </template>
         <template v-else>
-            <ListQuestion :question="question" />
+            <ListQuestion
+                :question="question"
+                @choosedVariant="choosedVariant"
+            />
         </template>
     </div>
 </template>
@@ -36,6 +39,12 @@ export default {
     props: {
         question: {
             type: Object,
+        },
+    },
+
+    methods: {
+        choosedVariant(value) {
+            this.$emit("choosedVariant", value);
         },
     },
 };

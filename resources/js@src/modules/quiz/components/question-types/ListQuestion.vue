@@ -4,9 +4,7 @@
         v-for="variant in question.variants"
         @selection-change="handleCheckbox"
         :key="variant.id"
-        :bgImage="variant.bgImage"
-        :icon="variant.icon"
-        :title="variant.title"
+        :variant="variant"
         :class="className"
         :name="question.name"
         :isActive="isSelectedCheckbox(variant.title)"
@@ -17,12 +15,10 @@
         v-for="variant in question.variants"
         @selection-change="handleSelection"
         :key="variant.id"
-        :bgImage="variant.bgImage"
-        :icon="variant.icon"
-        :title="variant.title"
+        :variant="variant"
         :class="className"
         :name="question.name"
-        :isActive="variant.title === question.answear"
+        :isActive="variant.title === question.answear.title"
     />
 </template>
   
@@ -57,8 +53,9 @@ export default {
     },
 
     methods: {
-        handleSelection(selectedValue) {
-            this.question.answear = selectedValue;
+        handleSelection(variant) {
+            this.question.answear = variant;
+            this.$emit("choosedVariant", variant);
         },
 
         handleCheckbox(selectedValues) {
@@ -72,6 +69,7 @@ export default {
                 this.selectedCheckboxValues.push(selectedValues);
             }
             this.question.answear = this.selectedCheckboxValues;
+            // this.$emit("choosedVariant", this.selectedCheckboxValues);
         },
 
         isSelectedCheckbox(value) {

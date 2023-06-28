@@ -2,15 +2,15 @@
     <label
         class="bg-local hover:opacity-80 p-4 cursor-pointer transition-opacity"
         :class="{
-            'c-gradient bg-no-repeat bg-center bg-cover': bgImage,
+            'c-gradient bg-no-repeat bg-center bg-cover': variant.bgImage,
             'bg-yellow': isSelected,
         }"
         :style="{
-            backgroundImage: bgImage && `url(${bgImage})`,
+            backgroundImage: variant.bgImage && `url(${variant.bgImage})`,
         }"
     >
         <input
-            :value="title"
+            :value="variant.title"
             :name="name"
             type="checkbox"
             class="hidden"
@@ -21,11 +21,11 @@
             <span
                 class="font-semibold text-primary flex text-center justify-center items-center gap-3 text-5.5"
                 :class="{
-                    'text-white': bgImage || isSelected,
+                    'text-white': variant.bgImage || isSelected,
                 }"
             >
-                <Icon v-if="icon" :name="icon" />
-                {{ title }}
+                <Icon v-if="variant.icon" :name="variant.icon" />
+                {{ variant.title }}
             </span>
         </div>
     </label>
@@ -38,14 +38,8 @@ export default {
         Icon,
     },
     props: {
-        bgImage: {
-            type: String,
-        },
-        icon: {
-            type: String,
-        },
-        title: {
-            type: String,
+        variant: {
+            type: Object,
         },
         name: {
             type: String,
@@ -60,12 +54,12 @@ export default {
     },
     computed: {
         isSelected() {
-            return this.selectedValues.includes(this.title);
+            return this.selectedValues.includes(this.variant.title);
         },
     },
     methods: {
         emitSelection() {
-            this.$emit("selection-change", this.title);
+            this.$emit("selection-change", this.variant);
         },
     },
 };

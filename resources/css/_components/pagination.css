@@ -31,7 +31,8 @@
         display: block;
       }
 
-      .i-icon {
+      .i-icon,
+      svg {
         width: theme(spacing.4);
         height: theme(spacing.4);
       }
@@ -39,6 +40,9 @@
 
     &.is-prev {
       padding-left: 0;
+      svg {
+        transform: rotate(180deg);
+      }
       .c-pagination__link {
         justify-content: flex-end;
       }

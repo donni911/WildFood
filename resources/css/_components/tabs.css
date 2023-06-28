@@ -117,7 +117,8 @@
         theme(transitionDuration.base);
       transition-property: opacity, transform;
 
-      .i-icon {
+      .i-icon,
+      svg {
         width: 60px;
         height: 20px;
       }

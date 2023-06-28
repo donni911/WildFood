@@ -3,16 +3,16 @@
     <label
         class="bg-local hover:opacity-80 p-4 cursor-pointer transition"
         :class="{
-            'c-gradient bg-no-repeat bg-center bg-cover': bgImage,
+            'c-gradient bg-no-repeat bg-center bg-cover': variant.bgImage,
             'bg-yellow pointer-events-none': isActive,
-            'opacity-50': isActive && bgImage,
+            'opacity-50': isActive && variant.bgImage,
         }"
         :style="{
-            backgroundImage: bgImage && `url(${bgImage})`,
+            backgroundImage: variant.bgImage && `url(${variant.bgImage})`,
         }"
     >
         <input
-            :value="title"
+            :value="variant.title"
             :name="name"
             type="radio"
             class="hidden"
@@ -23,11 +23,11 @@
             <span
                 class="font-semibold text-primary flex text-center justify-center items-center transition-colors gap-3 text-5.5"
                 :class="{
-                    'text-white': bgImage || isActive,
+                    'text-white': variant.bgImage || isActive,
                 }"
             >
-                <Icon v-if="icon" :name="icon" />
-                {{ title }}
+                <Icon v-if="variant.icon" :name="variant.icon" />
+                {{ variant.title }}
             </span>
         </div>
     </label>
@@ -40,14 +40,8 @@ export default {
         Icon,
     },
     props: {
-        bgImage: {
-            type: String,
-        },
-        icon: {
-            type: String,
-        },
-        title: {
-            type: String,
+        variant: {
+            type: Object,
         },
         name: {
             type: String,
@@ -63,7 +57,7 @@ export default {
     },
     methods: {
         emitSelection() {
-            this.$emit("selection-change", this.selectedValue);
+            this.$emit("selection-change", this.variant);
         },
     },
 };
