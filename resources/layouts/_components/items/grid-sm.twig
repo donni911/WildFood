@@ -8,7 +8,7 @@
                     </div>
                 </th>
                 {% for item in titles %}
-                    <th class="px-4 py-2 bg-white">
+                    <th class="px-4 py-2 bg-white last:rounded-se-xl">
                         <div class='flex w-[115px] items-start gap-2 flex-col justify-start '>
                             <div class=''>
                                 {% include "../../_app/icon.twig" with {id: item.icon, classIcon: 'w-5 h-5' } %}
@@ -37,7 +37,7 @@
                     </td>
 
                     {% for good in advantage.goods %}
-                        <td class="relative px-4 border-t-2 border-local py-3 pl-6 bg-white {% if loop.first %} c-border-top {% endif %} {% if loop.last %} c-border-last {% endif %}">
+                        <td class="relative px-4 border-t-2 border-local py-3 pl-6 bg-white {% if loop.parent.loop.last %} last:rounded-ee-xl {% endif %} {% if loop.first %} c-border-top {% endif %} {% if loop.last %} c-border-last {% endif %}">
                             <div class='w-[115px] font-bold leading-none {% if good.positive %} text-[#8EA43D] {% else %} text-[#E45B44] {% endif %}'>
                                 {{ good.text }}
                             </div>

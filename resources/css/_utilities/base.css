@@ -139,6 +139,7 @@
 /* width */
 .c-scroll::-webkit-scrollbar {
   height: 6px;
+  -webkit-appearance: none;
 }
 
 /* Track */
