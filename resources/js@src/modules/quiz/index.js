@@ -1,15 +1,9 @@
-import QuizComponent from "./components/QuizComponent.vue";
+import Component from "./components/Component.vue";
+// import QuizComponent from "./components/QuizComponent.vue";
 import { createApp } from "vue";
 const quizEl = document.querySelector(".jsv-quiz");
 
 if (quizEl) {
-  // const QuizComponent = defineComponent({
-  //   components: {
-  //     QuizComponent: () => import("./components/QuizComponent.vue"),
-  //   },
-  //   template: "<QuizComponent />",
-  // });
-
-  const app = createApp(QuizComponent);
+  const app = createApp(Component);
   app.mount(quizEl);
 }
