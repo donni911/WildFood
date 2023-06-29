@@ -3,8 +3,8 @@
         <thead>
             <tr>
                 <th class="c-border sticky z-10 left-0 bg-body p-4 before:rounded-ss-xl before:bg-local before:content-[''] before:absolute before:inset-0">
-                    <div class='top-4 absolute'>
-                        {% include "../../_app/icon.twig" with {id: 'pet-food', classIcon: 'w-12 h-12' } %}
+                    <div class='top-4 absolute [&>svg]:w-12 [&>svg]:h-12'>
+                        {% include "../../_app/icon.twig" with {id: 'pet-food', classIcon: '' } %}
                     </div>
                 </th>
                 {% for item in titles %}
