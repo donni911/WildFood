@@ -8,9 +8,9 @@ if (menuToggle) {
     document.documentElement.classList.toggle("is-menu-open");
 
     if (document.documentElement.classList.contains("is-menu-open")) {
-      setSpaces();
+      // setSpaces();
     } else {
-      clearSpaces();
+      // clearSpaces();
     }
   });
 

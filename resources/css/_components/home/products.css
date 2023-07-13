@@ -79,6 +79,7 @@
     margin-bottom: auto;
 
     img {
+      object-fit: cover;
       aspect-ratio: 175 / 280;
       margin: 0 auto;
     }

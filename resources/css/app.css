@@ -13,6 +13,7 @@
 @import "_app/icons.css";
 @import "_app/measure.css";
 @import "_app/typography.css";
+@import "_app/loader.css";
 
 /* Layouts */
 @import "_layouts/box.css";

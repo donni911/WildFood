@@ -1,0 +1,39 @@
+.c-loader {
+  position: fixed;
+  inset: 0px;
+  z-index: 100;
+  background-color: theme(colors.body);
+  opacity: 1;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s opacity ease;
+
+  &__logo {
+    width: 150px;
+    @screen md {
+      width: 250px;
+    }
+    svg {
+      animation: pulse 1s infinite alternate-reverse;
+    }
+  }
+
+  &.is-loaded {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}

@@ -5,7 +5,7 @@
     "src": "css/about-us.css"
   },
   "css/app.css": {
-    "file": "css/app.2fe0b34d.css",
+    "file": "css/app.ef2cc3f0.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -20,7 +20,7 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.9bd088a2.css",
+    "file": "css/home.91db7b6f.css",
     "isEntry": true,
     "src": "css/home.css"
   },
@@ -81,270 +81,6 @@
     "file": "fonts/Manrope-Regular.1b2c7e68.woff",
     "src": "fonts/Manrope-Regular.woff"
   },
-  "icons/account.svg": {
-    "file": "js/chunks/account.a709a745.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/account.svg"
-  },
-  "icons/angle-pagination-left.svg": {
-    "file": "js/chunks/angle-pagination-left.abd83bb3.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/angle-pagination-left.svg"
-  },
-  "icons/angle-pagination-right.svg": {
-    "file": "js/chunks/angle-pagination-right.63e7d18f.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/angle-pagination-right.svg"
-  },
-  "icons/angle.svg": {
-    "file": "js/chunks/angle.99fb251a.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/angle.svg"
-  },
-  "icons/arrow-lg.svg": {
-    "file": "js/chunks/arrow-lg.fa5edeae.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/arrow-lg.svg"
-  },
-  "icons/arrow-sm.svg": {
-    "file": "js/chunks/arrow-sm.adca516d.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/arrow-sm.svg"
-  },
-  "icons/arrow.svg": {
-    "file": "js/chunks/arrow.66975eb7.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/arrow.svg"
-  },
-  "icons/bag.svg": {
-    "file": "js/chunks/bag.ddad5839.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/bag.svg"
-  },
-  "icons/blog.svg": {
-    "file": "js/chunks/blog.57a335d9.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/blog.svg"
-  },
-  "icons/box.svg": {
-    "file": "js/chunks/box.442d23b5.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/box.svg"
-  },
-  "icons/calories.svg": {
-    "file": "js/chunks/calories.104d183d.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/calories.svg"
-  },
-  "icons/carousel-icon-1.svg": {
-    "file": "js/chunks/carousel-icon-1.47edd9a8.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/carousel-icon-1.svg"
-  },
-  "icons/carousel-icon-2.svg": {
-    "file": "js/chunks/carousel-icon-2.23cd2ddc.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/carousel-icon-2.svg"
-  },
-  "icons/carousel-icon-3.svg": {
-    "file": "js/chunks/carousel-icon-3.98fd2ee1.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/carousel-icon-3.svg"
-  },
-  "icons/cart.svg": {
-    "file": "js/chunks/cart.03bd8fc5.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/cart.svg"
-  },
-  "icons/cat.svg": {
-    "file": "js/chunks/cat.625792bc.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/cat.svg"
-  },
-  "icons/close.svg": {
-    "file": "js/chunks/close.445015c0.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/close.svg"
-  },
-  "icons/cormDog.svg": {
-    "file": "js/chunks/cormDog.1ab5fc32.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/cormDog.svg"
-  },
-  "icons/cormdogg.svg": {
-    "file": "js/chunks/cormdogg.6dd3f4ba.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/cormdogg.svg"
-  },
-  "icons/dog.svg": {
-    "file": "js/chunks/dog.77da8e30.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/dog.svg"
-  },
-  "icons/facebook.svg": {
-    "file": "js/chunks/facebook.04f416ec.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/facebook.svg"
-  },
-  "icons/frost.svg": {
-    "file": "js/chunks/frost.11181f9c.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/frost.svg"
-  },
-  "icons/handDog.svg": {
-    "file": "js/chunks/handDog.a64bef33.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/handDog.svg"
-  },
-  "icons/instagram.svg": {
-    "file": "js/chunks/instagram.ebfe9499.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/instagram.svg"
-  },
-  "icons/lettuce.svg": {
-    "file": "js/chunks/lettuce.b55d91a7.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/lettuce.svg"
-  },
-  "icons/mark.svg": {
-    "file": "js/chunks/mark.b004b600.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/mark.svg"
-  },
-  "icons/no-preservatives.svg": {
-    "file": "js/chunks/no-preservatives.c752d15a.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/no-preservatives.svg"
-  },
-  "icons/pet-food.svg": {
-    "file": "js/chunks/pet-food.8eee5502.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/pet-food.svg"
-  },
-  "icons/salt-and-pepper.svg": {
-    "file": "js/chunks/salt-and-pepper.4277bd68.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/salt-and-pepper.svg"
-  },
-  "icons/shopping-list.svg": {
-    "file": "js/chunks/shopping-list.1db3e438.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/shopping-list.svg"
-  },
-  "icons/star.svg": {
-    "file": "js/chunks/star.79055eee.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/star.svg"
-  },
-  "icons/whatsapp.svg": {
-    "file": "js/chunks/whatsapp.9a6a0f19.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/whatsapp.svg"
-  },
-  "icons/works.svg": {
-    "file": "js/chunks/works.b230c6ac.js",
-    "imports": [
-      "js@pub/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "icons/works.svg"
-  },
   "img/banner-image.png": {
     "file": "img/banner-image.4a79d99f.png",
     "src": "img/banner-image.png"
@@ -398,43 +134,20 @@
     "src": "img/handshakedog.png"
   },
   "js@pub/app.js": {
-    "dynamicImports": [
-      "icons/account.svg",
-      "icons/angle-pagination-left.svg",
-      "icons/angle-pagination-right.svg",
-      "icons/angle.svg",
-      "icons/arrow-lg.svg",
-      "icons/arrow-sm.svg",
-      "icons/arrow.svg",
-      "icons/bag.svg",
-      "icons/blog.svg",
-      "icons/box.svg",
-      "icons/calories.svg",
-      "icons/carousel-icon-1.svg",
-      "icons/carousel-icon-2.svg",
-      "icons/carousel-icon-3.svg",
-      "icons/cart.svg",
-      "icons/cat.svg",
-      "icons/close.svg",
-      "icons/cormDog.svg",
-      "icons/cormdogg.svg",
-      "icons/dog.svg",
-      "icons/facebook.svg",
-      "icons/frost.svg",
-      "icons/handDog.svg",
-      "icons/instagram.svg",
-      "icons/lettuce.svg",
-      "icons/mark.svg",
-      "icons/no-preservatives.svg",
-      "icons/pet-food.svg",
-      "icons/salt-and-pepper.svg",
-      "icons/shopping-list.svg",
-      "icons/star.svg",
-      "icons/whatsapp.svg",
-      "icons/works.svg"
-    ],
-    "file": "js/6.72472176.js",
+    "file": "js/6.e420e49c.js",
     "isEntry": true,
     "src": "js@pub/app.js"
+  },
+  "layouts/index.html": {
+    "css": [
+      "css/app.ef2cc3f0.css",
+      "css/utilities.1350fede.css"
+    ],
+    "file": "js/index.73227e82.js",
+    "imports": [
+      "js@pub/app.js"
+    ],
+    "isEntry": true,
+    "src": "layouts/index.html"
   }
 }

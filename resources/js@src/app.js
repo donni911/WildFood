@@ -9,3 +9,4 @@ import "./modules/header/index.js";
 import "./modules/table/index.js";
 import "./modules/tabs/index.js";
 import "./modules/quiz/index.js";
+import "./modules/loader/index.js";
