@@ -46,7 +46,8 @@
       <transition mode="out-in">
         <div
           :key="questions[activeQuestion].id"
-          class="flex flex-grow pt-2 md:pt-[32px]"
+          class="flex flex-grow"
+          :class="{ 'pt-2 md:pt-[32px]': !quizFinished }"
         >
           <div
             v-if="!quizFinished"
@@ -69,16 +70,15 @@
               v-html="questions[activeQuestion]?.subtitle"
             ></p>
             <div
-              class="gap-5 h-full"
+              class="grid gap-5 h-full"
               :class="{
-                'grid grid-cols-2': questions[activeQuestion].type == 'double',
-                'grid sm:grid-cols-3':
-                  questions[activeQuestion].type == 'triple',
-                'grid sm:grid-cols-2 md:grid-cols-4':
+                ' grid-cols-2': questions[activeQuestion].type == 'double',
+                'sm:grid-cols-3': questions[activeQuestion].type == 'triple',
+                'sm:grid-cols-2 md:grid-cols-4':
                   questions[activeQuestion].type == 'quarter',
                 'flex flex-wrap': questions[activeQuestion].type == 'multiple',
-                'grid sm:grid-cols-2':
-                  questions[activeQuestion].type == 'input',
+                'sm:grid-cols-2': questions[activeQuestion].type == 'input',
+                'grid-cols-2': questions[activeQuestion].type == 'inputDouble',
                 grid: 'inputSingle',
               }"
             >
@@ -89,7 +89,6 @@
                     class="bg-local h-full rounded-2xl w-full flex items-center justify-center p-4"
                   >
                     <input
-                      ref="input"
                       type="mail"
                       v-model="questions[activeQuestion].variants[0].value"
                       @input="
@@ -110,13 +109,10 @@
                 <label
                   v-for="input in questions[activeQuestion].variants"
                   :key="input.title"
-                  :for="input.title"
-                  class="bg-local h-full rounded-2xl w-full flex items-center justify-center p-4"
+                  class="bg-local cursor-text h-full rounded-2xl w-full flex items-center justify-center p-4"
                 >
                   <input
-                    ref="input"
                     type="number"
-                    :name="input.title"
                     :placeholder="input.title"
                     v-model="input.value"
                     @input="handleInputChange(input)"
@@ -125,6 +121,20 @@
                 </label>
               </template>
               <template v-else>
+                <label
+                  v-if="questions[activeQuestion].type === 'inputDouble'"
+                  class="cursor-text bg-local h-full rounded-2xl w-full flex items-center justify-center p-4 col-span-3"
+                >
+                  <input
+                    type="text"
+                    v-model="questions[activeQuestion].variantInput.value"
+                    @input="
+                      handleInputChange(questions[activeQuestion].variantInput)
+                    "
+                    class="w-full outline-none flex-grow border-0 text-primary font-bold text-6 lg:text-8 bg-transparent text-center placeholder:text-primary placeholder:opacity-50"
+                    placeholder="name of your pet"
+                  />
+                </label>
                 <label
                   v-for="variant in questions[activeQuestion].variants"
                   :key="variant.id"
@@ -211,16 +221,17 @@
               </template>
             </div>
           </div>
-          <div v-else class="flex flex-col justify-center items-center w-full">
-            <h3 class="text-10 font-bold mb-2 text-primary">Your result!</h3>
-            <h3 class="text-2xl font-bold mb-2" v-html="`Email - 321`"></h3>
-            <a
-              href="/"
-              class="text-xl font-semibold mb-5"
-              v-html="`Try this - 321`"
-            ></a>
-            <button class="f-btn f-btn--primary-ghost" @click="restartQuiz">
-              Try again
+          <div v-else class="flex flex-col w-full">
+            <p class="c-description text-lg">
+              Based on your answers, we have calculated a personal diet plan for
+              your pet <span class="font-bold"> Ralf </span> for 2 weeks:
+            </p>
+
+            <button
+              class="w-fit f-btn f-btn--primary-ghost"
+              @click="restartQuiz"
+            >
+              Try Quiz again
             </button>
           </div>
         </div>
@@ -231,7 +242,7 @@
 
 <script>
 import shortQuestions from "../shortQuestions";
-
+import results from "../results";
 export default {
   data() {
     return {
@@ -239,6 +250,7 @@ export default {
       activeQuestion: 0,
       quizFinished: false,
       variant: null,
+      result: null,
     };
   },
 
@@ -246,6 +258,7 @@ export default {
     handleInputChange(input) {
       this.questions[this.activeQuestion].answear =
         this.questions[this.activeQuestion].answear || {};
+
       if (input.value === "") {
         delete this.questions[this.activeQuestion].answear[input.title];
       } else {
@@ -254,21 +267,24 @@ export default {
     },
     handleSelection(variant) {
       const activeQuestion = this.questions[this.activeQuestion];
-
-      activeQuestion.answear = variant;
+      if (activeQuestion.type === "inputDouble") {
+        activeQuestion.answear = variant;
+        activeQuestion.answear.furryName = activeQuestion.variantInput.value;
+      } else {
+        activeQuestion.answear = variant;
+      }
     },
 
     nextQuestion() {
-      console.log(this.questions[this.activeQuestion].answear);
       this.activeQuestion++;
     },
     previousQuestion() {
-      console.log(this.questions[this.activeQuestion].answear);
       this.activeQuestion--;
     },
 
     finishQuiz() {
-      const result = {
+      this.result = {
+        furryName: this.questions[0]?.answear?.furryName,
         furry: this.questions[0]?.answear?.title,
         old: {
           age: this.questions[1]?.answear?.age,
@@ -283,30 +299,52 @@ export default {
         mail: this.questions[6]?.answear,
       };
 
-      console.log(result);
       // Perform further processing or send the result to a server
-
+      const result = this.checkQuizRequest();
+      console.log(this.result);
       this.quizFinished = true;
+    },
+    checkQuizRequest() {
+      for (const result of results) {
+        const resultFurry = result.furry;
+        const resultOld = result.old;
+        const resultWeight = result.weight;
+
+        if (
+          resultFurry === this.result.furry &&
+          resultOld === this.result.old.age &&
+          resultWeight.weight >= this.result.weight.weightMin &&
+          resultWeight.weight <= this.result.weight.weightMax
+        ) {
+          return result.result;
+        }
+      }
+
+      return null; // No match found
     },
     restartQuiz() {
       this.activeQuestion = 0;
       this.quizFinished = false;
-      this.variant = null;
+      this.result = null;
       this.resetAnswers();
     },
     resetAnswers() {
       for (let i = 0; i < this.questions.length; i++) {
-        this.questions[i].answear = {};
+        this.questions[i].answear = null;
+        this.questions[i].variants.forEach((val) => {
+          if (val.value) val.value = null;
+        });
       }
     },
   },
   computed: {
     disabledBtn() {
-      if (!this.questions[this.activeQuestion].answear) {
+      const currentQuestion = this.questions[this.activeQuestion];
+      if (!currentQuestion.answear) {
         return true;
       } else if (
-        this.questions[this.activeQuestion].type === "input" &&
-        this.questions[this.activeQuestion].variants.some(
+        currentQuestion.type === "input" &&
+        currentQuestion.variants.some(
           (variant) =>
             variant.value === null ||
             variant.value === undefined ||
@@ -314,9 +352,11 @@ export default {
         )
       ) {
         return true;
+      } else if (currentQuestion.type === "mail" && !this.isMailValid) {
+        return true;
       } else if (
-        this.questions[this.activeQuestion].type === "mail" &&
-        !this.isMailValid
+        currentQuestion.type === "inputDouble" &&
+        (!currentQuestion.answear.title || !currentQuestion.answear.furryName)
       ) {
         return true;
       } else {
@@ -340,7 +380,7 @@ export default {
     isMailValid() {
       const mailQuestion = this.questions.find((q) => q.type === "mail");
       const mailAnswer = mailQuestion.answear.mail;
-      console.log(mailQuestion);
+
       if (typeof mailAnswer === "string" && mailAnswer.includes("@")) {
         return true;
       }

@@ -3,6 +3,10 @@ export default [
     id: "0",
     question: "Who is your furry?",
     name: "furry",
+    variantInput: {
+      title: "furryName",
+      value: null,
+    },
     variants: [
       {
         bgImage: "https://i.ibb.co/7nmg5xM/cat-quiz.png",
@@ -16,7 +20,7 @@ export default [
       },
     ],
     answear: null,
-    type: "double",
+    type: "inputDouble",
   },
   {
     id: "1",
