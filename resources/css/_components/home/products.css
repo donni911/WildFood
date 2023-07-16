@@ -140,3 +140,11 @@
     justify-content: center;
   }
 }
+
+.c-products__list.visible {
+  .c-products__item {
+    &:nth-child(3) {
+      display: block;
+    }
+  }
+}

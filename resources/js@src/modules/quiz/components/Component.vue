@@ -222,17 +222,56 @@
             </div>
           </div>
           <div v-else class="flex flex-col w-full">
+            <h1 class="c-title text-center mb-2 text-2xl text-primary">
+              Result
+            </h1>
             <p class="c-description text-lg">
               Based on your answers, we have calculated a personal diet plan for
-              your pet <span class="font-bold"> Ralf </span> for 2 weeks:
+              your pet
+              <span class="font-bold"> {{ characteristic?.furryName }} </span>
+              for 2 weeks.
             </p>
-
-            <button
-              class="w-fit f-btn f-btn--primary-ghost"
-              @click="restartQuiz"
-            >
-              Try Quiz again
-            </button>
+            <div class="mt-4 mb-4 flex flex-grow items-center justify-center">
+              <ul
+                class="c-products__list sm-max:flex-wrap visible gap-4 md:gap-2 w-full"
+                v-if="propose"
+              >
+                <li
+                  v-for="(item, key) in propose"
+                  :key="key"
+                  class="c-products__item w-full"
+                >
+                  <a :href="item.url" class="c-product">
+                    <div class="c-product__image">
+                      <img :src="item.imgUrl" alt="" />
+                    </div>
+                    <div class="c-product__wrap">
+                      <span
+                        class="c-product__pieces"
+                        v-html="`Amount: ` + item.amount"
+                      ></span>
+                      <h3
+                        class="c-product__title sm-max:text-sm"
+                        v-html="item.title"
+                      ></h3>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div v-else>
+                <h5 class="text-primary font-semibold text-xl text-center">
+                  Sorry,we can't caluclate your diet plan, try again.
+                </h5>
+              </div>
+            </div>
+            <div class="flex justify-center mt-auto">
+              <button
+                class="w-fit f-btn f-btn--primary-ghost"
+                @click="restartQuiz"
+              >
+                Try Quiz again
+              </button>
+            </div>
           </div>
         </div>
       </transition>
@@ -242,7 +281,7 @@
 
 <script>
 import shortQuestions from "../shortQuestions";
-import results from "../results";
+import results, { proposes } from "../results";
 export default {
   data() {
     return {
@@ -250,7 +289,11 @@ export default {
       activeQuestion: 0,
       quizFinished: false,
       variant: null,
+      characteristic: null,
       result: null,
+      propose: null,
+      results,
+      proposes,
     };
   },
 
@@ -283,7 +326,7 @@ export default {
     },
 
     finishQuiz() {
-      this.result = {
+      this.characteristic = {
         furryName: this.questions[0]?.answear?.furryName,
         furry: this.questions[0]?.answear?.title,
         old: {
@@ -295,37 +338,125 @@ export default {
         weight: {
           weight: this.questions[4]?.answear?.weight,
         },
-        kindOfFood: this.questions[5]?.answear?.title,
+        kindOfFood: this.questions[5]?.answear?.type,
         mail: this.questions[6]?.answear,
       };
 
-      // Perform further processing or send the result to a server
-      const result = this.checkQuizRequest();
-      console.log(this.result);
+      this.checkQuizRequest(this.characteristic);
+      this.propose = this.proposes[this.result];
       this.quizFinished = true;
     },
-    checkQuizRequest() {
-      for (const result of results) {
-        const resultFurry = result.furry;
-        const resultOld = result.old;
-        const resultWeight = result.weight;
 
-        if (
-          resultFurry === this.result.furry &&
-          resultOld === this.result.old.age &&
-          resultWeight.weight >= this.result.weight.weightMin &&
-          resultWeight.weight <= this.result.weight.weightMax
-        ) {
-          return result.result;
+    checkQuizRequest(petCharacteristic) {
+      const furryType = petCharacteristic.furry;
+      const age = petCharacteristic.old.age;
+      const weight = petCharacteristic.weight.weight;
+      const foodType = petCharacteristic.kindOfFood;
+
+      if (furryType === "Dog") {
+        if (age > 1) {
+          if (foodType === "kibble") {
+            this.result = this.getResult(
+              this.results.DOG.moreThanOne.kibble,
+              weight
+            );
+          } else if (foodType === "fresh") {
+            this.result = this.getResult(
+              this.results.DOG.moreThanOne.fresh,
+              weight
+            );
+          } else if (foodType === "raw") {
+            this.result = this.getResult(
+              this.results.DOG.moreThanOne.raw,
+              weight
+            );
+          }
+        } else if (age < 1) {
+          if (foodType === "kibble" || foodType === "fresh") {
+            this.result = this.getResult(
+              this.results.DOG.lessThanOne.kibble,
+              weight
+            );
+          } else if (foodType === "fresh") {
+            this.result = this.getResult(
+              this.results.DOG.lessThanOne.fresh,
+              weight
+            );
+          } else if (foodType === "raw") {
+            this.result = this.getResult(
+              this.results.DOG.lessThanOne.raw,
+              weight
+            );
+          }
+        }
+      } else if (furryType === "Cat") {
+        if (age > 1) {
+          if (foodType === "kibble") {
+            this.result = this.getResult(
+              this.results.CAT.moreThanOne.kibble,
+              weight
+            );
+          } else if (foodType === "fresh") {
+            this.result = this.getResult(
+              this.results.CAT.moreThanOne.fresh,
+              weight
+            );
+          } else if (foodType === "raw") {
+            this.result = this.getResult(
+              this.results.CAT.moreThanOne.raw,
+              weight
+            );
+          }
+        } else if (age < 1) {
+          if (foodType === "kibble") {
+            this.result = this.getResult(
+              this.results.CAT.lessThanOne.kibble,
+              weight
+            );
+          } else if (foodType === "fresh") {
+            this.result = this.getResult(
+              this.results.CAT.lessThanOne.fresh,
+              weight
+            );
+          } else if (foodType === "raw") {
+            this.result = this.getResult(
+              this.results.CAT.lessThanOne.raw,
+              weight
+            );
+          }
         }
       }
-
-      return null; // No match found
     },
+
+    getResult(array, weight) {
+      for (let i = 0; i < array.length; i++) {
+        const range = array[i].range;
+        const [min, max] = range.split("-");
+        if (min && max) {
+          if (weight >= parseInt(min) && weight <= parseInt(max)) {
+            return array[i].result;
+          }
+        } else if (
+          range.startsWith("<=") &&
+          weight <= parseInt(range.slice(2))
+        ) {
+          return array[i].result;
+        } else if (
+          range.startsWith(">=") &&
+          weight >= parseInt(range.slice(2))
+        ) {
+          return array[i].result;
+        }
+      }
+      return "No result found";
+    },
+
     restartQuiz() {
       this.activeQuestion = 0;
       this.quizFinished = false;
+      this.characteristic = null;
       this.result = null;
+      this.propose = null;
       this.resetAnswers();
     },
     resetAnswers() {
@@ -386,6 +517,10 @@ export default {
       }
       return false;
     },
+  },
+  mounted() {
+    this.result = this.getResult(this.results.DOG.moreThanOne.fresh, 30);
+    console.log(this.proposes[this.result]);
   },
 };
 </script>

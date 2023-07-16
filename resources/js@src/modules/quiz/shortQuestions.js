@@ -90,12 +90,15 @@ export default [
     name: "kindOfFood",
     variants: [
       {
+        type:'kibble',
         title: "Kibble and/or wet food",
       },
       {
+        type:'raw',
         title: "Raw food",
       },
       {
+        type:'fresh',
         title: "Fresh cooked food",
       },
     ],
