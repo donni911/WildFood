@@ -357,7 +357,7 @@ export const proposes = {
       amount: 9,
     },
   },
-
+  // DOG Raw boneless
   51: {
     chicken: {
       url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=bbbdc4165be84dde1801742188769e2f",

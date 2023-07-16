@@ -112,10 +112,10 @@
                   class="bg-local cursor-text h-full rounded-2xl w-full flex items-center justify-center p-4"
                 >
                   <input
+                    @input="handleInputChange(input)"
                     type="number"
                     :placeholder="input.title"
                     v-model="input.value"
-                    @input="handleInputChange(input)"
                     class="w-full outline-none flex-grow border-0 text-primary font-bold text-6 lg:text-8 bg-transparent text-center placeholder:text-primary placeholder:opacity-50"
                   />
                 </label>
@@ -285,13 +285,14 @@ import results, { proposes } from "../results";
 export default {
   data() {
     return {
-      questions: shortQuestions,
       activeQuestion: 0,
       quizFinished: false,
-      variant: null,
       characteristic: null,
+
       result: null,
       propose: null,
+
+      questions: shortQuestions,
       results,
       proposes,
     };
@@ -299,6 +300,18 @@ export default {
 
   methods: {
     handleInputChange(input) {
+      console.log(input.title, input.title === "months");
+      if (input.title == "months") {
+        const value = parseInt(input.value);
+        console.log(value);
+
+        if (value > 11) {
+          input.value = "11";
+        } else {
+          input.value = value.toString();
+        }
+      }
+
       this.questions[this.activeQuestion].answear =
         this.questions[this.activeQuestion].answear || {};
 
@@ -344,6 +357,8 @@ export default {
 
       this.checkQuizRequest(this.characteristic);
       this.propose = this.proposes[this.result];
+      this.saveToLocalStorage();
+
       this.quizFinished = true;
     },
 
@@ -372,7 +387,7 @@ export default {
             );
           }
         } else if (age < 1) {
-          if (foodType === "kibble" || foodType === "fresh") {
+          if (foodType === "kibble") {
             this.result = this.getResult(
               this.results.DOG.lessThanOne.kibble,
               weight
@@ -457,17 +472,30 @@ export default {
       this.characteristic = null;
       this.result = null;
       this.propose = null;
-      this.resetAnswers();
-    },
-    resetAnswers() {
+
       for (let i = 0; i < this.questions.length; i++) {
+        if (this.questions[i].variantInput) {
+          this.questions[i].variantInput.value = null;
+        }
         this.questions[i].answear = null;
         this.questions[i].variants.forEach((val) => {
-          if (val.value) val.value = null;
+          val.value = null;
         });
       }
     },
+
+    saveToLocalStorage() {
+      localStorage.setItem("propose", JSON.stringify(this.propose));
+    },
+    loadFromLocalStorage() {
+      const storedPropose = localStorage.getItem("propose");
+      if (storedPropose) {
+        this.propose = JSON.parse(storedPropose);
+        this.quizFinished = true;
+      }
+    },
   },
+
   computed: {
     disabledBtn() {
       const currentQuestion = this.questions[this.activeQuestion];
@@ -519,8 +547,7 @@ export default {
     },
   },
   mounted() {
-    this.result = this.getResult(this.results.DOG.moreThanOne.fresh, 30);
-    console.log(this.proposes[this.result]);
+    this.loadFromLocalStorage();
   },
 };
 </script>
