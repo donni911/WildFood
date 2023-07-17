@@ -93,6 +93,7 @@ module.exports = {
         brown: "#4a3d304d",
       },
       maxWidth: {
+        xxs: screens.xxs.min,
         xs: screens.xs.min,
         sm: screens.sm.min,
         md: screens.md.min,
