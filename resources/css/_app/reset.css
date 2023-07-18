@@ -29,6 +29,7 @@ html {
   scroll-behavior: smooth;
   overflow: -moz-scrollbars-vertical;
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
 
   &.is-menu-open {
     overflow: hidden;

@@ -37,3 +37,6 @@
 @import "blog.css";
 @import "home.css";
 @import "about-us.css";
+
+/* Components */
+@import "_components/modal.css";
