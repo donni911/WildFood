@@ -238,7 +238,7 @@
                 Based on your answers, we have calculated a personal diet plan
                 for your pet
                 <span class="font-bold"> {{ furryName }} </span>
-                for 2 weeks.
+                for 1 weeks.
               </p>
               <div class="mt-4 mb-4 flex flex-grow items-center justify-center">
                 <ul
@@ -453,7 +453,7 @@ export default {
               weight
             );
           }
-        } else if (age < 1) {
+        } else if (age < 1 || !age) {
           if (foodType === "kibble") {
             this.result = this.getResult(
               this.results.DOG.lessThanOne.kibble,
@@ -489,7 +489,7 @@ export default {
               weight
             );
           }
-        } else if (age < 1) {
+        } else if (age < 1 || !age) {
           if (foodType === "kibble") {
             this.result = this.getResult(
               this.results.CAT.lessThanOne.kibble,
@@ -544,7 +544,9 @@ export default {
         if (this.questions[i].variantInput) {
           this.questions[i].variantInput.value = null;
         }
+
         this.questions[i].answear = null;
+
         this.questions[i].variants.forEach((val) => {
           val.value = null;
         });
@@ -569,7 +571,9 @@ export default {
   computed: {
     disabledBtn() {
       const currentQuestion = this.questions[this.activeQuestion];
+
       if (!currentQuestion.answear) {
+        console.log("1");
         return true;
       } else if (
         currentQuestion.type === "input" &&
@@ -580,6 +584,7 @@ export default {
             variant.value === ""
         )
       ) {
+        console.log("3");
         return true;
       } else if (currentQuestion.type === "mail" && !this.isMailValid) {
         return true;
@@ -587,13 +592,16 @@ export default {
         currentQuestion.type === "inputDouble" &&
         (!currentQuestion.answear.title || !currentQuestion.answear.furryName)
       ) {
+        console.log("4");
         return true;
       } else if (
         Object.keys(currentQuestion?.answear).length === 0 &&
         currentQuestion?.answear.constructor === Object
       ) {
+        console.log("5");
         return true;
       } else {
+        console.log("6");
         return false;
       }
     },

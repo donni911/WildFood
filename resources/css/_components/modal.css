@@ -1,5 +1,11 @@
 .is-modal-open {
   overflow-y: hidden !important;
+  body {
+    padding-right: 15px;
+  }
+  .c-header {
+    padding-right: 15px;
+  }
 }
 
 .m-modal {
@@ -39,7 +45,7 @@
   transition-property: transform;
 
   margin: 0px 20px;
-  mask-type: 30px;
+  margin-top: 60px;
 
   @screen sm {
     margin-left: auto;
@@ -99,7 +105,6 @@
   background-clip: padding-box;
   outline: 0;
   border-radius: 32px;
-  overflow: hidden;
 
   &--bg {
     @screen lg {
@@ -171,9 +176,16 @@
 /* Components */
 
 .m-close {
+  position: absolute;
+  right: 0;
+  top: -30px;
+
+  -webkit-filter: invert(100%); /* Safari/Chrome */
+  filter: invert(100%);
+
   align-self: flex-start;
-  width: theme(spacing.11);
-  height: theme(spacing.11);
+  width: theme(spacing.10);
+  height: theme(spacing.10);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,8 +193,8 @@
     calc(theme(spacing[2.5]) * -1) auto;
 
   .i-icon {
-    width: theme(spacing.6);
-    height: theme(spacing.6);
+    width: theme(spacing.5);
+    height: theme(spacing.5);
   }
 }
 

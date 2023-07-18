@@ -36,7 +36,7 @@ export default [
         value: null,
       },
     ],
-    answear: null,
+    answear: "",
     type: "input",
   },
   {
@@ -90,15 +90,15 @@ export default [
     name: "kindOfFood",
     variants: [
       {
-        type:'kibble',
+        type: "kibble",
         title: "Kibble and/or wet food",
       },
       {
-        type:'raw',
+        type: "raw",
         title: "Raw food",
       },
       {
-        type:'fresh',
+        type: "fresh",
         title: "Fresh cooked food",
       },
     ],

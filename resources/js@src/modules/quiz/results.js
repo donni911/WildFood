@@ -173,24 +173,24 @@ export const proposes = {
   // DOG Gently food
   1: {
     chicken: {
-      url: "https://9e168f-2.myshopify.com/products/chicken-mix-for-dogs-120g-4-2oz-2",
+      url: "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/products_preview?preview_key=d34035c10636cb80865b7dd94052172b",
       title: "Chicken MIX for Dogs",
       imgUrl:
-        "https://9e168f-2.myshopify.com/cdn/shop/files/Chickenmixgentlycooked.png?v=1689006237",
+        "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/cdn/shop/files/11.png?v=1689685483",
       amount: 3,
     },
     beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=8d1f761a43128a3cc31ff30e188dc53e",
+      url: "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/products_preview?preview_key=92e7dbc417dcef6b780f3478d6b4f74c",
       title: "Beef MIX for Dogs",
       imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixgentlycooked.png?v=1689006086",
+        "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/cdn/shop/files/10.png?v=1689685375",
       amount: 2,
     },
     turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=6b820282c18207ad7e82ce4816c8b370",
+      url: "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/products_preview?preview_key=ac9f834cfa3ab11c1722ec6cede71b64",
       title: "Turkey MIX for Dogs",
       imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixgentlycooked.png?v=1689006296",
+        "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/cdn/shop/files/12.png?v=1689685550",
       amount: 2,
     },
   },

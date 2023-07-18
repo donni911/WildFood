@@ -5,7 +5,7 @@
     "src": "css/about-us.css"
   },
   "css/app.css": {
-    "file": "css/app.3cfb722e.css",
+    "file": "css/app.4e5a5e7d.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -134,16 +134,16 @@
     "src": "img/handshakedog.png"
   },
   "js@pub/app.js": {
-    "file": "js/6.208acf2c.js",
+    "file": "js/6.b3ade1f9.js",
     "isEntry": true,
     "src": "js@pub/app.js"
   },
   "layouts/index.html": {
     "css": [
-      "css/app.3cfb722e.css",
+      "css/app.4e5a5e7d.css",
       "css/utilities.2398de30.css"
     ],
-    "file": "js/index.8cef40d0.js",
+    "file": "js/index.e0d547e6.js",
     "imports": [
       "js@pub/app.js"
     ],
