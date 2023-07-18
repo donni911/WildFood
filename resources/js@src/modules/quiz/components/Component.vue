@@ -120,7 +120,7 @@
                   >
                     <input
                       @input="handleInputChange(input)"
-                      type="number"
+                      :type="input.title == 'months' ? 'number' : 'text'"
                       :placeholder="input.title"
                       v-model="input.value"
                       class="w-full outline-none flex-grow border-0 text-primary font-bold text-6 lg:text-8 bg-transparent text-center placeholder:text-primary placeholder:opacity-50"
@@ -147,7 +147,7 @@
                   <label
                     v-for="variant in questions[activeQuestion].variants"
                     :key="variant.id"
-                    class="bg-local hover:opacity-80 p-4 cursor-pointer transition"
+                    class="bg-local min-h-[100px] hover:opacity-80 p-4 cursor-pointer transition"
                     :class="{
                       'c-gradient bg-no-repeat bg-center bg-cover':
                         variant.bgImage,
@@ -365,13 +365,12 @@ export default {
       this.loading[index] = false;
     },
     handleInputChange(input) {
-      // input.value = input.value.replace(/[^0-9]/g, "");
-      // let value = input.value.toString(); // Convert input value to a string
-      // value = value.replace(/[^0-9]/g, "");
-
-      if (input.title == "months") {
+      if (input.title === "age" || input.title === "weight") {
+        input.value = input.value.replace(/[^0-9]/g, "");
+        let value = input.value.toString();
+        value = value.replace(/[^0-9]/g, "");
+      } else if (input.title == "months") {
         const value = parseInt(input.value);
-
         if (value > 11) {
           input.value = "11";
         } else {
@@ -589,6 +588,11 @@ export default {
         (!currentQuestion.answear.title || !currentQuestion.answear.furryName)
       ) {
         return true;
+      } else if (
+        Object.keys(currentQuestion?.answear).length === 0 &&
+        currentQuestion?.answear.constructor === Object
+      ) {
+        return true;
       } else {
         return false;
       }
@@ -619,7 +623,7 @@ export default {
   },
   mounted() {
     this.loadFromLocalStorage();
-    this.loading = Array(this.propose.length).fill(true);
+    this.loading = Array(this.propose?.length).fill(true);
   },
 };
 </script>
