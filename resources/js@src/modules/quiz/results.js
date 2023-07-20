@@ -172,426 +172,536 @@ const results = {
 export const proposes = {
   // DOG Gently food
   1: {
-    chicken: {
-      url: "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/products_preview?preview_key=d34035c10636cb80865b7dd94052172b",
-      title: "Chicken MIX for Dogs",
-      imgUrl:
-        "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/cdn/shop/files/11.png?v=1689685483",
-      amount: 3,
-    },
-    beef: {
-      url: "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/products_preview?preview_key=92e7dbc417dcef6b780f3478d6b4f74c",
-      title: "Beef MIX for Dogs",
-      imgUrl:
-        "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/cdn/shop/files/10.png?v=1689685375",
-      amount: 2,
-    },
-    turkey: {
-      url: "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/products_preview?preview_key=ac9f834cfa3ab11c1722ec6cede71b64",
-      title: "Turkey MIX for Dogs",
-      imgUrl:
-        "https://gu4mav80msvkz2nr-77263962411.shopifypreview.com/cdn/shop/files/12.png?v=1689685550",
-      amount: 2,
+    perDay: 1,
+    perWeek: 7,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+        title: "Chicken MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+        price: 2.92,
+        amount: 3,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+        title: "Beef MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+        price: 3.22,
+        amount: 2,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+        title: "Turkey MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+        price: 3.12,
+        amount: 2,
+      },
     },
   },
   2: {
-    chicken: {
-      url: "https://9e168f-2.myshopify.com/products/chicken-mix-for-dogs-120g-4-2oz-2",
-      title: "Chicken MIX for Dogs",
-      imgUrl:
-        "https://9e168f-2.myshopify.com/cdn/shop/files/Chickenmixgentlycooked.png?v=1689006237",
-      amount: 5,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=8d1f761a43128a3cc31ff30e188dc53e",
-      title: "Beef MIX for Dogs",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixgentlycooked.png?v=1689006086",
-      amount: 5,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=6b820282c18207ad7e82ce4816c8b370",
-      title: "Turkey MIX for Dogs",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixgentlycooked.png?v=1689006296",
-      amount: 4,
+    perDay: 2,
+    perWeek: 14,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+        title: "Chicken MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+        price: 2.92,
+        amount: 5,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+        title: "Beef MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+        price: 3.22,
+        amount: 5,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+        title: "Turkey MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+        price: 3.12,
+        amount: 4,
+      },
     },
   },
   3: {
-    chicken: {
-      url: "https://9e168f-2.myshopify.com/products/chicken-mix-for-dogs-120g-4-2oz-2",
-      title: "Chicken MIX for Dogs",
-      imgUrl:
-        "https://9e168f-2.myshopify.com/cdn/shop/files/Chickenmixgentlycooked.png?v=1689006237",
-      amount: 7,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=8d1f761a43128a3cc31ff30e188dc53e",
-      title: "Beef MIX for Dogs",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixgentlycooked.png?v=1689006086",
-      amount: 7,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=6b820282c18207ad7e82ce4816c8b370",
-      title: "Turkey MIX for Dogs",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixgentlycooked.png?v=1689006296",
-      amount: 7,
+    perDay: 3,
+    perWeek: 21,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+        title: "Chicken MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+        price: 2.92,
+        amount: 7,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+        title: "Beef MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+        price: 3.22,
+        amount: 7,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+        title: "Turkey MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+        price: 3.12,
+        amount: 7,
+      },
     },
   },
   4: {
-    chicken: {
-      url: "https://9e168f-2.myshopify.com/products/chicken-mix-for-dogs-120g-4-2oz-2",
-      title: "Chicken MIX for Dogs",
-      imgUrl:
-        "https://9e168f-2.myshopify.com/cdn/shop/files/Chickenmixgentlycooked.png?v=1689006237",
-      amount: 10,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=8d1f761a43128a3cc31ff30e188dc53e",
-      title: "Beef MIX for Dogs",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixgentlycooked.png?v=1689006086",
-      amount: 9,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=6b820282c18207ad7e82ce4816c8b370",
-      title: "Turkey MIX for Dogs",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixgentlycooked.png?v=1689006296",
-      amount: 9,
+    perDay: 4,
+    perWeek: 28,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+        title: "Chicken MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+        price: 2.92,
+        amount: 10,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+        title: "Beef MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+        price: 3.22,
+        amount: 9,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+        title: "Turkey MIX for Dogs",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+        price: 3.12,
+        amount: 9,
+      },
     },
   },
 
   // DOG Raw bones
   5: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=1e42ea454bca8518ca03d48e4dd69e53",
-      title: "Chicken MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmix.png?v=1689005951",
-      amount: 3,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=7872e944f4be3166919688c28a9e06d1",
-      title: "Beef MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmix_93982c85-47f5-484d-8736-0f9b48d829fb.png?v=1689005394",
-      amount: 2,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=7f777d8d189b2431ae7ae470f159b377",
-      title: "Turkey MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/turkeymix.png?v=1689006022",
-      amount: 2,
+    perDay: 1,
+    perWeek: 7,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-1?variant=45725410099499",
+        title: "Chicken MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/14_1.png?v=1689838158&width=1100",
+        price: 2.92,
+        amount: 3,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-1?variant=45725251404075",
+        title: "Beef MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/13.png?v=1689685003",
+        price: 3.09,
+        amount: 2,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-1?variant=45725426319659",
+        title: "Turkey MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/17.png?v=1689685293",
+        price: 2.98,
+        amount: 2,
+      },
     },
   },
   6: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=1e42ea454bca8518ca03d48e4dd69e53",
-      title: "Chicken MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmix.png?v=1689005951",
-      amount: 5,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=7872e944f4be3166919688c28a9e06d1",
-      title: "Beef MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmix_93982c85-47f5-484d-8736-0f9b48d829fb.png?v=1689005394",
-      amount: 5,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=7f777d8d189b2431ae7ae470f159b377",
-      title: "Turkey MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/turkeymix.png?v=1689006022",
-      amount: 4,
+    perDay: 2,
+    perWeek: 14,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-1?variant=45725410099499",
+        title: "Chicken MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/14_1.png?v=1689838158&width=1100",
+        price: 2.92,
+        amount: 5,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-1?variant=45725251404075",
+        title: "Beef MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/13.png?v=1689685003",
+        price: 3.09,
+        amount: 5,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-1?variant=45725426319659",
+        title: "Turkey MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/17.png?v=1689685293",
+        price: 2.98,
+        amount: 4,
+      },
     },
   },
   7: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=1e42ea454bca8518ca03d48e4dd69e53",
-      title: "Chicken MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmix.png?v=1689005951",
-      amount: 7,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=7872e944f4be3166919688c28a9e06d1",
-      title: "Beef MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmix_93982c85-47f5-484d-8736-0f9b48d829fb.png?v=1689005394",
-      amount: 7,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=7f777d8d189b2431ae7ae470f159b377",
-      title: "Turkey MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/turkeymix.png?v=1689006022",
-      amount: 7,
+    perDay: 3,
+    perWeek: 21,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-1?variant=45725410099499",
+        title: "Chicken MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/14_1.png?v=1689838158&width=1100",
+        price: 2.92,
+        amount: 7,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-1?variant=45725251404075",
+        title: "Beef MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/13.png?v=1689685003",
+        price: 3.09,
+        amount: 7,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-1?variant=45725426319659",
+        title: "Turkey MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/17.png?v=1689685293",
+        price: 2.98,
+        amount: 7,
+      },
     },
   },
   8: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=1e42ea454bca8518ca03d48e4dd69e53",
-      title: "Chicken MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmix.png?v=1689005951",
-      amount: 10,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=7872e944f4be3166919688c28a9e06d1",
-      title: "Beef MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmix_93982c85-47f5-484d-8736-0f9b48d829fb.png?v=1689005394",
-      amount: 10,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=7f777d8d189b2431ae7ae470f159b377",
-      title: "Turkey MIX for Dogs (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/turkeymix.png?v=1689006022",
-      amount: 9,
+    perDay: 4,
+    perWeek: 28,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-1?variant=45725410099499",
+        title: "Chicken MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/14_1.png?v=1689838158&width=1100",
+        price: 2.92,
+        amount: 10,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-1?variant=45725251404075",
+        title: "Beef MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/13.png?v=1689685003",
+        price: 3.09,
+        amount: 10,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-1?variant=45725426319659",
+        title: "Turkey MIX for Dogs (bones)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/17.png?v=1689685293",
+        price: 2.98,
+        amount: 9,
+      },
     },
   },
+
   // DOG Raw boneless
   51: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=bbbdc4165be84dde1801742188769e2f",
-      title: "Chicken MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmixboneless_27a053c1-1ccc-4867-a46f-e8570da613d2.png?v=1689005010",
-      amount: 3,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=1aea0e39483e29603d805f299d197976",
-      title: "Beef MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixboneless_1.png?v=1689004898",
-      amount: 2,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=3b3f239c6fed14e0905c444011ccf062",
-      title: "Turkey MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixboneless.png?v=1689005345",
-      amount: 2,
+    perDay: 1,
+    perWeek: 7,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz?variant=45725190029611",
+        title: "Chicken MIX for Dogs (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/8.png?v=1689684397",
+        price: 2.97,
+        amount: 3,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz?variant=45725184098603",
+        title: "Beef MIX for Dogs (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/9.png?v=1689684305",
+        price: 3.18,
+        amount: 2,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz?variant=45725233316139",
+        title: "Turkey MIX for Dogs (boneless)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/16.png?v=1689684459",
+        price: 3.08,
+        amount: 2,
+      },
     },
   },
   61: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=bbbdc4165be84dde1801742188769e2f",
-      title: "Chicken MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmixboneless_27a053c1-1ccc-4867-a46f-e8570da613d2.png?v=1689005010",
-      amount: 5,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=1aea0e39483e29603d805f299d197976",
-      title: "Beef MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixboneless_1.png?v=1689004898",
-      amount: 5,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=3b3f239c6fed14e0905c444011ccf062",
-      title: "Turkey MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixboneless.png?v=1689005345",
-      amount: 4,
+    perDay: 2,
+    perWeek: 14,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz?variant=45725190029611",
+        title: "Chicken MIX for Dogs (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/8.png?v=1689684397",
+        price: 2.97,
+        amount: 5,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz?variant=45725184098603",
+        title: "Beef MIX for Dogs (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/9.png?v=1689684305",
+        price: 3.18,
+        amount: 5,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz?variant=45725233316139",
+        title: "Turkey MIX for Dogs (boneless)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/16.png?v=1689684459",
+        price: 3.08,
+        amount: 4,
+      },
     },
   },
   71: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=bbbdc4165be84dde1801742188769e2f",
-      title: "Chicken MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmixboneless_27a053c1-1ccc-4867-a46f-e8570da613d2.png?v=1689005010",
-      amount: 7,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=1aea0e39483e29603d805f299d197976",
-      title: "Beef MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixboneless_1.png?v=1689004898",
-      amount: 7,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=3b3f239c6fed14e0905c444011ccf062",
-      title: "Turkey MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixboneless.png?v=1689005345",
-      amount: 7,
+    perDay: 3,
+    perWeek: 21,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz?variant=45725190029611",
+        title: "Chicken MIX for Dogs (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/8.png?v=1689684397",
+        price: 2.97,
+        amount: 7,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz?variant=45725184098603",
+        title: "Beef MIX for Dogs (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/9.png?v=1689684305",
+        price: 3.18,
+        amount: 7,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz?variant=45725233316139",
+        title: "Turkey MIX for Dogs (boneless)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/16.png?v=1689684459",
+        price: 3.08,
+        amount: 7,
+      },
     },
   },
   81: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=bbbdc4165be84dde1801742188769e2f",
-      title: "Chicken MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmixboneless_27a053c1-1ccc-4867-a46f-e8570da613d2.png?v=1689005010",
-      amount: 10,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=1aea0e39483e29603d805f299d197976",
-      title: "Beef MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixboneless_1.png?v=1689004898",
-      amount: 10,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=3b3f239c6fed14e0905c444011ccf062",
-      title: "Turkey MIX for Dogs (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixboneless.png?v=1689005345",
-      amount: 9,
+    perDay: 4,
+    perWeek: 28,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz?variant=45725190029611",
+        title: "Chicken MIX for Dogs (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/8.png?v=1689684397",
+        price: 2.97,
+        amount: 10,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz?variant=45725184098603",
+        title: "Beef MIX for Dogs (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/9.png?v=1689684305",
+        price: 3.18,
+        amount: 10,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz?variant=45725233316139",
+        title: "Turkey MIX for Dogs (boneless)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/16.png?v=1689684459",
+        price: 3.08,
+        amount: 9,
+      },
     },
   },
 
   // Cat gently food
   9: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=173a6bdaaa178b6f41f10f4b0200063e",
-      title: "Chicken MIX for Cats",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmixgentlycooked_1.png?v=1688998052",
-      amount: 5,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=6b895b9cf5c5dfde7d32a1eadc9139ed",
-      title: "Beef MIX for Cats",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixgentlycooked_1.png?v=1688997972",
-      amount: 5,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=17d97c11d3a44018abf9d945a28662df",
-      title: "Turkey MIX for Cats",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixgentlycooked_1.png?v=1688998604",
-      amount: 4,
+    perDay: 2,
+    perWeek: 14,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-3?variant=45724674523435",
+        title: "Chicken MIX for Cats",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/19.png?v=1689684147",
+        price: 2.84,
+        amount: 5,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-3?variant=45724667871531",
+        title: "Beef MIX for Cats",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/18.png?v=1689684047",
+        price: 2.98,
+        amount: 5,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz-2?variant=45724689400107",
+        title: "Turkey MIX for Cats",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/20.png?v=1689684201",
+        price: 2.89,
+        amount: 4,
+      },
     },
   },
   10: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=173a6bdaaa178b6f41f10f4b0200063e",
-      title: "Chicken MIX for Cats",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmixgentlycooked_1.png?v=1688998052",
-      amount: 7,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=6b895b9cf5c5dfde7d32a1eadc9139ed",
-      title: "Beef MIX for Cats",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixgentlycooked_1.png?v=1688997972",
-      amount: 7,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=17d97c11d3a44018abf9d945a28662df",
-      title: "Turkey MIX for Cats",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixgentlycooked_1.png?v=1688998604",
-      amount: 7,
+    perDay: 3,
+    perWeek: 21,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-3?variant=45724674523435",
+        title: "Chicken MIX for Cats",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/19.png?v=1689684147",
+        price: 2.84,
+        amount: 7,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-3?variant=45724667871531",
+        title: "Beef MIX for Cats",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/18.png?v=1689684047",
+        price: 2.98,
+        price: 2.98,
+        amount: 7,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz-2?variant=45724689400107",
+        title: "Turkey MIX for Cats",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/20.png?v=1689684201",
+        price: 2.89,
+        amount: 7,
+      },
     },
   },
 
   // Cat raw food (bones)
   11: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=e82ab07021c39fceabd41aae1455234b",
-      title: "Chicken MIX for Cats (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmix_1.png?v=1688994085",
-      amount: 5,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=1f4eb07b7463e53376759edfd3c0f9a4",
-      title: "Beef MIX for Cats (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmix_1.png?v=1688993944",
-      amount: 5,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=7b298d7272b879740389cb9955a5c9dc",
-      title: "Turkey MIX for Cats (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/turkeymix_1.png?v=1688997866",
-      amount: 4,
+    perDay: 2,
+    perWeek: 14,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-2?variant=45724168225067",
+        title: "Chicken MIX for Cats (bones)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/4.png?v=1689683847",
+        price: 2.77,
+        amount: 5,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-1?variant=45724138242347",
+        title: "Beef MIX for Cats (bones)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/2.png?v=1689683742",
+        price: 2.85,
+        amount: 5,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz-1?variant=45724657680683",
+        title: "Turkey MIX for Cats (bones)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/7.png?v=1689683952",
+        price: 2.83,
+        amount: 4,
+      },
     },
   },
   12: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=e82ab07021c39fceabd41aae1455234b",
-      title: "Chicken MIX for Cats (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmix_1.png?v=1688994085",
-      amount: 7,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=1f4eb07b7463e53376759edfd3c0f9a4",
-      title: "Beef MIX for Cats (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmix_1.png?v=1688993944",
-      amount: 7,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=7b298d7272b879740389cb9955a5c9dc",
-      title: "Turkey MIX for Cats (bones)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/turkeymix_1.png?v=1688997866",
-      amount: 7,
+    perDay: 3,
+    perWeek: 21,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-2?variant=45724168225067",
+        title: "Chicken MIX for Cats (bones)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/4.png?v=1689683847",
+        price: 2.77,
+        amount: 7,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-1?variant=45724138242347",
+        title: "Beef MIX for Cats (bones)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/2.png?v=1689683742",
+        price: 2.85,
+        amount: 7,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz-1?variant=45724657680683",
+        title: "Turkey MIX for Cats (bones)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/7.png?v=1689683952",
+        price: 2.83,
+        amount: 7,
+      },
     },
   },
 
   // Cat raw food (boneless)
   111: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=abbbf926ed3d566a408f7c3d89652a06",
-      title: "Chicken MIX for Cats (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmixboneless_1.png?v=1688991700",
-      amount: 5,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=e636818a1fe1b8ac37448c754287b9a9",
-      title: "Beef MIX for Cats (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixboneless-1_1.png?v=1688997547",
-      amount: 5,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=8becebefa68e3212c56680d6acd935bb",
-      title: "Turkey MIX for Cats (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixboneless_1.png?v=1688991939",
-      amount: 4,
+    perDay: 2,
+    perWeek: 14,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-1?variant=45723937898795",
+        title: "Chicken MIX for Cats (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/3.png?v=1689683479",
+        price: 2.8,
+        amount: 5,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-2?variant=45724632285483",
+        title: "Beef MIX for Cats (boneless)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/1_540e9caa-b6bb-42b4-9a62-19c5a7c97619.png?v=1689683036",
+        price: 2.93,
+        amount: 5,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz?variant=45723951202603",
+        title: "Turkey MIX for Cats (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/6.png?v=1689683613",
+        price: 2.83,
+        amount: 4,
+      },
     },
   },
   121: {
-    chicken: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=abbbf926ed3d566a408f7c3d89652a06",
-      title: "Chicken MIX for Cats (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Chickenmixboneless_1.png?v=1688991700",
-      amount: 5,
-    },
-    beef: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=e636818a1fe1b8ac37448c754287b9a9",
-      title: "Beef MIX for Cats (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Beefmixboneless-1_1.png?v=1688997547",
-      amount: 5,
-    },
-    turkey: {
-      url: "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/products_preview?preview_key=8becebefa68e3212c56680d6acd935bb",
-      title: "Turkey MIX for Cats (boneless)",
-      imgUrl:
-        "https://9to8e4nyc9q90iiy-77263962411.shopifypreview.com/cdn/shop/files/Turkeymixboneless_1.png?v=1688991939",
-      amount: 4,
+    perDay: 3,
+    perWeek: 21,
+    ration: {
+      chicken: {
+        url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-1?variant=45723937898795",
+        title: "Chicken MIX for Cats (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/3.png?v=1689683479",
+        price: 2.8,
+        amount: 5,
+      },
+      beef: {
+        url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-2?variant=45724632285483",
+        title: "Beef MIX for Cats (boneless)",
+        imgUrl:
+          "https://wildfoodforpets.com/cdn/shop/files/1_540e9caa-b6bb-42b4-9a62-19c5a7c97619.png?v=1689683036",
+        price: 2.93,
+        amount: 5,
+      },
+      turkey: {
+        url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz?variant=45723951202603",
+        title: "Turkey MIX for Cats (boneless)",
+        imgUrl: "https://wildfoodforpets.com/cdn/shop/files/6.png?v=1689683613",
+        price: 2.83,
+        amount: 4,
+      },
     },
   },
 };

@@ -230,23 +230,51 @@
                 </template>
               </div>
             </div>
+
             <div v-else class="flex flex-col w-full">
               <h1 class="c-title text-center mb-2 text-2xl text-primary">
                 Result
               </h1>
-              <p class="c-description text-lg">
+              <p class="c-description text-lg mb-5">
                 Based on your answers, we have calculated a personal diet plan
                 for your pet
                 <span class="font-bold"> {{ furryName }} </span>
                 for 1 weeks.
               </p>
+              <div class="bg-local p-4 rounded-[20px]">
+                <div class="">
+                  <h3
+                    class="sm:maxtext-2xs pb-4 relative font-semibold before:content-[''] before:rounded-[999px] before:bg-brown before:w-full before:h-0.5 before:absolute before:left-0 before:top-[100%]"
+                  >
+                    RECOMENDATIONS
+                  </h3>
+                  <div
+                    class="flex justify-between items-center mt-4 font-bold sm:maxtext-xs text-primary gap-2"
+                  >
+                    <h4 class="uppercase">
+                      {{ furryName }}
+                    </h4>
+                    <div class="shrink-0 flex flex-col gap-1">
+                      <p>{{ computedCormPerDay }} oz/day</p>
+                      <p>
+                        {{ propose.perDay }}
+                        {{ propose.perDay == 1 ? "pack" : "packs" }}/day
+                      </p>
+                      <p>
+                        {{ propose.perWeek }}
+                        {{ propose.perWeek == 1 ? "pack" : "packs" }}/week
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="mt-4 mb-4 flex flex-grow items-center justify-center">
                 <ul
                   class="c-products__list quiz sm-max:flex-wrap visible gap-4 md:gap-2 w-full"
                   v-if="propose"
                 >
                   <li
-                    v-for="(item, key) in propose"
+                    v-for="(item, key) in propose.ration"
                     :key="key"
                     class="c-products__item w-full"
                   >
@@ -314,6 +342,16 @@
                           class="c-product__title sm-max:text-sm"
                           v-html="item.title"
                         ></h3>
+                        <h4
+                          class="c-product__price mt-auto"
+                          v-html="`$${item.price}`"
+                        ></h4>
+                        <a
+                          :href="item.url"
+                          class="f-btn f-btn--primary-ghost w-full mt-4 rounded-lg bg-primary hover:bg-transparent text-white z-20"
+                        >
+                          Buy
+                        </a>
                       </div>
                     </a>
                   </li>
@@ -323,6 +361,28 @@
                     Sorry,we can't caluclate your diet plan, try again.
                   </h5>
                 </div>
+              </div>
+              <div
+                class="bg-local p-4 rounded-[20px] gap-4 font-semibold text-[24px] mb-4"
+              >
+                <div
+                  class="flex justify-between relative pb-5 before:content-[''] before:rounded-[999px] before:bg-brown before:w-full before:h-0.5 before:absolute before:left-0 before:top-[100%]"
+                >
+                  <h3>Total</h3>
+                  <h3 v-if="calculateTotalSum">${{ calculateTotalSum }}</h3>
+                </div>
+                <ul class="py-6 gap-4 grid">
+                  <li
+                    class="flex justify-between font-semibold items-center text-sm text-primary"
+                    v-for="(item, key) in propose?.ration"
+                    :key="key"
+                  >
+                    <h5 v-html="item.title" class="sm-max:max-w-[50%]"></h5>
+                    <h5
+                      v-html="`$${(item.price * item.amount).toFixed(2)}`"
+                    ></h5>
+                  </li>
+                </ul>
               </div>
               <div class="flex justify-center mt-auto">
                 <button
@@ -352,7 +412,12 @@ export default {
       furryName: null,
       loading: [],
       result: null,
-      propose: null,
+      propose: {
+        ration: [],
+      },
+
+      dogCormWeight: 4.2,
+      catCormWeight: 2.8,
 
       questions: shortQuestions,
       results,
@@ -424,6 +489,7 @@ export default {
       this.checkQuizRequest(this.characteristic);
       this.propose = this.proposes[this.result];
       this.furryName = this.characteristic.furryName;
+      this.furryType = this.characteristic.furry;
       this.saveToLocalStorage();
 
       this.quizFinished = true;
@@ -538,7 +604,9 @@ export default {
       this.quizFinished = false;
       this.characteristic = null;
       this.result = null;
-      this.propose = null;
+      this.propose = {
+        ration: [],
+      };
 
       for (let i = 0; i < this.questions.length; i++) {
         if (this.questions[i].variantInput) {
@@ -556,24 +624,40 @@ export default {
     saveToLocalStorage() {
       localStorage.setItem("propose", JSON.stringify(this.propose));
       localStorage.setItem("furryName", JSON.stringify(this.furryName));
+      localStorage.setItem("furryType", JSON.stringify(this.furryType));
     },
     loadFromLocalStorage() {
       const storedPropose = localStorage.getItem("propose");
       const furryName = localStorage.getItem("furryName");
+      const furryType = localStorage.getItem("furryType");
       if (storedPropose) {
         this.propose = JSON.parse(storedPropose);
         this.furryName = JSON.parse(furryName);
+        this.furryType = JSON.parse(furryType);
         this.quizFinished = true;
       }
     },
   },
 
   computed: {
+    calculateTotalSum() {
+      const arr = Object.values(this.propose.ration);
+      return arr.reduce(
+        (sum, item) => sum + (item?.price || 0) * (item?.amount || 0),
+        0
+      );
+    },
+    computedCormPerDay() {
+      if (this.furryType === "Dog") {
+        return (this.dogCormWeight * +this.propose.perDay).toFixed(1);
+      } else if (this.furryType === "Cat") {
+        return (this.catCormWeight * +this.propose.perDay).toFixed(1);
+      }
+    },
     disabledBtn() {
       const currentQuestion = this.questions[this.activeQuestion];
 
       if (!currentQuestion.answear) {
-        console.log("1");
         return true;
       } else if (
         currentQuestion.type === "input" &&
@@ -584,7 +668,6 @@ export default {
             variant.value === ""
         )
       ) {
-        console.log("3");
         return true;
       } else if (currentQuestion.type === "mail" && !this.isMailValid) {
         return true;
@@ -592,16 +675,13 @@ export default {
         currentQuestion.type === "inputDouble" &&
         (!currentQuestion.answear.title || !currentQuestion.answear.furryName)
       ) {
-        console.log("4");
         return true;
       } else if (
         Object.keys(currentQuestion?.answear).length === 0 &&
         currentQuestion?.answear.constructor === Object
       ) {
-        console.log("5");
         return true;
       } else {
-        console.log("6");
         return false;
       }
     },

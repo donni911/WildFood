@@ -5,7 +5,7 @@
     "src": "css/about-us.css"
   },
   "css/app.css": {
-    "file": "css/app.4e5a5e7d.css",
+    "file": "css/app.78b17b75.css",
     "isEntry": true,
     "src": "css/app.css"
   },
@@ -20,12 +20,12 @@
     "src": "css/error.css"
   },
   "css/home.css": {
-    "file": "css/home.9d0a22c2.css",
+    "file": "css/home.5c5b68ce.css",
     "isEntry": true,
     "src": "css/home.css"
   },
   "css/utilities.css": {
-    "file": "css/utilities.2398de30.css",
+    "file": "css/utilities.62ad6aef.css",
     "isEntry": true,
     "src": "css/utilities.css"
   },
@@ -134,16 +134,16 @@
     "src": "img/handshakedog.png"
   },
   "js@pub/app.js": {
-    "file": "js/6.b3ade1f9.js",
+    "file": "js/6.c055f8b9.js",
     "isEntry": true,
     "src": "js@pub/app.js"
   },
   "layouts/index.html": {
     "css": [
-      "css/app.4e5a5e7d.css",
-      "css/utilities.2398de30.css"
+      "css/app.78b17b75.css",
+      "css/utilities.62ad6aef.css"
     ],
-    "file": "js/index.e0d547e6.js",
+    "file": "js/index.24a6380b.js",
     "imports": [
       "js@pub/app.js"
     ],

@@ -1,0 +1,1 @@
+/* empty css          *//* empty css          */import"./6.c055f8b9.js";const d=document.querySelector(".js-loader");d&&window.addEventListener("load",()=>{document.documentElement.classList.add("is-loaded"),d.classList.add("is-loaded")});
