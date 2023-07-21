@@ -68,6 +68,19 @@
   overflow: hidden;
   position: relative;
 
+  svg path {
+    transition: fill 0.1s;
+  }
+
+  &--active {
+    svg path {
+      fill: theme(colors.yellow);
+    }
+    span {
+      color: theme(colors.yellow);
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;

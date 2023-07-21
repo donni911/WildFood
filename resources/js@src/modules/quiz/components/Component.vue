@@ -5,51 +5,9 @@
     >
       <transition mode="out-in">
         <div
-          v-if="!quizFinished"
-          class="sm-max:flex-col w-full pb-2 md:pb-5 md:border-b-2 md:border-primary flex sm:items-center justify-between gap-5 h-fit"
-        >
-          <div class="text-primary font-sans text-xs md:text-[24px]">
-            <!-- <span
-                class="inline-flex font-manrope font-medium justify-between text-6 md:text-[34px]"
-              >
-                <transition mode="out-in">
-                  <span
-                    class="min-w-[32px] md:min-w-[42px]"
-                    :key="activeQuestionComputed"
-                  >{{ activeQuestionComputed }}</span
-                  >
-                </transition>
-                /
-              </span> -->
-            <!-- {{ questionsLength }} -->
-          </div>
-          <div class="c-quiz__nav w-full flex sm:justify-end gap-1.5 md:gap-3">
-            <button
-              v-if="!finalQuestion"
-              class="f-btn f-btn--primary-ghost h-fit"
-              :disabled="activeQuestion == 0"
-              @click="previousQuestion"
-            >
-              Previous
-            </button>
-            <transition mode="out-in">
-              <button
-                :key="activeQuestion == questions.length - 1"
-                :disabled="disabledBtn"
-                class="f-btn f-btn--primary-ghost h-fit"
-                @click="finalQuestion ? finishQuiz() : nextQuestion()"
-                v-html="finalQuestion ? 'Finish' : 'Next'"
-              ></button>
-            </transition>
-          </div>
-        </div>
-      </transition>
-
-      <transition mode="out-in">
-        <div
           :key="questions[activeQuestion].id"
           class="flex flex-grow"
-          :class="{ 'pt-2 md:pt-[32px]': !quizFinished }"
+          :class="{ 'pt-2 md:pb-[32px]': !quizFinished }"
         >
           <transition mode="out-in">
             <div
@@ -73,16 +31,19 @@
                 v-html="questions[activeQuestion]?.subtitle"
               ></p>
               <div
-                class="grid gap-5 h-full"
+                class="grid h-full"
                 :class="{
-                  ' grid-cols-2': questions[activeQuestion].type == 'double',
-                  'sm:grid-cols-3': questions[activeQuestion].type == 'triple',
-                  'sm:grid-cols-2 md:grid-cols-4':
+                  'grid-cols-2 gap-5':
+                    questions[activeQuestion].type == 'double',
+                  'sm:grid-cols-3 gap-5':
+                    questions[activeQuestion].type == 'triple',
+                  'sm:grid-cols-2 md:grid-cols-4 gap-5':
                     questions[activeQuestion].type == 'quarter',
-                  'flex flex-wrap':
+                  'flex flex-wrap gap-5':
                     questions[activeQuestion].type == 'multiple',
-                  'sm:grid-cols-2': questions[activeQuestion].type == 'input',
-                  'grid-cols-2':
+                  'sm:grid-cols-2 gap-5':
+                    questions[activeQuestion].type == 'input',
+                  'grid-cols-2 gap-y-5':
                     questions[activeQuestion].type == 'inputDouble',
                   grid: 'inputSingle',
                 }"
@@ -95,7 +56,9 @@
                     >
                       <input
                         type="mail"
-                        v-model="questions[activeQuestion].variants[0].value"
+                        v-model.trim="
+                          questions[activeQuestion].variants[0].value
+                        "
                         @input="
                           handleInputChange(
                             questions[activeQuestion].variants[0]
@@ -119,10 +82,10 @@
                     class="bg-local cursor-text h-full rounded-2xl w-full flex items-center justify-center p-4"
                   >
                     <input
+                      v-model.trim="input.value"
                       @input="handleInputChange(input)"
                       :type="input.title == 'months' ? 'number' : 'text'"
                       :placeholder="input.title"
-                      v-model="input.value"
                       class="w-full outline-none flex-grow border-0 text-primary font-bold text-6 lg:text-8 bg-transparent text-center placeholder:text-primary placeholder:opacity-50"
                     />
                   </label>
@@ -134,7 +97,9 @@
                   >
                     <input
                       type="text"
-                      v-model="questions[activeQuestion].variantInput.value"
+                      v-model.trim="
+                        questions[activeQuestion].variantInput.value
+                      "
                       @input="
                         handleInputChange(
                           questions[activeQuestion].variantInput
@@ -147,14 +112,14 @@
                   <label
                     v-for="variant in questions[activeQuestion].variants"
                     :key="variant.id"
-                    class="bg-local min-h-[100px] hover:opacity-80 p-4 cursor-pointer transition"
+                    class="bg-local min-h-[100px] sm:hover:opacity-80 p-4 cursor-pointer transition"
                     :class="{
-                      'c-gradient bg-no-repeat bg-center bg-cover':
+                      'c-gradient bg-no-repeat bg-center bg-cover mr-2.5 last:ml-2.5 last:mr-0':
                         variant.bgImage,
                       'bg-yellow pointer-events-none':
                         variant.title ===
                         questions[activeQuestion].answear?.title,
-                      'opacity-50':
+                      'c-gradient--active opacity-50':
                         variant.title ===
                           questions[activeQuestion].answear?.title &&
                         variant.bgImage,
@@ -236,10 +201,9 @@
                 Result
               </h1>
               <p class="c-description text-lg mb-5">
-                Based on your answers, we have calculated a personal diet plan
-                for your pet
+                A personal diet plan for
                 <span class="font-bold"> {{ furryName }} </span>
-                for 1 weeks.
+                for 1 week.
               </p>
               <div class="bg-local p-4 rounded-[20px]">
                 <div class="">
@@ -255,7 +219,7 @@
                       {{ furryName }}
                     </h4>
                     <div class="shrink-0 flex flex-col gap-1">
-                      <p>{{ computedCormPerDay }} oz/day</p>
+                      <!-- <p>{{ computedCormPerDay }} oz/day</p> -->
                       <p>
                         {{ propose.perDay }}
                         {{ propose.perDay == 1 ? "pack" : "packs" }}/day
@@ -264,6 +228,7 @@
                         {{ propose.perWeek }}
                         {{ propose.perWeek == 1 ? "pack" : "packs" }}/week
                       </p>
+                      <p>${{ calculateTotalSum.toFixed(2) }}/week</p>
                     </div>
                   </div>
                 </div>
@@ -359,7 +324,7 @@
                   </h5>
                 </div>
               </div>
-              <div
+              <!-- <div
                 class="bg-local p-4 rounded-[20px] gap-4 font-semibold text-[24px] mb-4"
               >
                 <div
@@ -382,7 +347,7 @@
                     ></h5>
                   </li>
                 </ul>
-              </div>
+              </div> -->
               <div class="flex justify-center mt-auto">
                 <button
                   class="w-fit f-btn f-btn--primary-ghost"
@@ -393,6 +358,48 @@
               </div>
             </div>
           </transition>
+        </div>
+      </transition>
+
+      <transition mode="out-in">
+        <div
+          v-if="!quizFinished"
+          class="sm-max:flex-col w-full flex sm:items-center justify-between gap-5 h-fit"
+        >
+          <div class="text-primary font-sans text-xs md:text-[24px]">
+            <!-- <span
+                class="inline-flex font-manrope font-medium justify-between text-6 md:text-[34px]"
+              >
+                <transition mode="out-in">
+                  <span
+                    class="min-w-[32px] md:min-w-[42px]"
+                    :key="activeQuestionComputed"
+                  >{{ activeQuestionComputed }}</span
+                  >
+                </transition>
+                /
+              </span> -->
+            <!-- {{ questionsLength }} -->
+          </div>
+          <div class="c-quiz__nav w-full flex sm:justify-end gap-1.5 md:gap-3">
+            <button
+              v-if="!finalQuestion"
+              class="f-btn f-btn--primary-ghost h-fit"
+              :disabled="activeQuestion == 0"
+              @click="previousQuestion"
+            >
+              Previous
+            </button>
+            <transition mode="out-in">
+              <button
+                :key="activeQuestion == questions.length - 1"
+                :disabled="disabledBtn"
+                class="f-btn f-btn--primary-ghost h-fit"
+                @click="finalQuestion ? finishQuiz() : nextQuestion()"
+                v-html="finalQuestion ? 'Finish' : 'Next'"
+              ></button>
+            </transition>
+          </div>
         </div>
       </transition>
     </div>
@@ -434,6 +441,7 @@ export default {
         let value = input.value.toString();
         value = value.replace(/[^0-9]/g, "");
       } else if (input.title == "months") {
+        if (!input.value) return;
         const value = parseInt(input.value);
         if (value > 11) {
           input.value = "11";
@@ -451,6 +459,7 @@ export default {
         this.questions[this.activeQuestion].answear[input.title] = input.value;
       }
     },
+
     handleSelection(variant) {
       const activeQuestion = this.questions[this.activeQuestion];
       if (activeQuestion.type === "inputDouble") {
@@ -473,8 +482,8 @@ export default {
         furryName: this.questions[0]?.answear?.furryName,
         furry: this.questions[0]?.answear?.title,
         old: {
-          age: this.questions[1]?.answear?.age,
-          month: this.questions[1]?.answear?.months,
+          age: this.questions[1]?.answear?.age || 0,
+          month: this.questions[1]?.answear?.months || 11,
         },
         condition: this.questions[2]?.answear?.title,
         activity: this.questions[3]?.answear?.title,
@@ -485,6 +494,7 @@ export default {
         mail: this.questions[6]?.answear,
       };
 
+      console.log(this.characteristic);
       this.checkQuizRequest(this.characteristic);
       this.propose = this.proposes[this.result];
       this.furryName = this.characteristic.furryName;
@@ -657,28 +667,39 @@ export default {
       const currentQuestion = this.questions[this.activeQuestion];
 
       if (!currentQuestion.answear) {
+        console.log("1");
         return true;
+      } else if (
+        currentQuestion.name === "old" &&
+        currentQuestion.variants.some((variant) => !!variant.value)
+      ) {
+        return false;
       } else if (
         currentQuestion.type === "input" &&
         currentQuestion.variants.some(
           (variant) =>
             variant.value === null ||
             variant.value === undefined ||
+            variant.value === NaN ||
             variant.value === ""
         )
       ) {
+        console.log("2");
         return true;
       } else if (currentQuestion.type === "mail" && !this.isMailValid) {
+        console.log("3");
         return true;
       } else if (
         currentQuestion.type === "inputDouble" &&
         (!currentQuestion.answear.title || !currentQuestion.answear.furryName)
       ) {
+        console.log("4");
         return true;
       } else if (
         Object.keys(currentQuestion?.answear).length === 0 &&
         currentQuestion?.answear.constructor === Object
       ) {
+        console.log("5");
         return true;
       } else {
         return false;

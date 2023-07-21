@@ -2,7 +2,9 @@
   <div>
     <transition name="pop">
       <div v-if="!modal" class="c-quiz__wrap">
-        <button class="c-quiz__btn" @click="openModal">Define a plan</button>
+        <button class="c-quiz__btn shadow" @click="openModal">
+          Define a plan
+        </button>
       </div>
     </transition>
     <transition name="pop">

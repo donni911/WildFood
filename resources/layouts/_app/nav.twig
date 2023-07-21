@@ -7,7 +7,7 @@
                     <div class="c-nav__link-icon">
                         {% include "./icon.twig" with { id: 'angle' } %}
                     </div>
-                    <ul class="c-nav__dropdown">
+                    <ul class="c-nav__dropdown shadow-xl	">
                         {% for itemDropdown in item.dropdown %}
                             <li class="c-nav__dropdown-link">
                                 <a href="{{ itemDropdown.link }}" class="c-nav__link">{{ itemDropdown.title }}</a>
