@@ -173,10 +173,14 @@
 .c-products__list.quiz {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
+  @screen sm-max {
+    gap: 16px;
+  }
   @screen xxs {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   @screen sm {
+    gap: 8px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

@@ -269,10 +269,7 @@
                 </div>
               </div>
               <div class="mt-4 mb-4 flex flex-grow items-center justify-center">
-                <ul
-                  class="c-products__list quiz sm-max:flex-wrap visible gap-4 md:gap-2 w-full"
-                  v-if="propose"
-                >
+                <ul class="c-products__list quiz visible w-full" v-if="propose">
                   <li
                     v-for="(item, key) in propose.ration"
                     :key="key"
@@ -369,7 +366,9 @@
                   class="flex justify-between relative pb-5 before:content-[''] before:rounded-[999px] before:bg-brown before:w-full before:h-0.5 before:absolute before:left-0 before:top-[100%]"
                 >
                   <h3>Total</h3>
-                  <h3 v-if="calculateTotalSum">${{ calculateTotalSum }}</h3>
+                  <h3 v-if="calculateTotalSum">
+                    ${{ calculateTotalSum.toFixed(2) }}
+                  </h3>
                 </div>
                 <ul class="py-6 gap-4 grid">
                   <li
