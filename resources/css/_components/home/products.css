@@ -19,6 +19,7 @@
   }
 
   &__products {
+    width: 100%;
     @screen lg {
       max-width: 740px;
     }

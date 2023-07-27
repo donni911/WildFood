@@ -28,7 +28,7 @@ export default [
     name: "old",
     variants: [
       {
-        title: "age",
+        title: "years",
         value: null,
       },
       {

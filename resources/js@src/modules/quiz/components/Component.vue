@@ -21,9 +21,8 @@
                   'md:mb-4': questions[activeQuestion]?.subtitle,
                   'md:mb-12': !questions[activeQuestion]?.subtitle,
                 }"
-              >
-                {{ questions[activeQuestion].question }}
-              </h3>
+                v-html="questions[activeQuestion].question"
+              ></h3>
               <p
                 v-if="questions[activeQuestion].subtitle"
                 :key="questions[activeQuestion].subtitle"
@@ -188,7 +187,7 @@
                             />
                           </svg>
                         </template>
-                        {{ variant.title }}
+                        <span v-html="variant.title"></span>
                       </span>
                     </div>
                   </label>
@@ -202,8 +201,9 @@
               </h1>
               <p class="c-description text-lg mb-5">
                 A personal diet plan for
-                <span class="font-bold"> {{ furryName }} </span>
-                for 1 week.
+                <span class="font-bold" v-html="furryName"></span>
+                for 1 week. <br />
+                Build your box with favorite flavors:
               </p>
               <div class="bg-local p-4 rounded-[20px]">
                 <div class="">
@@ -215,20 +215,28 @@
                   <div
                     class="flex justify-between items-center mt-4 font-bold sm:maxtext-xs text-primary gap-2"
                   >
-                    <h4 class="uppercase">
-                      {{ furryName }}
-                    </h4>
+                    <h4 class="uppercase" v-html="furryName"></h4>
                     <div class="shrink-0 flex flex-col gap-1">
                       <!-- <p>{{ computedCormPerDay }} oz/day</p> -->
                       <p>
-                        {{ propose.perDay }}
-                        {{ propose.perDay == 1 ? "pack" : "packs" }}/day
+                        <span v-html="propose.perDay"></span>
+                        <span
+                          v-html="
+                            `${propose.perDay == 1 ? ' pack' : ' packs'} / day`
+                          "
+                        ></span>
                       </p>
                       <p>
-                        {{ propose.perWeek }}
-                        {{ propose.perWeek == 1 ? "pack" : "packs" }}/week
+                        <span v-html="propose.perWeek"></span>
+                        <span
+                          v-html="
+                            `${
+                              propose.perWeek == 1 ? ' pack' : ' packs'
+                            } / week`
+                          "
+                        ></span>
                       </p>
-                      <p>${{ calculateTotalSum.toFixed(2) }}/week</p>
+                      <p v-html="`$${calculateTotalSum.toFixed(2)} / week`"></p>
                     </div>
                   </div>
                 </div>
@@ -296,10 +304,10 @@
                         </div>
                       </div>
                       <div class="c-product__wrap">
-                        <span
+                        <!-- <span
                           class="c-product__pieces"
                           v-html="`Amount: ` + item.amount"
-                        ></span>
+                        ></span> -->
                         <h3
                           class="c-product__title sm-max:text-sm"
                           v-html="item.title"
@@ -407,8 +415,6 @@
 </template>
 
 <script>
-import shortQuestions from "../shortQuestions";
-import results, { proposes } from "../results";
 export default {
   data() {
     return {
@@ -425,9 +431,1068 @@ export default {
       dogCormWeight: 4.2,
       catCormWeight: 2.8,
 
-      questions: shortQuestions,
-      results,
-      proposes,
+      questions: [
+        {
+          id: "0",
+          question: "Who is your furry?",
+          name: "furry",
+          variantInput: {
+            title: "furryName",
+            value: null,
+          },
+          variants: [
+            {
+              bgImage: "https://i.ibb.co/7nmg5xM/cat-quiz.png",
+              icon: "cat",
+              title: "Cat",
+            },
+            {
+              bgImage: "https://i.ibb.co/zWvdFwd/dog-quiz.png",
+              icon: "dog",
+              title: "Dog",
+            },
+          ],
+          answear: null,
+          type: "inputDouble",
+        },
+        {
+          id: "1",
+          question: "How old is your pet?",
+          name: "old",
+          variants: [
+            {
+              title: "years",
+              value: null,
+            },
+            {
+              title: "months",
+              value: null,
+            },
+          ],
+          answear: "",
+          type: "input",
+        },
+        {
+          id: "2",
+          question: "How would you describe your pet's body condition?",
+          name: "condition",
+          variants: [
+            {
+              title: "Underweight",
+            },
+            {
+              title: "Just Right",
+            },
+            {
+              title: "Overweight",
+            },
+          ],
+          answear: null,
+          type: "triple",
+        },
+        {
+          id: "3",
+          question: "What is their daily activity level?",
+          name: "activity",
+          variants: [
+            {
+              title: "Low",
+            },
+            {
+              title: "Average",
+            },
+            {
+              title: "High",
+            },
+          ],
+          answear: null,
+          type: "triple",
+        },
+        {
+          id: "4",
+          name: "weight",
+          question: "Please write your pet's current weight in lb.",
+          variants: [{ title: "weight", value: "" }],
+          answear: null,
+          type: "inputSingle",
+        },
+        {
+          id: "5",
+          preFinal: true,
+          question: "What kind of food does your pet eat?",
+          name: "kindOfFood",
+          variants: [
+            {
+              type: "kibble",
+              title: "Kibble and/or wet food",
+            },
+            {
+              type: "raw",
+              title: "Raw food",
+            },
+            {
+              type: "fresh",
+              title: "Fresh cooked food",
+            },
+          ],
+          answear: null,
+          type: "triple",
+        },
+        {
+          id: "6",
+          final: true,
+          name: "mail",
+          variants: [
+            {
+              title: "mail",
+              value: null,
+            },
+          ],
+          question: "Your Mail",
+          answear: null,
+          type: "mail",
+        },
+      ],
+
+      results: {
+        DOG: {
+          moreThanOne: {
+            kibble: [
+              {
+                range: "<=13",
+                result: 1,
+              },
+              {
+                range: "14-22",
+                result: 131,
+              },
+              {
+                range: "23-29",
+                result: 2,
+              },
+              {
+                range: "30-37",
+                result: 3,
+              },
+              {
+                range: "38-43",
+                result: 4,
+              },
+              {
+                range: "44-50",
+                result: 132,
+              },
+              {
+                range: ">=51",
+                result: 133,
+              },
+            ],
+            raw: [
+              {
+                range: "<=13",
+                result: 5,
+              },
+              {
+                range: "14-22",
+                result: 6,
+              },
+              {
+                range: "23-29",
+                result: 7,
+              },
+              {
+                range: "30-37",
+                result: 8,
+              },
+              {
+                range: "38-43",
+                result: 134,
+              },
+              {
+                range: "44-50",
+                result: 135,
+              },
+              {
+                range: ">=51",
+                result: 136,
+              },
+            ],
+            fresh: [
+              {
+                range: "<=13",
+                result: 1,
+              },
+              {
+                range: "14-22",
+                result: 131,
+              },
+              {
+                range: "23-29",
+                result: 2,
+              },
+              {
+                range: "30-37",
+                result: 3,
+              },
+              {
+                range: "38-43",
+                result: 4,
+              },
+              {
+                range: "44-50",
+                result: 132,
+              },
+              {
+                range: ">=51",
+                result: 133,
+              },
+            ],
+          },
+          lessThanOne: {
+            kibble: [
+              {
+                range: "<=5",
+                result: 2,
+              },
+              {
+                range: "6-9",
+                result: 4,
+              },
+              {
+                range: ">=10",
+                result: 133,
+              },
+            ],
+            raw: [
+              {
+                range: "<=5",
+                result: 7,
+              },
+              {
+                range: "6-9",
+                result: 134,
+              },
+              {
+                range: ">=10",
+                result: 136,
+              },
+            ],
+            fresh: [
+              {
+                range: "<=5",
+                result: 2,
+              },
+              {
+                range: "6-9",
+                result: 4,
+              },
+              {
+                range: ">=10",
+                result: 133,
+              },
+            ],
+          },
+        },
+        CAT: {
+          moreThanOne: {
+            kibble: [
+              {
+                range: "<=15",
+                result: 9,
+              },
+              {
+                range: ">=16",
+                result: 10,
+              },
+            ],
+            raw: [
+              {
+                range: "<=15",
+                result: 11,
+              },
+              {
+                range: ">=16",
+                result: 12,
+              },
+            ],
+            fresh: [
+              {
+                range: "<=15",
+                result: 111,
+              },
+              {
+                range: ">=16",
+                result: 121,
+              },
+            ],
+          },
+          lessThanOne: {
+            kibble: [
+              {
+                range: "<=5",
+                result: 9,
+              },
+              {
+                range: ">=6",
+                result: 10,
+              },
+            ],
+            raw: [
+              {
+                range: "<=5",
+                result: 11,
+              },
+              {
+                range: ">=6",
+                result: 12,
+              },
+            ],
+            fresh: [
+              {
+                range: "<=5",
+                result: 111,
+              },
+              {
+                range: ">=6",
+                result: 121,
+              },
+            ],
+          },
+        },
+      },
+      proposes: {
+        // DOG Gently food
+        1: {
+          perDay: 1,
+          perWeek: 7,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+              price: 2.92,
+              amount: 3,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+              price: 3.22,
+              amount: 2,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+              price: 3.12,
+              amount: 2,
+            },
+          },
+        },
+        131: {
+          perDay: 1.5,
+          perWeek: 11,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+              price: 2.92,
+              amount: 3,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+              price: 3.22,
+              amount: 2,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+              price: 3.12,
+              amount: 2,
+            },
+          },
+        },
+        2: {
+          perDay: 2,
+          perWeek: 14,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+              price: 2.92,
+              amount: 5,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+              price: 3.22,
+              amount: 5,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+              price: 3.12,
+              amount: 4,
+            },
+          },
+        },
+        3: {
+          perDay: 2.5,
+          perWeek: 18,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+              price: 2.92,
+              amount: 7,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+              price: 3.22,
+              amount: 7,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+              price: 3.12,
+              amount: 7,
+            },
+          },
+        },
+        4: {
+          perDay: 3,
+          perWeek: 21,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+              price: 2.92,
+              amount: 10,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+              price: 3.22,
+              amount: 9,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+              price: 3.12,
+              amount: 9,
+            },
+          },
+        },
+        132: {
+          perDay: 3.5,
+          perWeek: 25,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+              price: 2.92,
+              amount: 10,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+              price: 3.22,
+              amount: 9,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+              price: 3.12,
+              amount: 9,
+            },
+          },
+        },
+        133: {
+          perDay: 4,
+          perWeek: 28,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+              price: 2.92,
+              amount: 10,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+              price: 3.22,
+              amount: 9,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+              price: 3.12,
+              amount: 9,
+            },
+          },
+        },
+
+        // DOG Raw bones
+        5: {
+          perDay: 1,
+          perWeek: 7,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-1?variant=45725410099499",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/14_1.png?v=1689838158&width=1100",
+              price: 2.92,
+              amount: 3,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-1?variant=45725251404075",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/13.png?v=1689685003",
+              price: 3.09,
+              amount: 2,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-1?variant=45725426319659",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/17.png?v=1689685293",
+              price: 2.98,
+              amount: 2,
+            },
+          },
+        },
+        6: {
+          perDay: 1.5,
+          perWeek: 11,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-1?variant=45725410099499",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/14_1.png?v=1689838158&width=1100",
+              price: 2.92,
+              amount: 5,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-1?variant=45725251404075",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/13.png?v=1689685003",
+              price: 3.09,
+              amount: 5,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-1?variant=45725426319659",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/17.png?v=1689685293",
+              price: 2.98,
+              amount: 4,
+            },
+          },
+        },
+        7: {
+          perDay: 2,
+          perWeek: 14,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-1?variant=45725410099499",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/14_1.png?v=1689838158&width=1100",
+              price: 2.92,
+              amount: 7,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-1?variant=45725251404075",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/13.png?v=1689685003",
+              price: 3.09,
+              amount: 7,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-1?variant=45725426319659",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/17.png?v=1689685293",
+              price: 2.98,
+              amount: 7,
+            },
+          },
+        },
+        8: {
+          perDay: 2.5,
+          perWeek: 18,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-1?variant=45725410099499",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/14_1.png?v=1689838158&width=1100",
+              price: 2.92,
+              amount: 10,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-1?variant=45725251404075",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/13.png?v=1689685003",
+              price: 3.09,
+              amount: 10,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-1?variant=45725426319659",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/17.png?v=1689685293",
+              price: 2.98,
+              amount: 9,
+            },
+          },
+        },
+        134: {
+          perDay: 3,
+          perWeek: 21,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-1?variant=45725410099499",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/14_1.png?v=1689838158&width=1100",
+              price: 2.92,
+              amount: 10,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-1?variant=45725251404075",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/13.png?v=1689685003",
+              price: 3.09,
+              amount: 10,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-1?variant=45725426319659",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/17.png?v=1689685293",
+              price: 2.98,
+              amount: 9,
+            },
+          },
+        },
+        135: {
+          perDay: 3.5,
+          perWeek: 25,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-1?variant=45725410099499",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/14_1.png?v=1689838158&width=1100",
+              price: 2.92,
+              amount: 10,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-1?variant=45725251404075",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/13.png?v=1689685003",
+              price: 3.09,
+              amount: 10,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-1?variant=45725426319659",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/17.png?v=1689685293",
+              price: 2.98,
+              amount: 9,
+            },
+          },
+        },
+        136: {
+          perDay: 4,
+          perWeek: 28,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-1?variant=45725410099499",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/14_1.png?v=1689838158&width=1100",
+              price: 2.92,
+              amount: 10,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-1?variant=45725251404075",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/13.png?v=1689685003",
+              price: 3.09,
+              amount: 10,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-1?variant=45725426319659",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/17.png?v=1689685293",
+              price: 2.98,
+              amount: 9,
+            },
+          },
+        },
+
+        // DOG Raw boneless
+        51: {
+          perDay: 1,
+          perWeek: 7,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+              price: 2.92,
+              amount: 3,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+              price: 3.22,
+              amount: 2,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+              price: 3.12,
+              amount: 2,
+            },
+          },
+        },
+        61: {
+          perDay: 2,
+          perWeek: 14,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+              price: 2.92,
+              amount: 3,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+              price: 3.22,
+              amount: 2,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+              price: 3.12,
+              amount: 2,
+            },
+          },
+        },
+        71: {
+          perDay: 3,
+          perWeek: 21,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+              price: 2.92,
+              amount: 3,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+              price: 3.22,
+              amount: 2,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+              price: 3.12,
+              amount: 2,
+            },
+          },
+        },
+        81: {
+          perDay: 4,
+          perWeek: 28,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-dogs-120g-4-2oz-2?variant=45725477798187",
+              title: "Chicken MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/11.png?v=1689685483",
+              price: 2.92,
+              amount: 3,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-dogs-120g-4-2oz-2?variant=45725442048299",
+              title: "Beef MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/10.png?v=1689685375",
+              price: 3.22,
+              amount: 2,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-dogs-120g-4-2oz-2?variant=45725490020651",
+              title: "Turkey MIX for Dogs",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/12.png?v=1689685550",
+              price: 3.12,
+              amount: 2,
+            },
+          },
+        },
+
+        // Cat gently food
+        9: {
+          perDay: 2,
+          perWeek: 14,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-3?variant=45724674523435",
+              title: "Chicken MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/19.png?v=1689684147",
+              price: 2.84,
+              amount: 5,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-3?variant=45724667871531",
+              title: "Beef MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/18.png?v=1689684047",
+              price: 2.98,
+              amount: 5,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz-2?variant=45724689400107",
+              title: "Turkey MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/20.png?v=1689684201",
+              price: 2.89,
+              amount: 4,
+            },
+          },
+        },
+        10: {
+          perDay: 3,
+          perWeek: 21,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-3?variant=45724674523435",
+              title: "Chicken MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/19.png?v=1689684147",
+              price: 2.84,
+              amount: 7,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-3?variant=45724667871531",
+              title: "Beef MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/18.png?v=1689684047",
+              price: 2.98,
+              amount: 7,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz-2?variant=45724689400107",
+              title: "Turkey MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/20.png?v=1689684201",
+              price: 2.89,
+              amount: 7,
+            },
+          },
+        },
+
+        // Cat raw food
+        11: {
+          perDay: 2,
+          perWeek: 14,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-2?variant=45724168225067",
+              title: "Chicken MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/4.png?v=1689683847",
+              price: 2.77,
+              amount: 5,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-1?variant=45724138242347",
+              title: "Beef MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/2.png?v=1689683742",
+              price: 2.85,
+              amount: 5,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz-1?variant=45724657680683",
+              title: "Turkey MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/7.png?v=1689683952",
+              price: 2.83,
+              amount: 4,
+            },
+          },
+        },
+        12: {
+          perDay: 3,
+          perWeek: 21,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-2?variant=45724168225067",
+              title: "Chicken MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/4.png?v=1689683847",
+              price: 2.77,
+              amount: 7,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-1?variant=45724138242347",
+              title: "Beef MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/2.png?v=1689683742",
+              price: 2.85,
+              amount: 7,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz-1?variant=45724657680683",
+              title: "Turkey MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/7.png?v=1689683952",
+              price: 2.83,
+              amount: 7,
+            },
+          },
+        },
+
+        // Cat raw food (boneless)
+        111: {
+          perDay: 2,
+          perWeek: 14,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-3?variant=45724674523435",
+              title: "Chicken MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/19.png?v=1689684147",
+              price: 2.84,
+              amount: 5,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-3?variant=45724667871531",
+              title: "Beef MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/18.png?v=1689684047",
+              price: 2.98,
+              amount: 5,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz-2?variant=45724689400107",
+              title: "Turkey MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/20.png?v=1689684201",
+              price: 2.89,
+              amount: 4,
+            },
+          },
+        },
+        121: {
+          perDay: 3,
+          perWeek: 21,
+          ration: {
+            chicken: {
+              url: "https://wildfoodforpets.com/products/chicken-mix-for-cats-80-g-2-8oz-3?variant=45724674523435",
+              title: "Chicken MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/19.png?v=1689684147",
+              price: 2.84,
+              amount: 5,
+            },
+            beef: {
+              url: "https://wildfoodforpets.com/products/beef-mix-for-cats-80-g-2-8oz-3?variant=45724667871531",
+              title: "Beef MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/18.png?v=1689684047",
+              price: 2.98,
+              amount: 5,
+            },
+            turkey: {
+              url: "https://wildfoodforpets.com/products/turkey-mix-for-cats-80-g-2-8oz-2?variant=45724689400107",
+              title: "Turkey MIX for Cats",
+              imgUrl:
+                "https://wildfoodforpets.com/cdn/shop/files/20.png?v=1689684201",
+              price: 2.89,
+              amount: 4,
+            },
+          },
+        },
+      },
     };
   },
 
@@ -482,7 +1547,7 @@ export default {
         furryName: this.questions[0]?.answear?.furryName,
         furry: this.questions[0]?.answear?.title,
         old: {
-          age: this.questions[1]?.answear?.age || 0,
+          age: this.questions[1]?.answear?.years || 0,
           month: this.questions[1]?.answear?.months || 11,
         },
         condition: this.questions[2]?.answear?.title,
@@ -494,13 +1559,11 @@ export default {
         mail: this.questions[6]?.answear,
       };
 
-      console.log(this.characteristic);
       this.checkQuizRequest(this.characteristic);
       this.propose = this.proposes[this.result];
       this.furryName = this.characteristic.furryName;
       this.furryType = this.characteristic.furry;
       this.saveToLocalStorage();
-
       this.quizFinished = true;
     },
 
@@ -667,7 +1730,6 @@ export default {
       const currentQuestion = this.questions[this.activeQuestion];
 
       if (!currentQuestion.answear) {
-        console.log("1");
         return true;
       } else if (
         currentQuestion.name === "old" &&
@@ -684,22 +1746,18 @@ export default {
             variant.value === ""
         )
       ) {
-        console.log("2");
         return true;
       } else if (currentQuestion.type === "mail" && !this.isMailValid) {
-        console.log("3");
         return true;
       } else if (
         currentQuestion.type === "inputDouble" &&
         (!currentQuestion.answear.title || !currentQuestion.answear.furryName)
       ) {
-        console.log("4");
         return true;
       } else if (
         Object.keys(currentQuestion?.answear).length === 0 &&
         currentQuestion?.answear.constructor === Object
       ) {
-        console.log("5");
         return true;
       } else {
         return false;
