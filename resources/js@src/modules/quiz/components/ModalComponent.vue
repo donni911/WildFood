@@ -35,7 +35,7 @@
                   <div
                     :key="questions[activeQuestion].id"
                     class="flex flex-grow"
-                    :class="{ 'pt-2 md:pb-[32px]': !quizFinished }"
+                    :class="{ 'pb-2 md:pb-[32px]': !quizFinished }"
                   >
                     <transition mode="out-in">
                       <div
@@ -243,10 +243,14 @@
                           Result
                         </h1>
                         <p class="c-description text-lg mb-5">
+                          Your promo code for a <b>35% discount:</b>
+                          <b>Wildfood35</b> The promo code will be applied
+                          automatically during checkout.
+                        </p>
+                        <p class="c-description text-lg mb-5">
                           A personal diet plan for
                           <span class="font-bold" v-html="furryName"></span>
                           for 1 week. <br />
-                          Build your box with favorite flavors:
                         </p>
                         <div class="bg-local p-4 rounded-[20px]">
                           <div class="">
@@ -260,8 +264,7 @@
                             >
                               <h4 class="uppercase" v-html="furryName"></h4>
                               <div class="shrink-0 flex flex-col gap-1">
-                                <!-- <p>{{ computedCormPerDay }} oz/day</p> -->
-                                <p>
+                                <p class="text-end">
                                   <span v-html="propose.perDay"></span>
                                   <span
                                     v-html="
@@ -271,7 +274,7 @@
                                     "
                                   ></span>
                                 </p>
-                                <p>
+                                <p class="text-end">
                                   <span v-html="propose.perWeek"></span>
                                   <span
                                     v-html="
@@ -285,13 +288,21 @@
                                 </p>
                                 <p
                                   v-html="
-                                    `$${calculateTotalSum.toFixed(2)} / week`
+                                    `<span class='line-through'>$${calculateTotalSum.toFixed(
+                                      2
+                                    )}</span> ${
+                                      '$' +
+                                      (calculateTotalSum * 0.65).toFixed(2)
+                                    } / week`
                                   "
                                 ></p>
                               </div>
                             </div>
                           </div>
                         </div>
+                        <p class="c-description text-lg mb-5 mt-2">
+                          Build your box with favorite flavors:
+                        </p>
                         <div
                           class="mt-4 mb-4 flex flex-grow items-center justify-center"
                         >
@@ -365,10 +376,12 @@
                                   </div>
                                 </div>
                                 <div class="c-product__wrap">
-                                  <!-- <span
-                                    class="c-product__pieces"
-                                    v-html="`Amount: ` + item.amount"
-                                  ></span> -->
+                                  <!--
+                                <span
+                                  class="c-product__pieces"
+                                  v-html="`Amount: ` + item.amount"
+                                ></span>
+                              -->
                                   <h3
                                     class="c-product__title sm-max:text-sm"
                                     v-html="item.title"
@@ -396,30 +409,6 @@
                             </h5>
                           </div>
                         </div>
-                        <!-- <div
-                class="bg-local p-4 rounded-[20px] gap-4 font-semibold text-[24px] mb-4"
-              >
-                <div
-                  class="flex justify-between relative pb-5 before:content-[''] before:rounded-[999px] before:bg-brown before:w-full before:h-0.5 before:absolute before:left-0 before:top-[100%]"
-                >
-                  <h3>Total</h3>
-                  <h3 v-if="calculateTotalSum">
-                    ${{ calculateTotalSum.toFixed(2) }}
-                  </h3>
-                </div>
-                <ul class="py-6 gap-4 grid">
-                  <li
-                    class="flex justify-between font-semibold items-center text-sm text-primary"
-                    v-for="(item, key) in propose?.ration"
-                    :key="key"
-                  >
-                    <h5 v-html="item.title" class="sm-max:max-w-[50%]"></h5>
-                    <h5
-                      v-html="`$${(item.price * item.amount).toFixed(2)}`"
-                    ></h5>
-                  </li>
-                </ul>
-              </div> -->
                         <div class="flex justify-center mt-auto">
                           <button
                             class="w-fit f-btn f-btn--primary-ghost"
@@ -439,18 +428,20 @@
                     class="sm-max:flex-col w-full flex sm:items-center justify-between gap-5 h-fit"
                   >
                     <div class="text-primary font-sans text-xs md:text-[24px]">
-                      <!-- <span
-                class="inline-flex font-manrope font-medium justify-between text-6 md:text-[34px]"
-              >
-                <transition mode="out-in">
-                  <span
-                    class="min-w-[32px] md:min-w-[42px]"
-                    :key="activeQuestionComputed"
-                  >{{ activeQuestionComputed }}</span
-                  >
-                </transition>
-                /
-              </span> -->
+                      <!--
+                    <span
+                      class="inline-flex font-manrope font-medium justify-between text-6 md:text-[34px]"
+                    >
+                      <transition mode="out-in">
+                        <span
+                          class="min-w-[32px] md:min-w-[42px]"
+                          :key="activeQuestionComputed"
+                        >{{ activeQuestionComputed }}</span
+                        >
+                      </transition>
+                      /
+                    </span>
+                  -->
                       <!-- {{ questionsLength }} -->
                     </div>
                     <div
@@ -486,6 +477,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -1617,6 +1609,16 @@ export default {
       }
     },
 
+    async createCustomer() {
+      try {
+        await axios.post("https://customercreate.com/api/senddata", {
+          email: this.mail.mail,
+        });
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+    },
+
     nextQuestion() {
       this.activeQuestion++;
     },
@@ -1640,6 +1642,9 @@ export default {
         kindOfFood: this.questions[5]?.answear?.type,
         mail: this.questions[6]?.answear,
       };
+
+      this.mail = this.questions[6]?.answear;
+      this.createCustomer();
 
       this.checkQuizRequest(this.characteristic);
       this.propose = this.proposes[this.result];
@@ -1870,6 +1875,8 @@ export default {
     },
   },
   mounted() {
+    this.mail = "rodster@example.com";
+    this.createCustomer();
     this.loadFromLocalStorage();
     this.loading = Array(this.propose?.length).fill(true);
   },
