@@ -582,7 +582,7 @@ export default {
         },
         {
           id: "5",
-          preFinal: true,
+          final: true,
           question: "What kind of food does your pet eat?",
           name: "kindOfFood",
           variants: [
@@ -602,20 +602,20 @@ export default {
           answear: null,
           type: "triple",
         },
-        {
-          id: "6",
-          final: true,
-          name: "mail",
-          variants: [
-            {
-              title: "mail",
-              value: null,
-            },
-          ],
-          question: "Your Mail",
-          answear: null,
-          type: "mail",
-        },
+        // {
+        //   id: "6",
+        //   final: true,
+        //   name: "mail",
+        //   variants: [
+        //     {
+        //       title: "mail",
+        //       value: null,
+        //     },
+        //   ],
+        //   question: "Your Mail",
+        //   answear: null,
+        //   type: "mail",
+        // },
       ],
 
       results: {
@@ -1627,6 +1627,9 @@ export default {
     },
 
     finishQuiz() {
+      // this.mail = this.questions[6]?.answear;
+      // this.createCustomer();
+
       this.characteristic = {
         furryName: this.questions[0]?.answear?.furryName,
         furry: this.questions[0]?.answear?.title,
@@ -1643,9 +1646,6 @@ export default {
         mail: this.questions[6]?.answear,
       };
 
-      this.mail = this.questions[6]?.answear;
-      this.createCustomer();
-
       this.checkQuizRequest(this.characteristic);
       this.propose = this.proposes[this.result];
       this.furryName = this.characteristic.furryName;
@@ -1658,43 +1658,34 @@ export default {
     checkQuizRequest(petCharacteristic) {
       const furryType = petCharacteristic.furry;
       const age = petCharacteristic.old.age;
+      const months = petCharacteristic.old.month;
       const weight = petCharacteristic.weight.weight;
       const foodType = petCharacteristic.kindOfFood;
 
       if (furryType === "Dog") {
-        if (age >= 1) {
+        if (months >= 11 || age >= 1) {
           if (foodType === "kibble") {
-            this.result = this.getResult(
-              this.results.DOG.moreThanOne.kibble,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.lg.kibble, weight);
           } else if (foodType === "fresh") {
-            this.result = this.getResult(
-              this.results.DOG.moreThanOne.fresh,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.lg.fresh, weight);
           } else if (foodType === "raw") {
-            this.result = this.getResult(
-              this.results.DOG.moreThanOne.raw,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.lg.raw, weight);
           }
-        } else if (age < 1 || !age) {
+        } else if (months >= 7 && months <= 10 && age < 1) {
           if (foodType === "kibble") {
-            this.result = this.getResult(
-              this.results.DOG.lessThanOne.kibble,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.md.kibble, weight);
           } else if (foodType === "fresh") {
-            this.result = this.getResult(
-              this.results.DOG.lessThanOne.fresh,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.md.fresh, weight);
           } else if (foodType === "raw") {
-            this.result = this.getResult(
-              this.results.DOG.lessThanOne.raw,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.md.raw, weight);
+          }
+        } else if (months <= 6 && age < 1) {
+          if (foodType === "kibble") {
+            this.result = this.getResult(this.results.DOG.sm.kibble, weight);
+          } else if (foodType === "fresh") {
+            this.result = this.getResult(this.results.DOG.sm.fresh, weight);
+          } else if (foodType === "raw") {
+            this.result = this.getResult(this.results.DOG.sm.raw, weight);
           }
         }
       } else if (furryType === "Cat") {
@@ -1875,8 +1866,6 @@ export default {
     },
   },
   mounted() {
-    this.mail = "rodster@example.com";
-    this.createCustomer();
     this.loadFromLocalStorage();
     this.loading = Array(this.propose?.length).fill(true);
   },

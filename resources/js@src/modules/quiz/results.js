@@ -1,6 +1,75 @@
 const results = {
   DOG: {
-    moreThanOne: {
+    sm: {
+      kibble: [
+        {
+          range: "<=5",
+          result: 2,
+        },
+        {
+          range: ">=6",
+          result: 4,
+        },
+      ],
+
+      raw: [
+        {
+          range: "<=5",
+          result: 7,
+        },
+        {
+          range: ">=6",
+          result: 134,
+        },
+      ],
+      
+      fresh: [
+        {
+          range: "<=5",
+          result: 2,
+        },
+        {
+          range: ">=6",
+          result: 4,
+        },
+      ],
+    },
+
+    md:{
+      kibble: [
+        {
+          range: "<=9",
+          result: 2,
+        },
+        {
+          range: ">=10",
+          result: 4,
+        },
+      ],
+      raw: [
+        {
+          range: "<=9",
+          result: 2,
+        },
+        {
+          range: ">=10",
+          result: 4,
+        },
+      ],
+      fresh: [
+        {
+          range: "<=9",
+          result: 2,
+        },
+        {
+          range: ">=10",
+          result: 4,
+        },
+      ],
+    },
+
+    lg: {
+      
       kibble: [
         {
           range: "<=13",
@@ -31,6 +100,7 @@ const results = {
           result: 133,
         },
       ],
+
       raw: [
         {
           range: "<=13",
@@ -61,6 +131,7 @@ const results = {
           result: 136,
         },
       ],
+
       fresh: [
         {
           range: "<=13",
@@ -88,50 +159,6 @@ const results = {
         },
         {
           range: ">=51",
-          result: 133,
-        },
-      ],
-    },
-    lessThanOne: {
-      kibble: [
-        {
-          range: "<=5",
-          result: 2,
-        },
-        {
-          range: "6-9",
-          result: 4,
-        },
-        {
-          range: ">=10",
-          result: 133,
-        },
-      ],
-      raw: [
-        {
-          range: "<=5",
-          result: 7,
-        },
-        {
-          range: "6-9",
-          result: 134,
-        },
-        {
-          range: ">=10",
-          result: 136,
-        },
-      ],
-      fresh: [
-        {
-          range: "<=5",
-          result: 2,
-        },
-        {
-          range: "6-9",
-          result: 4,
-        },
-        {
-          range: ">=10",
           result: 133,
         },
       ],

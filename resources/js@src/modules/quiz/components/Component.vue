@@ -52,6 +52,7 @@
                     <h5 class="font-semibold text-5 mb-5">Email</h5>
                     <div
                       class="bg-local h-full rounded-2xl w-full flex items-center justify-center p-4"
+                      :class="{ 'border-primary border-2': !mailIsValid }"
                     >
                       <input
                         type="mail"
@@ -63,7 +64,7 @@
                             questions[activeQuestion].variants[0]
                           )
                         "
-                        class="w-full outline-none flex-grow border-0 text-primary font-bold text-6 lg:text-8 bg-transparent text-center placeholder:text-primary placeholder:opacity-50"
+                        class="w-full outline-none outline-red flex-grow border-0 text-primary font-bold text-6 lg:text-8 bg-transparent text-center placeholder:text-primary placeholder:opacity-50"
                         placeholder="mail@example.com"
                       />
                     </div>
@@ -409,6 +410,7 @@
 
 <script>
 import axios from "axios";
+import results from "../results";
 
 export default {
   data() {
@@ -423,6 +425,8 @@ export default {
       propose: {
         ration: [],
       },
+
+      mailIsValid: true,
 
       dogCormWeight: 4.2,
       catCormWeight: 2.8,
@@ -507,6 +511,7 @@ export default {
         {
           id: "4",
           name: "weight",
+          preFinal: true,
           question: "Please write your pet's current weight in lb.",
           variants: [{ title: "weight", value: "" }],
           answear: null,
@@ -514,7 +519,7 @@ export default {
         },
         {
           id: "5",
-          preFinal: true,
+          final: true,
           question: "What kind of food does your pet eat?",
           name: "kindOfFood",
           variants: [
@@ -534,228 +539,256 @@ export default {
           answear: null,
           type: "triple",
         },
-        {
-          id: "6",
-          final: true,
-          name: "mail",
-          variants: [
-            {
-              title: "mail",
-              value: null,
-            },
-          ],
-          question: "Your Mail",
-          answear: null,
-          type: "mail",
-        },
+        // {
+        //   id: "6",
+        //   final: true,
+        //   name: "mail",
+        //   variants: [
+        //     {
+        //       title: "mail",
+        //       value: null,
+        //     },
+        //   ],
+        //   question: "Your Mail",
+        //   answear: null,
+        //   type: "mail",
+        // },
       ],
 
-      results: {
-        DOG: {
-          moreThanOne: {
-            kibble: [
-              {
-                range: "<=13",
-                result: 1,
-              },
-              {
-                range: "14-22",
-                result: 131,
-              },
-              {
-                range: "23-29",
-                result: 2,
-              },
-              {
-                range: "30-37",
-                result: 3,
-              },
-              {
-                range: "38-43",
-                result: 4,
-              },
-              {
-                range: "44-50",
-                result: 132,
-              },
-              {
-                range: ">=51",
-                result: 133,
-              },
-            ],
-            raw: [
-              {
-                range: "<=13",
-                result: 5,
-              },
-              {
-                range: "14-22",
-                result: 6,
-              },
-              {
-                range: "23-29",
-                result: 7,
-              },
-              {
-                range: "30-37",
-                result: 8,
-              },
-              {
-                range: "38-43",
-                result: 134,
-              },
-              {
-                range: "44-50",
-                result: 135,
-              },
-              {
-                range: ">=51",
-                result: 136,
-              },
-            ],
-            fresh: [
-              {
-                range: "<=13",
-                result: 1,
-              },
-              {
-                range: "14-22",
-                result: 131,
-              },
-              {
-                range: "23-29",
-                result: 2,
-              },
-              {
-                range: "30-37",
-                result: 3,
-              },
-              {
-                range: "38-43",
-                result: 4,
-              },
-              {
-                range: "44-50",
-                result: 132,
-              },
-              {
-                range: ">=51",
-                result: 133,
-              },
-            ],
-          },
-          lessThanOne: {
-            kibble: [
-              {
-                range: "<=5",
-                result: 2,
-              },
-              {
-                range: "6-9",
-                result: 4,
-              },
-              {
-                range: ">=10",
-                result: 133,
-              },
-            ],
-            raw: [
-              {
-                range: "<=5",
-                result: 7,
-              },
-              {
-                range: "6-9",
-                result: 134,
-              },
-              {
-                range: ">=10",
-                result: 136,
-              },
-            ],
-            fresh: [
-              {
-                range: "<=5",
-                result: 2,
-              },
-              {
-                range: "6-9",
-                result: 4,
-              },
-              {
-                range: ">=10",
-                result: 133,
-              },
-            ],
-          },
-        },
-        CAT: {
-          moreThanOne: {
-            kibble: [
-              {
-                range: "<=15",
-                result: 9,
-              },
-              {
-                range: ">=16",
-                result: 10,
-              },
-            ],
-            raw: [
-              {
-                range: "<=15",
-                result: 11,
-              },
-              {
-                range: ">=16",
-                result: 12,
-              },
-            ],
-            fresh: [
-              {
-                range: "<=15",
-                result: 111,
-              },
-              {
-                range: ">=16",
-                result: 121,
-              },
-            ],
-          },
-          lessThanOne: {
-            kibble: [
-              {
-                range: "<=5",
-                result: 9,
-              },
-              {
-                range: ">=6",
-                result: 10,
-              },
-            ],
-            raw: [
-              {
-                range: "<=5",
-                result: 11,
-              },
-              {
-                range: ">=6",
-                result: 12,
-              },
-            ],
-            fresh: [
-              {
-                range: "<=5",
-                result: 111,
-              },
-              {
-                range: ">=6",
-                result: 121,
-              },
-            ],
-          },
-        },
-      },
+      // results: {
+      //   DOG: {
+      //     sm: {
+      //       kibble: [
+      //         {
+      //           range: "<=5",
+      //           result: 2,
+      //         },
+      //         {
+      //           range: ">=6",
+      //           result: 4,
+      //         },
+      //       ],
+      //       raw: [
+      //         {
+      //           range: "<=5",
+      //           result: 7,
+      //         },
+      //         {
+      //           range: ">=6",
+      //           result: 134,
+      //         },
+      //       ],
+      //       fresh: [
+      //         {
+      //           range: "<=5",
+      //           result: 2,
+      //         },
+      //         {
+      //           range: ">=6",
+      //           result: 4,
+      //         },
+      //       ],
+      //     },
+
+      //     md: {
+      //       kibble: [
+      //         {
+      //           range: "<=9",
+      //           result: 2,
+      //         },
+      //         {
+      //           range: ">=10",
+      //           result: 4,
+      //         },
+      //       ],
+      //       raw: [
+      //         {
+      //           range: "<=9",
+      //           result: 2,
+      //         },
+      //         {
+      //           range: ">=10",
+      //           result: 4,
+      //         },
+      //       ],
+      //       fresh: [
+      //         {
+      //           range: "<=9",
+      //           result: 2,
+      //         },
+      //         {
+      //           range: ">=10",
+      //           result: 4,
+      //         },
+      //       ],
+      //     },
+
+      //     lg: {
+      //       kibble: [
+      //         {
+      //           range: "<=13",
+      //           result: 1,
+      //         },
+      //         {
+      //           range: "14-22",
+      //           result: 131,
+      //         },
+      //         {
+      //           range: "23-29",
+      //           result: 2,
+      //         },
+      //         {
+      //           range: "30-37",
+      //           result: 3,
+      //         },
+      //         {
+      //           range: "38-43",
+      //           result: 4,
+      //         },
+      //         {
+      //           range: "44-50",
+      //           result: 132,
+      //         },
+      //         {
+      //           range: ">=51",
+      //           result: 133,
+      //         },
+      //       ],
+
+      //       raw: [
+      //         {
+      //           range: "<=13",
+      //           result: 5,
+      //         },
+      //         {
+      //           range: "14-22",
+      //           result: 6,
+      //         },
+      //         {
+      //           range: "23-29",
+      //           result: 7,
+      //         },
+      //         {
+      //           range: "30-37",
+      //           result: 8,
+      //         },
+      //         {
+      //           range: "38-43",
+      //           result: 134,
+      //         },
+      //         {
+      //           range: "44-50",
+      //           result: 135,
+      //         },
+      //         {
+      //           range: ">=51",
+      //           result: 136,
+      //         },
+      //       ],
+
+      //       fresh: [
+      //         {
+      //           range: "<=13",
+      //           result: 1,
+      //         },
+      //         {
+      //           range: "14-22",
+      //           result: 131,
+      //         },
+      //         {
+      //           range: "23-29",
+      //           result: 2,
+      //         },
+      //         {
+      //           range: "30-37",
+      //           result: 3,
+      //         },
+      //         {
+      //           range: "38-43",
+      //           result: 4,
+      //         },
+      //         {
+      //           range: "44-50",
+      //           result: 132,
+      //         },
+      //         {
+      //           range: ">=51",
+      //           result: 133,
+      //         },
+      //       ],
+      //     },
+      //   },
+
+      //   CAT: {
+      //     moreThanOne: {
+      //       kibble: [
+      //         {
+      //           range: "<=15",
+      //           result: 9,
+      //         },
+      //         {
+      //           range: ">=16",
+      //           result: 10,
+      //         },
+      //       ],
+      //       raw: [
+      //         {
+      //           range: "<=15",
+      //           result: 11,
+      //         },
+      //         {
+      //           range: ">=16",
+      //           result: 12,
+      //         },
+      //       ],
+      //       fresh: [
+      //         {
+      //           range: "<=15",
+      //           result: 111,
+      //         },
+      //         {
+      //           range: ">=16",
+      //           result: 121,
+      //         },
+      //       ],
+      //     },
+      //     lessThanOne: {
+      //       kibble: [
+      //         {
+      //           range: "<=5",
+      //           result: 9,
+      //         },
+      //         {
+      //           range: ">=6",
+      //           result: 10,
+      //         },
+      //       ],
+      //       raw: [
+      //         {
+      //           range: "<=5",
+      //           result: 11,
+      //         },
+      //         {
+      //           range: ">=6",
+      //           result: 12,
+      //         },
+      //       ],
+      //       fresh: [
+      //         {
+      //           range: "<=5",
+      //           result: 111,
+      //         },
+      //         {
+      //           range: ">=6",
+      //           result: 121,
+      //         },
+      //       ],
+      //     },
+      //   },
+      // },
+
+      results,
+
       proposes: {
         // DOG Gently food
         1: {
@@ -1543,12 +1576,18 @@ export default {
         await axios.post("https://customercreate.com/api/senddata", {
           email: this.mail.mail,
         });
+        this.mailIsValid = true;
       } catch (error) {
-        console.error("An error occurred:", error);
+        this.mailIsValid = false;
       }
     },
+    async finishQuiz() {
+      // this.mail = this.questions[6]?.answear;
+      // await this.createCustomer();
+      // if (!this.mailIsValid) {
+      //   return;
+      // }
 
-    finishQuiz() {
       this.characteristic = {
         furryName: this.questions[0]?.answear?.furryName,
         furry: this.questions[0]?.answear?.title,
@@ -1565,9 +1604,6 @@ export default {
         mail: this.questions[6]?.answear,
       };
 
-      this.mail = this.questions[6]?.answear;
-      this.createCustomer();
-
       this.checkQuizRequest(this.characteristic);
 
       this.propose = this.proposes[this.result];
@@ -1581,43 +1617,34 @@ export default {
     checkQuizRequest(petCharacteristic) {
       const furryType = petCharacteristic.furry;
       const age = petCharacteristic.old.age;
+      const months = petCharacteristic.old.month;
       const weight = petCharacteristic.weight.weight;
       const foodType = petCharacteristic.kindOfFood;
 
       if (furryType === "Dog") {
-        if (age >= 1) {
+        if (months >= 11 || age >= 1) {
           if (foodType === "kibble") {
-            this.result = this.getResult(
-              this.results.DOG.moreThanOne.kibble,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.lg.kibble, weight);
           } else if (foodType === "fresh") {
-            this.result = this.getResult(
-              this.results.DOG.moreThanOne.fresh,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.lg.fresh, weight);
           } else if (foodType === "raw") {
-            this.result = this.getResult(
-              this.results.DOG.moreThanOne.raw,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.lg.raw, weight);
           }
-        } else if (age < 1 || !age) {
+        } else if (months >= 7 && months <= 10 && age < 1) {
           if (foodType === "kibble") {
-            this.result = this.getResult(
-              this.results.DOG.lessThanOne.kibble,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.md.kibble, weight);
           } else if (foodType === "fresh") {
-            this.result = this.getResult(
-              this.results.DOG.lessThanOne.fresh,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.md.fresh, weight);
           } else if (foodType === "raw") {
-            this.result = this.getResult(
-              this.results.DOG.lessThanOne.raw,
-              weight
-            );
+            this.result = this.getResult(this.results.DOG.md.raw, weight);
+          }
+        } else if (months <= 6 && age < 1) {
+          if (foodType === "kibble") {
+            this.result = this.getResult(this.results.DOG.sm.kibble, weight);
+          } else if (foodType === "fresh") {
+            this.result = this.getResult(this.results.DOG.sm.fresh, weight);
+          } else if (foodType === "raw") {
+            this.result = this.getResult(this.results.DOG.sm.raw, weight);
           }
         }
       } else if (furryType === "Cat") {
@@ -1702,6 +1729,10 @@ export default {
           val.value = null;
         });
       }
+
+      scrollTo({
+        top: window.pageYOffset + this.$el.getBoundingClientRect().top - 100,
+      });
     },
 
     saveToLocalStorage() {
@@ -1758,8 +1789,6 @@ export default {
         )
       ) {
         return true;
-      } else if (currentQuestion.type === "mail" && !this.isMailValid) {
-        return true;
       } else if (
         currentQuestion.type === "inputDouble" &&
         (!currentQuestion.answear.title || !currentQuestion.answear.furryName)
@@ -1788,15 +1817,15 @@ export default {
         ? this.questions.length
         : "0" + this.questions.length;
     },
-    isMailValid() {
-      const mailQuestion = this.questions.find((q) => q.type === "mail");
-      const mailAnswer = mailQuestion.answear.mail;
+    // isMailValid() {
+    //   const mailQuestion = this.questions.find((q) => q.type === "mail");
+    //   const mailAnswer = mailQuestion.answear.mail;
 
-      if (typeof mailAnswer === "string" && mailAnswer.includes("@")) {
-        return true;
-      }
-      return false;
-    },
+    //   if (typeof mailAnswer === "string" && mailAnswer.includes("@")) {
+    //     return true;
+    //   }
+    //   return false;
+    // },
   },
 
   mounted() {
